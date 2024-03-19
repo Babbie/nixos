@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+genImports () {
+  local imports=$(find . -type f -not -name '*imports.nix' | sed 's/^/    /')
+  echo "$imports"
+  echo "{ ... }:
+
+{
+  imports = [
+$imports
+  ];
+}" > imports.nix
+}
+
+echo "Generating modules/nixos/imports.nix:"
+cd $HOME/.config/nixos/modules/nixos
+genImports
+echo "Generating modules/home-manager/imports.nix:"
+cd $HOME/.config/nixos/modules/home-manager
+genImports
