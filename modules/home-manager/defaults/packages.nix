@@ -16,8 +16,8 @@ with lib; {
       discord
       pavucontrol
       networkmanagerapplet
-      xfce.thunar
-      gvfs # Thunar support dependencies
+      thunar
     ];
+    services.gvfs.enable = true;
   };
 }
