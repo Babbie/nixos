@@ -12,7 +12,7 @@
       ../../modules/nixos/imports.nix
     ];
 
-  networking.hostName = "wheelie"; # Define your hostname.
+  networking.hostName = "waddle-dee"; # Define your hostname.
 
   home-manager.users."bab" = import ./home.nix;
 
