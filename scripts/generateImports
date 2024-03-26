@@ -12,7 +12,7 @@ $imports
 }" > imports.nix
 }
 
-if (! git diff-index --quiet HEAD) || (u="$(git ls-files --exclude-standard --others)" && test -z "$u"); then
+if (! git diff-index --quiet HEAD) || (! u="$(git ls-files --exclude-standard --others)" || test -n "$u"); then
   echo "git is dirty, exiting";
   exit 1;
 fi
