@@ -14,5 +14,6 @@
     ./defaults/git.nix
     ./defaults/packages.nix
     ./colors.nix
+    ./ssh/ssh.nix
   ];
 }
