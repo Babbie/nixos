@@ -18,10 +18,10 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      nixosConfigurations.wheelie = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.waddle-dee = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs nix-colors; };
           modules = [ 
-            ./hosts/wheelie/configuration.nix
+            ./hosts/waddle-dee/configuration.nix
             inputs.home-manager.nixosModules.default
           ];
         };
