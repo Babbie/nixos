@@ -14,9 +14,11 @@ with lib; {
   config = mkIf config.userSsh.enable {
     programs.ssh = {
       enable = true;
-      "wilhelm" = {
-        hostname = "10.0.0.100";
-	port = 49999;
+      matchBlocks = {
+        "wilhelm" = {
+          hostname = "10.0.0.100";
+	  port = 49999;
+	};
       };
     };
   };
