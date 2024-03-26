@@ -19,5 +19,6 @@ with lib; {
     hardware.opengl.enable = true;
     fonts.enableDefaultPackages = true;
     security.polkit.enable = true;
+    services.gvfs.enable = true;
   };
 }
