@@ -15,6 +15,10 @@ $imports
 echo "Generating modules/nixos/imports.nix:"
 cd $HOME/.config/nixos/modules/nixos
 genImports
+git add --intent-to-add imports.nix
+git update-index --skip-worktree --assume-unchanged import.nix
 echo "Generating modules/home-manager/imports.nix:"
 cd $HOME/.config/nixos/modules/home-manager
 genImports
+git add --intent-to-add imports.nix
+git update-index --skip-worktree --assume-unchanged import.nix
