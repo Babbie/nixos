@@ -12,7 +12,7 @@
     ./defaults/homeManagerDefaults.nix
     ./defaults/audio.nix
     ./defaults/bluetooth.nix
-    ./defaults/misc.nix
     ./defaults/packages.nix
+    ./defaults/misc.nix
   ];
 }
