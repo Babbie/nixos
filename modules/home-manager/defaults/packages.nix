@@ -16,7 +16,7 @@ with lib; {
       discord
       pavucontrol
       networkmanagerapplet
-      thunar
+      xfce.thunar
     ];
   };
 }
