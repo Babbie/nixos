@@ -17,6 +17,7 @@ with lib; {
       pavucontrol
       networkmanagerapplet
       xfce.thunar
+      gvfs # Thunar support dependencies
     ];
   };
 }
