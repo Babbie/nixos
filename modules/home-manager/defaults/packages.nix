@@ -18,6 +18,5 @@ with lib; {
       networkmanagerapplet
       thunar
     ];
-    services.gvfs.enable = true;
   };
 }
