@@ -16,8 +16,7 @@ with lib; {
       discord
       pavucontrol
       networkmanagerapplet
-      xfce.thunar
-      gvfs # Thunar support dependencies
+      dolphin
     ];
   };
 }
