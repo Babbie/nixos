@@ -25,5 +25,5 @@ echo "Generating modules/home-manager/imports.nix:"
 cd $HOME/.config/nixos/modules/home-manager
 genImports
 git add imports.nix
-#git commit -m "AUTO: Generated imports.nix"
-#git push
+git commit -m "AUTO: Generated imports.nix"
+git push
