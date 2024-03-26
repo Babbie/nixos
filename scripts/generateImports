@@ -11,10 +11,17 @@ $imports
   ];
 }" > imports.nix
 }
-
+if git ls-files --exclude-standard --others; then
+  echo "git is dirty, exiting";
+  exit 1;
+fi
 echo "Generating modules/nixos/imports.nix:"
 cd $HOME/.config/nixos/modules/nixos
 genImports
+git add imports.nix
 echo "Generating modules/home-manager/imports.nix:"
 cd $HOME/.config/nixos/modules/home-manager
 genImports
+git add imports.nix
+#git commit -m "AUTO: Generated imports.nix"
+#git push
