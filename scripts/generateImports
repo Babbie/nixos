@@ -11,7 +11,7 @@ $imports
   ];
 }" > imports.nix
 }
-if git ls-files --exclude-standard --others; then
+if test -z "$(git ls-files --exclude-standard --others)"; then
   echo "git is dirty, exiting";
   exit 1;
 fi
