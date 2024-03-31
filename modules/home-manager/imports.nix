@@ -15,5 +15,6 @@
     ./defaults/packages.nix
     ./colors.nix
     ./ssh/ssh.nix
+    ./files.nix
   ];
 }
