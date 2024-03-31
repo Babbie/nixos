@@ -15,6 +15,6 @@ with lib; {
     home.file.".wallpapers" = {
       enable = config.wallpapers.enable;
       source = "../../files/wallpapers";
-    }
+    };
   };
 }
