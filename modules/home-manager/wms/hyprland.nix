@@ -50,7 +50,7 @@ with lib; {
         ];
         exec-once = [
           "firefox"
-	  "swaybg -i $HOME/.config/nixos/files/wallpaper.png -m fill"
+	  "swaybg -i $(find $HOME/.wallpapers/. -type f | shuf -n1) -m fill"
 	  "hyprctl setcursor ${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}"
 	  "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
         ];
