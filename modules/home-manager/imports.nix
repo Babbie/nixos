@@ -9,10 +9,10 @@
     ./wms/waybar.nix
     ./wms/gtk.nix
     ./wms/hyprland.nix
-    ./defaults/babUser.nix
     ./defaults/tty.nix
     ./defaults/git.nix
     ./defaults/packages.nix
+    ./defaults/babUser.nix
     ./colors.nix
     ./ssh/ssh.nix
     ./files.nix
