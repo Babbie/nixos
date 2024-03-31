@@ -50,7 +50,7 @@ with lib; {
         ];
         exec-once = [
           "firefox"
-	  "wallpaper"
+	  "$HOME/.scripts/wallpaper"
 	  "hyprctl setcursor ${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}"
 	  "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
         ];
