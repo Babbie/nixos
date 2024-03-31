@@ -11,7 +11,7 @@ with lib; {
   config = mkIf config.babUserHome.enable {
     home.username = "bab";
     home.homeDirectory = "/home/bab";
-    home.sessionPath = [ "$HOME/.config/nixos/scripts" ];
+    home.sessionPath = [ "$HOME/.scripts" ];
     home.sessionVariables = {
       EDITOR = "nvim";
     };

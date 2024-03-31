@@ -16,5 +16,9 @@ with lib; {
       enable = config.wallpapers.enable;
       source = ../../files/wallpapers;
     };
+    home.file.".scripts" = {
+      enable = true;
+      source = ../../scripts;
+    };
   };
 }
