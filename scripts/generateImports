@@ -12,6 +12,8 @@ $imports
 }" > imports.nix
 }
 
+cd $HOME/.config/nixos
+
 if (! git diff-index --quiet HEAD) || (! u="$(git ls-files --exclude-standard --others)" || test -n "$u"); then
   echo "git is dirty, exiting";
   exit 1;

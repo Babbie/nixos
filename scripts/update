@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-$HOME/.config/nixos/scripts/generateImports
+if ! $HOME/.config/nixos/scripts/generateImports; then
+  exit 1
+fi
 HOME=/root sudo nixos-rebuild switch --flake $HOME/.config/nixos#$HOST
