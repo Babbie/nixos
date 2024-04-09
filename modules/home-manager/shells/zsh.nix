@@ -18,7 +18,7 @@ with lib; {
       enable = true;
       dotDir = ".config/zsh";
       defaultKeymap = "viins";
-      enableAutosuggestions = true;
+      autosuggestion.enable = true;
       enableCompletion = true;
       shellAliases = {
         ls = "ls --color=auto";
