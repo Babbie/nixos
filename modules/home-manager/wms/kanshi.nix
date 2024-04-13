@@ -7,6 +7,10 @@ with lib; {
       type = with types; uniq str;
       description = "Systemd target to bind to";
     };
+    kanshi.exec = mkOption {
+      default = [];
+      description = "Commands to execute on profile switch";
+    };
   };
 
   config = mkIf config.kanshi.enable {
@@ -34,7 +38,15 @@ with lib; {
 	      position = "1920,0";
 	    }
 	  ];
+	  exec = config.kanshi.exec;
         };
+	unknown = {
+          outputs = [
+            {
+	      criteria = "*";
+	    }
+	  ];
+	};
       };
       systemdTarget = config.kanshi.systemdTarget;
     };

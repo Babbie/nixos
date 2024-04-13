@@ -27,6 +27,9 @@ with lib; {
     dunst.enable = true;
     kanshi.enable = true;
     kanshi.systemdTarget = "hyprland-session.target";
+    kanshi.exec = [
+      "$HOME/.scripts/wallpaper"
+    ];
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;
@@ -45,11 +48,6 @@ with lib; {
         "$terminal" = config.hyprland.terminal;
 	"$menu" = "wofi " + config.hyprland.menuOptions;
 	"$mainMod" = config.hyprland.mainMod;
-        monitor = [
-          "HDMI-A-1,3440x1440,1440x500,1"
-  	  "DP-1,preferred,0x0,1,transform,1"
-  	  ",preferred,auto,1"
-        ];
         exec-once = [
           "firefox"
 	  "$HOME/.scripts/wallpaper"
