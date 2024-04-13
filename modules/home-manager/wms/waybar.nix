@@ -41,7 +41,7 @@ with lib; {
             font-weight: bold;
           }
           
-          window#waybar {
+          window#waybar, window#waybar.empty {
             background: rgba(${RGBString palette.base01}, 0.5);
             background-clip: content-box;
             border-bottom: 2px solid rgba(${RGBString palette.base04}, 0.5);
