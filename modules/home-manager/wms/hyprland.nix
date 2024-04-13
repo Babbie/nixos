@@ -28,7 +28,7 @@ with lib; {
     kanshi.enable = true;
     kanshi.systemdTarget = "hyprland-session.target";
     kanshi.exec = [
-      "${config.home.homeDirectory}/.scripts/wallpaper"
+      #"${config.home.homeDirectory}/.scripts/wallpaper"
     ];
     xdg.portal = {
       enable = true;
