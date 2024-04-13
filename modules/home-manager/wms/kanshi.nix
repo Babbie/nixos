@@ -37,7 +37,7 @@ with lib; {
 	      status = "enable";
 	    }
 	    {
-	      criteria = "LG Electronics 23MP75 Unknown";
+	      criteria = "LG Electronics 23MP75";
 	      status = "enable";
 	      position = "1920,0";
 	    }
