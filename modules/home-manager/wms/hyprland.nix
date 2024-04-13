@@ -44,6 +44,13 @@ with lib; {
     wayland.windowManager.hyprland = {
       enable = true;
       systemd.enable = true;
+      systemd.variables = [
+        "DISPLAY"
+	"HYPRLAND_INSTANCE_SIGNATURE"
+	"WAYLAND_DISPLAY"
+	"XDG_CURRENT_DESKTOP"
+	"PATH"
+      ];
       settings = {
         "$terminal" = config.hyprland.terminal;
 	"$menu" = "wofi " + config.hyprland.menuOptions;
