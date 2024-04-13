@@ -25,8 +25,8 @@ with lib; {
     waybar.enable = true;
     wlsunset.enable = true;
     dunst.enable = true;
-    config.kanshi.enable = true;
-    config.kanshi.systemdTarget = "hyprland-session.target";
+    home-manager.users.bab.config.kanshi.enable = true;
+    home-manager.users.bab.config.kanshi.systemdTarget = "hyprland-session.target";
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;
