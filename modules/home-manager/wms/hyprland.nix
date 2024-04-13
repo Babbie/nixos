@@ -25,6 +25,8 @@ with lib; {
     waybar.enable = true;
     wlsunset.enable = true;
     dunst.enable = true;
+    config.kanshi.enable = true;
+    config.kanshi.systemdTarget = "hyprland-session.target";
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;
@@ -126,6 +128,8 @@ with lib; {
 	];
 	env = [
 	  "QT_QPA_PLATFORMTHEME, qt6ct"
+	  "XCURSOR_THEME, ${config.gtk.cursorTheme.name}"
+	  "XCURSOR_SIZE, ${toString config.gtk.cursorTheme.size}"
 	];
 	bind = [
           "$mainMod, RETURN, exec, $terminal"
