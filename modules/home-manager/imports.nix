@@ -6,10 +6,10 @@
     ./browsers/firefox.nix
     ./wms/wlsunset.nix
     ./wms/dunst.nix
-    ./wms/waybar.nix
     ./wms/gtk.nix
     ./wms/kanshi.nix
     ./wms/hyprland.nix
+    ./wms/waybar.nix
     ./defaults/tty.nix
     ./defaults/git.nix
     ./defaults/packages.nix
