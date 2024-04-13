@@ -28,7 +28,7 @@ with lib; {
     kanshi.enable = true;
     kanshi.systemdTarget = "hyprland-session.target";
     kanshi.exec = [
-      "$HOME/.scripts/wallpaper"
+      "${config.home.homeDirectory}/.scripts/wallpaper"
     ];
     xdg.portal = {
       enable = true;
@@ -50,7 +50,7 @@ with lib; {
 	"$mainMod" = config.hyprland.mainMod;
         exec-once = [
           "firefox"
-	  "$HOME/.scripts/wallpaper"
+	  "${config.home.homeDirectory}/.scripts/wallpaper"
 	  "hyprctl setcursor ${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}"
 	  "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
         ];
