@@ -21,8 +21,10 @@ with lib; {
 	  outputs = [
 	    {
               criteria = "eDP-1";
+	      status = "enable";
 	    }
 	  ];
+	  exec = config.kanshi.exec;
         };
         klz = {
 	  outputs = [
@@ -32,9 +34,11 @@ with lib; {
 	    }
 	    {
 	      criteria = "DP-2";
+	      status = "enable";
 	    }
 	    {
 	      criteria = "DP-3";
+	      status = "enable";
 	      position = "1920,0";
 	    }
 	  ];
@@ -44,8 +48,10 @@ with lib; {
           outputs = [
             {
 	      criteria = "*";
+	      status = "enable";
 	    }
 	  ];
+	  exec = config.kanshi.exec;
 	};
       };
       systemdTarget = config.kanshi.systemdTarget;
