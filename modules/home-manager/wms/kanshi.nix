@@ -33,11 +33,11 @@ with lib; {
 	      status = "disable";
 	    }
 	    {
-	      criteria = "DP-2";
+	      criteria = "Iiyama North America PL2783Q 1142982501719";
 	      status = "enable";
 	    }
 	    {
-	      criteria = "DP-3";
+	      criteria = "LG Electronics 23MP75 Unknown";
 	      status = "enable";
 	      position = "1920,0";
 	    }
