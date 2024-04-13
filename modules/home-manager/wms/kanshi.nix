@@ -22,7 +22,7 @@ with lib; {
 	    {
               criteria = "eDP-1";
 	      status = "enable";
-	      scale = 1;
+	      scale = 1.0;
 	    }
 	  ];
 	  exec = config.kanshi.exec;
@@ -32,7 +32,7 @@ with lib; {
 	    {
               criteria = "eDP-1";
 	      status = "disable";
-	      scale = 1;
+	      scale = 1.0;
 	    }
 	    {
 	      criteria = "Iiyama North America PL2783Q 1142982501719";
@@ -66,7 +66,7 @@ with lib; {
 	    {
               criteria = "eDP-1";
 	      status = "disable";
-	      scale = 1;
+	      scale = 1.0;
 	    }
             {
 	      criteria = "*";
