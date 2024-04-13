@@ -8,6 +8,7 @@
     ./wms/dunst.nix
     ./wms/waybar.nix
     ./wms/gtk.nix
+    ./wms/kanshi.nix
     ./wms/hyprland.nix
     ./defaults/tty.nix
     ./defaults/git.nix
