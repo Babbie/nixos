@@ -27,10 +27,10 @@ with lib; {
 	      status = "disable";
 	    }
 	    {
-	      criteria = "Iiyama North America PL2783Q 1142982501719";
+	      criteria = "DP-2";
 	    }
 	    {
-	      criteria = "LG Electronics 23MP75";
+	      criteria = "DP-3";
 	      position = "1920,0";
 	    }
 	  ];
