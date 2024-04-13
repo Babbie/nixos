@@ -26,7 +26,7 @@ with lib; {
       text = '' 
         #!/usr/bin/env bash
 	pkill swaybg
-	swaybg -i $(find ${config.home.homeDirectory}/.wallpapers/. -type f | shuf -n1) -m fill > /dev/null 2>&1 &
+	swaybg -i $(find ${config.home.homeDirectory}/.wallpapers -type f | shuf -n1) -m fill > /dev/null 2>&1 &
       '';
       executable = true;
     };
