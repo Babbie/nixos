@@ -45,13 +45,6 @@ with lib; {
             background: rgba(${RGBString palette.base01}, 0.5);
             background-clip: content-box;
             border-bottom: 2px solid rgba(${RGBString palette.base04}, 0.5);
-            transition-property: background, border;
-            transition-duration: 0.5s;
-          }
-          
-          window#waybar.solo {
-	    background: rgba(${RGBString palette.base01}, 1);
-            border-bottom: 2px solid rgba(${RGBString palette.base04}, 1);
           }
 
           tooltip {
@@ -128,9 +121,6 @@ with lib; {
           #battery {
             border-bottom: 2px solid rgba(${RGBString palette.base0E}, 0.7);
           }
-          .solo #battery {
-            border-bottom: 2px solid rgba(${RGBString palette.base0E}, 1);
-          }
           
           /* Using steps() instead of linear as a timing function to limit cpu usage */
           #battery.critical:not(.charging) {
@@ -144,36 +134,21 @@ with lib; {
           #pulseaudio {
             border-bottom: 2px solid rgba(${RGBString palette.base08}, 0.7);
           }
-          .solo #pulseaudio {
-            border-bottom: 2px solid rgba(${RGBString palette.base08}, 1);
-          }
           
           #network {
             border-bottom: 2px solid rgba(${RGBString palette.base09}, 0.7);
-          }
-          .solo #network {
-            border-bottom: 2px solid rgba(${RGBString palette.base09}, 1);
           }
           
           #disk {
             border-bottom: 2px solid rgba(${RGBString palette.base0A}, 0.7);
           }
-          .solo #disk {
-            border-bottom: 2px solid rgba(${RGBString palette.base0A}, 1);
-          }
           
           #cpu {
             border-bottom: 2px solid rgba(${RGBString palette.base0B}, 0.7);
           }
-          .solo #cpu {
-            border-bottom: 2px solid rgba(${RGBString palette.base0B}, 1);
-          }
 
           #memory {
             border-bottom: 2px solid rgba(${RGBString palette.base0C}, 0.7);
-          }
-          .solo #memory {
-            border-bottom: 2px solid rgba(${RGBString palette.base0C}, 1);
           }
           
           @keyframes blink {
@@ -185,9 +160,6 @@ with lib; {
 
           #temperature {
             border-bottom: 2px solid rgba(${RGBString palette.base0D}, 0.7);
-          }
-          .solo #temperature {
-            border-bottom: 2px solid rgba(${RGBString palette.base0D}, 1);
           }
 
           /* Using steps() instead of linear as a timing function to limit cpu usage */
@@ -202,15 +174,9 @@ with lib; {
           #clock {
             border-bottom: 2px solid rgba(${RGBString palette.base0E}, 0.7);
           }
-          .solo #clock {
-            border-bottom: 2px solid rgba(${RGBString palette.base0E}, 1);
-          }
           
           #tray {
             border-bottom: 2px solid rgba(${RGBString palette.base08}, 0.7);
-          }
-          .solo #tray {
-            border-bottom: 2px solid rgba(${RGBString palette.base08}, 1);
           }
           
           #tray > .passive {
