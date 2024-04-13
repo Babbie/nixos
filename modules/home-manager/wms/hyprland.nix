@@ -125,6 +125,7 @@ with lib; {
 	  swallow_regex = "kitty";
 	};
 	windowrulev2 = [
+	  "opacity 1.0 override,title:(- Youtube)"
 	];
 	blurls = [
 	  "notifications"
