@@ -20,5 +20,13 @@ with lib; {
       enable = true;
       source = ../../scripts;
     };
+    home.file.".scripts/wallpapers" = {
+      enable = true;
+      text = '''
+        #!/usr/bin/env bash
+	pkill swaybg
+	swaybg -i $(find ${config.home.homeDirectory}/.wallpapers/. -type f | shuf -n1) -m fill > /dev/null 2>&1 &
+      ''';
+    };
   };
 }
