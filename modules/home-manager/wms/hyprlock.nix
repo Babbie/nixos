@@ -66,13 +66,14 @@ with lib; {
 	  halign = center
 	  valign = center
 
-          size = 300, 50
+          size = 500, 80
 	  outline_thickness = 2
 	  dots_center = true
           outer_color = rgba(${config.colorScheme.palette.base04}ff)
 	  inner_color = rgb(${config.colorScheme.palette.base01})
 	  font_color = rgb(${config.colorScheme.palette.base05})
-	  fade_on_empty = true
+	  fade_on_empty = false
+	  placeholder_text = 󰌾
 	  fade_timeout = 1000
 	  rounding = 10
           check_color = rgba(${config.colorScheme.palette.base0A}ff)
