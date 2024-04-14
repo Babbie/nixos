@@ -35,7 +35,7 @@ with lib; {
           monitor =
 	  path = screenshot
 
-	  blur_passes = 8
+	  blur_passes = 2
 	  blur_size = 8
 	  noise = 0.0117
 	  contrast = 0.8916
