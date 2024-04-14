@@ -36,7 +36,7 @@ with lib; {
 	  path = screenshot
 
 	  blur_passes = 2
-	  blur_size = 8
+	  blur_size = 2
 	  noise = 0.0117
 	  contrast = 0.8916
 	  brightness = 0.8172
