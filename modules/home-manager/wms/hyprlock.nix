@@ -28,7 +28,7 @@ with lib; {
 	  position = 0, 100
 	  halign = center
 	  valign = center
-	  text = cmd[update:500] echo $ATTEMPTS[$ATTEMPTS failed attempts!]
+	  text = cmd[$ATTEMPTS[$ATTEMPTS failed attempts!]]
 	  color = rgb(${config.colorScheme.palette.base08})
 	  font_size = 28
 	  font_family = Fira Sans
@@ -44,7 +44,7 @@ with lib; {
 	  halign = center
 	  valign = center
 
-          size = 200, 50
+          size = 300, 30
 	  outline_thickness = 2
 	  dots_center = true
           outer_color = rgba(${config.colorScheme.palette.base04}ff)
