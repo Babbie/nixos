@@ -6,25 +6,21 @@ with lib; {
   };
 
   config = mkIf config.hyprlock.enable {
-    nixpkgs.overlays = [
-      (
-        final: prev: {
-          hyprlock = prev.hyprlock.overrideAttrs ({
-            src = prev.fetchFromGitHub {
-              owner = "hyprwm";
-              repo = "hyprlock";
-              rev = "bc87adf9ec997090f15d9b662d6ca2f86e25f264";
-              # If you don't know the hash, the first time, set:
-              # hash = "";
-              # then nix will fail the build with such an error message:
-              # hash mismatch in fixed-output derivation '/nix/store/m1ga09c0z1a6n7rj8ky3s31dpgalsn0n-source':
-              # specified: sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
-              # got:    sha256-173gxk0ymiw94glyjzjizp8bv8g72gwkjhacigd1an09jshdrjb4
-              hash = "";
-            };
-          });
-        } 
-      )
+    home.packages = with pkgs; [
+      hyprlock = hyprlock.overrideAttrs (prev: {
+        src = prev.fetchFromGitHub {
+          owner = "hyprwm";
+          repo = "hyprlock";
+          rev = "bc87adf9ec997090f15d9b662d6ca2f86e25f264";
+          # If you don't know the hash, the first time, set:
+          # hash = "";
+          # then nix will fail the build with such an error message:
+          # hash mismatch in fixed-output derivation '/nix/store/m1ga09c0z1a6n7rj8ky3s31dpgalsn0n-source':
+          # specified: sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+          # got:    sha256-173gxk0ymiw94glyjzjizp8bv8g72gwkjhacigd1an09jshdrjb4
+          hash = "";
+        };
+      });
     ];
     home.packages = with pkgs; [ hyprlock ];
     home.file.".config/hypr/hyprlock.conf" = {
