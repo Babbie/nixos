@@ -34,7 +34,6 @@ with lib; {
 	background {
           monitor =
 	  path = screenshot
-          #color = rgba(20, 20, 20, 0.7)
 
 	  blur_passes = 8
 	  blur_size = 8
