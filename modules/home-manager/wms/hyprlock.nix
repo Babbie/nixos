@@ -12,7 +12,7 @@ with lib; {
       text = ''
         general {
           disable_loading_bar = false
-          grace = 10
+          grace = 2 
 	}
 
 	background {
@@ -28,7 +28,7 @@ with lib; {
 	  position = 0, 100
 	  halign = center
 	  valign = center
-	  text = cmd[update:500] $ATTEMPTS[$ATTEMPTS failed attempts!]
+	  text = cmd[update:500] echo $ATTEMPTS[$ATTEMPTS failed attempts!]
 	  color = rgb(${config.colorScheme.palette.base08})
 	  font_size = 28
 	  font_family = Fira Sans
