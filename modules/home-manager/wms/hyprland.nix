@@ -153,6 +153,7 @@ with lib; {
 	  "$mainMod SHIFT, F, fullscreen, 0"
 	  "$mainMod, SPACE, togglefloating"
 	  "$mainMod SHIFT, E, movecurrentworkspacetomonitor, +1"
+	  "$mainMod, L, exec, hyprlock"
 
 	  "$mainMod, left, movefocus, l"
 	  "$mainMod, right, movefocus, r"

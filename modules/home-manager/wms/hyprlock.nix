@@ -44,6 +44,17 @@ with lib; {
 	  vibrancy = 0.2
 	  vibrancy_darkness = 0.0
 	}
+	
+	label {
+          monitor =
+	  position = 0, 0
+	  halign = center
+	  valign = center
+          text = 󰌾
+	  color = rgb(${config.colorScheme.palette.base05})
+	  font_size = 80
+          font_family = FiraCode Nerd Font
+	}
 
 	label {
           monitor =
