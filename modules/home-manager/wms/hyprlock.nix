@@ -74,6 +74,7 @@ with lib; {
 	  font_color = rgb(${config.colorScheme.palette.base05})
 	  fade_on_empty = false
 	  fade_timeout = 1000
+	  placeholder_text =
 	  rounding = 10
           check_color = rgba(${config.colorScheme.palette.base0A}ff)
           fail_color = rgba(${config.colorScheme.palette.base08}ff)
