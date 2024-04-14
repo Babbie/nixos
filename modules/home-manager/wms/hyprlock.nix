@@ -25,7 +25,7 @@ with lib; {
           });
         } 
       )
-    ]
+    ];
     home.packages = with pkgs; [ hyprlock ];
     home.file.".config/hypr/hyprlock.conf" = {
       enable = true;
