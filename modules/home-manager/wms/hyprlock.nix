@@ -47,7 +47,7 @@ with lib; {
 	
 	label {
           monitor =
-	  position = 0, 100
+	  position = -10, 100
 	  halign = center
 	  valign = center
           text = cmd[] echo " 󰌾 "
