@@ -20,7 +20,7 @@ with lib; {
           # got:    sha256-173gxk0ymiw94glyjzjizp8bv8g72gwkjhacigd1an09jshdrjb4
           hash = "";
         };
-      });
+      })
     ];
     home.packages = with pkgs; [ hyprlock ];
     home.file.".config/hypr/hyprlock.conf" = {
