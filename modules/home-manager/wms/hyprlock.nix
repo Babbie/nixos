@@ -9,10 +9,16 @@ with lib; {
     home.packages = with pkgs; [
       (hyprlock.overrideAttrs ({
         version = "0.3.0";
+	patches = [
+          fetchPatch {
+            url = "https://raw.githubusercontent.com/NixOS/nixpkgs/68ed9da5e3ef13bf80fa22ff99dcb1d39bcf72dc/pkgs/by-name/hy/hyprlock/cmake.patch";
+	    hash = "";
+	  }
+	];
         src = fetchFromGitHub {
           owner = "hyprwm";
           repo = "hyprlock";
-          rev = "bc87adf9ec997090f15d9b662d6ca2f86e25f264";
+          rev = "v0.3.0";
           # If you don't know the hash, the first time, set:
           # hash = "";
           # then nix will fail the build with such an error message:
