@@ -18,7 +18,7 @@ with lib; {
           # hash mismatch in fixed-output derivation '/nix/store/m1ga09c0z1a6n7rj8ky3s31dpgalsn0n-source':
           # specified: sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
           # got:    sha256-173gxk0ymiw94glyjzjizp8bv8g72gwkjhacigd1an09jshdrjb4
-          hash = "";
+          hash = "rbzVe2WNdHynJrnyJsKOOrV8yuuJ7QIuah3ZHWERSnA";
         };
       }))
     ];
