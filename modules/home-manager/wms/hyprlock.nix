@@ -36,13 +36,15 @@ with lib; {
 	  #path = screenshot
           color = rgba(20, 20, 20, 0.7)
 
-	  blur_passes = 8
-	  blur_size = 8
+	  blur {
+	  passes = 8
+	  size = 8
 	  noise = 0.0117
 	  contrast = 0.8916
 	  brightness = 0.8172
 	  vibrancy = 0.1696
 	  vibrancy_darkness = 0.0
+	  }
 	}
 
 	label {
