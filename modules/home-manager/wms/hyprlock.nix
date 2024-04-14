@@ -9,7 +9,7 @@ with lib; {
     nixpkgs.overlays = [
       (
         final: prev: {
-          hyprlock = prev.hyprlock.overrideAttrs (old: {
+          hyprlock = prev.hyprlock.overrideAttrs ({
             src = prev.fetchFromGitHub {
               owner = "hyprwm";
               repo = "hyprlock";
