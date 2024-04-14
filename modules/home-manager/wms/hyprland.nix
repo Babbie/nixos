@@ -89,6 +89,11 @@ with lib; {
             enabled = true;
 	    size = 3;
 	    passes = 2;
+	    noise = 0;
+	    contrast = 0.9;
+	    brightness = 0.8;
+	    vibrancy = 0.2;
+	    vibrancy_darkness = 0;
 	    special = true;
 	  };
 	  drop_shadow = true;
