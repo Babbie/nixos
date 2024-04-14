@@ -39,26 +39,15 @@ with lib; {
 	  blur_passes = 2
 	  blur_size = 3
 	  noise = 0.0
-	  contrast = 0.9
-	  brightness = 0.8
+	  contrast = 0.8
+	  brightness = 0.6
 	  vibrancy = 0.2
 	  vibrancy_darkness = 0.0
-	}
-	
-	label {
-          monitor =
-	  position = -10, 100
-	  halign = center
-	  valign = center
-          text = cmd[] echo " 󰌾 "
-	  color = rgb(${config.colorScheme.palette.base05})
-	  font_size = 200
-          font_family = FiraCode Nerd Font
 	}
 
 	label {
           monitor =
-	  position = 0, -100
+	  position = 0, 100
 	  halign = center
 	  valign = center
 	  text = cmd[update:500] if [[ $ATTEMPTS -gt 0 ]]; then echo "$ATTEMPTS failed attempt(s)!"; else echo ""; fi
