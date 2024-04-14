@@ -50,9 +50,9 @@ with lib; {
 	  position = 0, 100
 	  halign = center
 	  valign = center
-          text = cmd[] echo "󰌾 "
+          text = cmd[] echo " 󰌾 "
 	  color = rgb(${config.colorScheme.palette.base05})
-	  font_size = 80
+	  font_size = 200
           font_family = FiraCode Nerd Font
 	}
 
