@@ -10,7 +10,7 @@ with lib; {
       (hyprlock.overrideAttrs ({
         version = "0.3.0";
 	patches = [
-          (fetchPatch {
+          (fetchpatch {
             url = "https://raw.githubusercontent.com/NixOS/nixpkgs/68ed9da5e3ef13bf80fa22ff99dcb1d39bcf72dc/pkgs/by-name/hy/hyprlock/cmake.patch";
 	    hash = "";
 	  })
