@@ -44,7 +44,7 @@ with lib; {
 	  halign = center
 	  valign = center
 
-          size = 300, 30
+          size = 300, 50
 	  outline_thickness = 2
 	  dots_center = true
           outer_color = rgba(${config.colorScheme.palette.base04}ff)
