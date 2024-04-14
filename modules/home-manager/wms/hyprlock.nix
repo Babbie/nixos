@@ -50,7 +50,7 @@ with lib; {
 	  position = 0, 100
 	  halign = center
 	  valign = center
-	  text = $ATTEMPTS[$ATTEMPTS failed attempts!]
+	  text = cmd[update:500] if [[ $ATTEMPTS -gt 0 ]]; then echo "$ATTEMPTS failed attempt(s)\!"; else echo ""; fi
 	  color = rgb(${config.colorScheme.palette.base08})
 	  font_size = 28
 	  font_family = Fira Sans
