@@ -47,10 +47,10 @@ with lib; {
 	
 	label {
           monitor =
-	  position = 0, 0
+	  position = 0, 100
 	  halign = center
 	  valign = center
-          text = 󰌾
+          text = "󰌾 "
 	  color = rgb(${config.colorScheme.palette.base05})
 	  font_size = 80
           font_family = FiraCode Nerd Font
@@ -58,7 +58,7 @@ with lib; {
 
 	label {
           monitor =
-	  position = 0, 100
+	  position = 0, -100
 	  halign = center
 	  valign = center
 	  text = cmd[update:500] if [[ $ATTEMPTS -gt 0 ]]; then echo "$ATTEMPTS failed attempt(s)!"; else echo ""; fi
