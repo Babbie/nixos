@@ -12,7 +12,7 @@ with lib; {
 	patches = [
           (fetchpatch {
             url = "https://raw.githubusercontent.com/NixOS/nixpkgs/68ed9da5e3ef13bf80fa22ff99dcb1d39bcf72dc/pkgs/by-name/hy/hyprlock/cmake.patch";
-	    hash = "";
+	    hash = "sha256-OPD2iWYm8kE5zjQWDNAoIrEI6hcdqGQB+7SibZZF8H8=";
 	  })
 	];
         src = fetchFromGitHub {
