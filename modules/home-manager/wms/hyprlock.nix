@@ -73,7 +73,7 @@ with lib; {
 	  inner_color = rgb(${config.colorScheme.palette.base01})
 	  font_color = rgb(${config.colorScheme.palette.base05})
 	  fade_on_empty = false
-	  placeholder_text = <span foreground='#${config.colorScheme.palette.base05}'>󰌾</span>
+	  placeholder_text = <span foreground='##${config.colorScheme.palette.base05}'>󰌾</span>"
 	  fade_timeout = 1000
 	  rounding = 10
           check_color = rgba(${config.colorScheme.palette.base0A}ff)
