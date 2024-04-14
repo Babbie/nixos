@@ -28,7 +28,7 @@ with lib; {
 	  position = 0, 100
 	  halign = center
 	  valign = center
-	  text = cmd[$ATTEMPTS[$ATTEMPTS failed attempts!]]
+	  text = $ATTEMPTS[$ATTEMPTS failed attempts!]
 	  color = rgb(${config.colorScheme.palette.base08})
 	  font_size = 28
 	  font_family = Fira Sans
