@@ -7,7 +7,7 @@ with lib; {
 
   config = mkIf config.hyprlock.enable {
     home.packages = with pkgs; [
-      hyprlock = hyprlock.overrideAttrs (prev: {
+      hyprlock.overrideAttrs (prev: {
         src = prev.fetchFromGitHub {
           owner = "hyprwm";
           repo = "hyprlock";
