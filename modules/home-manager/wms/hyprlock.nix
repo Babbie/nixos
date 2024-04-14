@@ -38,7 +38,7 @@ with lib; {
 
 	  blur_passes = 2
 	  blur_size = 3
-	  noise = 0.2
+	  noise = 0.1
 	  contrast = 0.9
 	  brightness = 0.8
 	  vibrancy = 0.2
