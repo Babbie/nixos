@@ -9,6 +9,7 @@
     ./wms/gtk.nix
     ./wms/kanshi.nix
     ./wms/waybar.nix
+    ./wms/hyprlock.nix
     ./wms/hyprland.nix
     ./wms/hyprlock.nix
     ./defaults/tty.nix
