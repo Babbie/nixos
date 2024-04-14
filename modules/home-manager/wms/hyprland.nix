@@ -30,6 +30,7 @@ with lib; {
     kanshi.exec = [
       "${config.home.homeDirectory}/.scripts/wallpaper"
     ];
+    hyprlock.enable = true;
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;
