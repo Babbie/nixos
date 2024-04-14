@@ -23,21 +23,6 @@ with lib; {
 	  blur_size = 8
 	}
 
-	label {
-          monitor =
-	  position = 0, 100
-	  halign = center
-	  valign = center
-	  text = $ATTEMPTS[] $ATTEMPTS failed attempts!
-	  color = rgb(${config.colorScheme.palette.base08})
-	  font_size = 28
-	  font_family = Fira Sans
-
-	  shadow_passes = 2
-	  shadow_size = 3
-	  shadow_color = rgba(1a1a1aee)
-	}
-
 	input-field {
           monitor =
 	  position = 0, 0
@@ -55,6 +40,7 @@ with lib; {
 	  rounding = 10
           check_color = rgba(${config.colorScheme.palette.base0A}7f)
           fail_color = rgba(${config.colorScheme.palette.base08}7f)
+	  fail_text = $ATTEMPTS failed attempts!
 
 	  shadow_passes = 2
 	  shadow_size = 3
