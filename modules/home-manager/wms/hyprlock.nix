@@ -7,8 +7,8 @@ with lib; {
 
   config = mkIf config.hyprlock.enable {
     home.packages = with pkgs; [
-      hyprlock.overrideAttrs (prev: {
-        src = prev.fetchFromGitHub {
+      (hyprlock.overrideAttrs ({
+        src = fetchFromGitHub {
           owner = "hyprwm";
           repo = "hyprlock";
           rev = "bc87adf9ec997090f15d9b662d6ca2f86e25f264";
@@ -20,7 +20,7 @@ with lib; {
           # got:    sha256-173gxk0ymiw94glyjzjizp8bv8g72gwkjhacigd1an09jshdrjb4
           hash = "";
         };
-      })
+      }))
     ];
     home.file.".config/hypr/hyprlock.conf" = {
       enable = true;
