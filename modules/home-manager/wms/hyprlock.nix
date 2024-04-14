@@ -17,15 +17,15 @@ with lib; {
 
 	background {
           monitor =
-          color = rgba(20, 20, 20, 0.5)
+          color = rgba(20, 20, 20, 0.7)
 
-	  blur_passes = 2
+	  blur_passes = 8
 	  blur_size = 8
 	}
 
 	label {
           monitor =
-	  position = 0, -100
+	  position = 0, 100
 	  halign = center
 	  valign = center
 	  text = $ATTEMPTS[] $ATTEMPTS failed attempts!
@@ -40,12 +40,12 @@ with lib; {
 
 	input-field {
           monitor =
-	  position = 0, -100
+	  position = 0, 0
 	  halign = center
 	  valign = center
 
           size = 200, 50
-	  outline_tickness = 2
+	  outline_thickness = 2
 	  dots_center = true
           outer_color = rgba(${config.colorScheme.palette.base04}7f)
 	  inner_color = rgb(${config.colorScheme.palette.base01})
