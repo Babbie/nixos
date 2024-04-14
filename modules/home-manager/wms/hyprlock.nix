@@ -33,8 +33,8 @@ with lib; {
 
 	background {
           monitor =
-	  path = screenshot
-          #color = rgba(20, 20, 20, 0.7)
+	  #path = screenshot
+          color = rgba(20, 20, 20, 0.7)
 
 	  blur_passes = 8
 	  blur_size = 8
@@ -45,7 +45,7 @@ with lib; {
 	  position = 0, 100
 	  halign = center
 	  valign = center
-	  text = $ATTEMPTS[] $ATTEMPTS failed attempts!
+	  text = $ATTEMPTS[$ATTEMPTS failed attempts!]
 	  color = rgb(${config.colorScheme.palette.base08})
 	  font_size = 28
 	  font_family = Fira Sans
