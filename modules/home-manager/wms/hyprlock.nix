@@ -19,12 +19,6 @@ with lib; {
           owner = "hyprwm";
           repo = "hyprlock";
           rev = "v0.3.0";
-          # If you don't know the hash, the first time, set:
-          # hash = "";
-          # then nix will fail the build with such an error message:
-          # hash mismatch in fixed-output derivation '/nix/store/m1ga09c0z1a6n7rj8ky3s31dpgalsn0n-source':
-          # specified: sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
-          # got:    sha256-173gxk0ymiw94glyjzjizp8bv8g72gwkjhacigd1an09jshdrjb4
           hash = "sha256-rbzVe2WNdHynJrnyJsKOOrV8yuuJ7QIuah3ZHWERSnA=";
         };
       }))
@@ -40,7 +34,7 @@ with lib; {
 	background {
           monitor =
 	  path = screenshot
-          color = rgba(20, 20, 20, 0.7)
+          #color = rgba(20, 20, 20, 0.7)
 
 	  blur_passes = 8
 	  blur_size = 8
