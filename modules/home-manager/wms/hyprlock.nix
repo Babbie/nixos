@@ -11,6 +11,7 @@ with lib; {
         src = fetchFromGitHub {
           owner = "hyprwm";
           repo = "hyprlock";
+	  version = "0.3.0";
           rev = "bc87adf9ec997090f15d9b662d6ca2f86e25f264";
           # If you don't know the hash, the first time, set:
           # hash = "";
