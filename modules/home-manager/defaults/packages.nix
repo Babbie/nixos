@@ -13,10 +13,11 @@ with lib; {
 
   config = mkIf config.defaultHomePackages.enable {
     home.packages = with pkgs; [
-      discord
+      vesktop
       pavucontrol
       networkmanagerapplet
       xfce.thunar
+      inkscape-with-extensions
     ];
   };
 }
