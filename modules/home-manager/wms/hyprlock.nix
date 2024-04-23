@@ -53,10 +53,10 @@ with lib; {
 	  position = 0, 0
 	  halign = center
 	  valign = center
-	  rounding = -1 
+	  rounding = 0
 	  border_size = 0
           path = ~/.images/lock.png
-	  size = 500
+	  size = 350 
 	}
 
 	label {
