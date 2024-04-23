@@ -61,7 +61,7 @@ with lib; {
 
 	label {
           monitor =
-	  position = 0, 100
+	  position = 0, -100
 	  halign = center
 	  valign = center
 	  text = cmd[update:500] if [[ $ATTEMPTS -gt 0 ]]; then echo "$ATTEMPTS failed attempt(s)!"; else echo ""; fi
@@ -86,7 +86,7 @@ with lib; {
           outer_color = rgba(${config.colorScheme.palette.base04}ff)
 	  inner_color = rgb(${config.colorScheme.palette.base01})
 	  font_color = rgb(${config.colorScheme.palette.base05})
-	  fade_on_empty = false
+	  fade_on_empty = true
 	  fade_timeout = 1000
 	  placeholder_text =
 	  rounding = 10
