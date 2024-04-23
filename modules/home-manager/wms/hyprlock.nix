@@ -23,6 +23,10 @@ with lib; {
         };
       }))
     ];
+    home.file.".images/lock.png" = {
+      enable = true;
+      source = "../../../files/lock.png";
+    };
     home.file.".config/hypr/hyprlock.conf" = {
       enable = true;
       text = ''
@@ -43,6 +47,15 @@ with lib; {
 	  brightness = 0.6
 	  vibrancy = 0.2
 	  vibrancy_darkness = 0.0
+	}
+	
+	image {
+	  position = 0, 0
+	  halign = center
+	  valign = center
+	  rounding = 0
+          path = ~/.images/lock.png
+	  size = 500
 	}
 
 	label {
