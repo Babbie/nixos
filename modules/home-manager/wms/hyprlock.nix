@@ -56,7 +56,6 @@ with lib; {
 	  rounding = 0
 	  border_size = 0
           path = ~/.images/lock.png
-	  size = 350 
 	}
 
 	label {
