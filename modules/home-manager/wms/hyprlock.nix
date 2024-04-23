@@ -31,8 +31,8 @@ with lib; {
       enable = true;
       text = ''
         general {
-          disable_loading_bar = false
           grace = 2 
+	  ignore_empty_input = true
 	}
 
 	background {
