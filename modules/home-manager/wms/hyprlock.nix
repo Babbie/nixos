@@ -53,7 +53,7 @@ with lib; {
 	  position = 0, 0
 	  halign = center
 	  valign = center
-	  rounding = 0
+	  rounding = -1 
           path = ~/.images/lock.png
 	  size = 500
 	}
