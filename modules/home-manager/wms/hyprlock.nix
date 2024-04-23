@@ -50,7 +50,7 @@ with lib; {
 	}
 	
 	image {
-	  position = 0, 65
+	  position = 0, 60
 	  halign = center
 	  valign = center
 	  rounding = 0
