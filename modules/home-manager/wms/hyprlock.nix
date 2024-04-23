@@ -25,7 +25,7 @@ with lib; {
     ];
     home.file.".images/lock.png" = {
       enable = true;
-      source = "../../../files/lock.png";
+      source = ../../../files/lock.png;
     };
     home.file.".config/hypr/hyprlock.conf" = {
       enable = true;
