@@ -7,21 +7,7 @@ with lib; {
 
   config = mkIf config.hyprlock.enable {
     home.packages = with pkgs; [
-      (hyprlock.overrideAttrs ({
-        version = "0.3.0";
-	patches = [
-          (fetchpatch {
-            url = "https://raw.githubusercontent.com/NixOS/nixpkgs/68ed9da5e3ef13bf80fa22ff99dcb1d39bcf72dc/pkgs/by-name/hy/hyprlock/cmake.patch";
-	    hash = "sha256-OPD2iWYm8kE5zjQWDNAoIrEI6hcdqGQB+7SibZZF8H8=";
-	  })
-	];
-        src = fetchFromGitHub {
-          owner = "hyprwm";
-          repo = "hyprlock";
-          rev = "v0.3.0";
-          hash = "sha256-rbzVe2WNdHynJrnyJsKOOrV8yuuJ7QIuah3ZHWERSnA=";
-        };
-      }))
+      hyprlock
     ];
     home.file.".images/lock.png" = {
       enable = true;
