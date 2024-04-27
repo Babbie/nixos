@@ -6,7 +6,7 @@ with lib; {
   };
 
   config = mkIf config.hypridle.enable {
-    home.packages = with pkgs; [ hypridle ];
+    home.packages = with pkgs; [ hypridle brightnessctl ];
     hyprlock.enable = true;
     home.file.".config/hypr/hypridle.conf" = {
       enable = true;
