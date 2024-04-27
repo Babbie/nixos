@@ -13,6 +13,8 @@
   home.packages = with pkgs; [
     bitwig-studio
     jetbrains.rider
+    dotnet-sdk_8
+    dotnet-aspnetcore_8
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
