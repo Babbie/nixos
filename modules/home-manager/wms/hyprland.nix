@@ -134,7 +134,7 @@ with lib; {
 	};
 	windowrulev2 = [
 	  "opacity 1.0 override,title:(- YouTube)"
-	  "idleinhibit always,title:(- YouTube)"
+	  "idleinhibit focus,title:(- YouTube)"
 	  "idleinhibit fullscreen,fullscreen:1"
 	];
 	blurls = [
