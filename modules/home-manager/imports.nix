@@ -9,9 +9,9 @@
     ./wms/gtk.nix
     ./wms/kanshi.nix
     ./wms/waybar.nix
-    ./wms/hypridle.nix
     ./wms/hyprlock.nix
     ./wms/hyprland.nix
+    ./wms/hypridle.nix
     ./defaults/tty.nix
     ./defaults/git.nix
     ./defaults/babUser.nix
