@@ -31,6 +31,7 @@ with lib; {
       "${config.home.homeDirectory}/.scripts/wallpaper"
     ];
     hyprlock.enable = true;
+    hypridle.enable = true;
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;
