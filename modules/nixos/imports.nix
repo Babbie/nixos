@@ -14,5 +14,6 @@
     ./defaults/bluetooth.nix
     ./defaults/packages.nix
     ./defaults/misc.nix
+    ./defaults/autoUpgrade.nix
   ];
 }
