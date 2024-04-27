@@ -13,7 +13,6 @@
   home.packages = with pkgs; [
     bitwig-studio
     jetbrains.rider
-    dotnet-sdk_8
     dotnet-aspnetcore_8
   ];
 
