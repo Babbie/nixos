@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 genImports () {
-  local imports=$(find . -type f -not -name '*imports.nix' | sed 's/^/    /')
+  local imports=$(find . -type f -not -name '*imports.nix' -name '*.nix' | sed 's/^/    /')
   echo "$imports"
   echo "{ ... }:
 
