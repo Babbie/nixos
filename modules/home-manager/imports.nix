@@ -13,6 +13,11 @@
     ./wms/hypridle.nix
     ./wms/hyprland.nix
     ./wms/ags.nix
+    ./wms/ags/tsconfig.json
+    ./wms/ags/README.md
+    ./wms/ags/ts/main.ts
+    ./wms/ags/config.js
+    ./wms/README.md
     ./defaults/tty.nix
     ./defaults/babUser.nix
     ./defaults/packages.nix
