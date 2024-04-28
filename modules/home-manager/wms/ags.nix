@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib; {
   options = {
@@ -6,6 +6,6 @@ with lib; {
   };
 
   config = mkIf config.ags.enable {
-    home.packages = [ ags ];
+    home.packages = [ pkgs.ags ];
   };
 }
