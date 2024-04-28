@@ -7,12 +7,12 @@
     ./wms/wlsunset.nix
     ./wms/dunst.nix
     ./wms/gtk.nix
-    ./wms/kanshi.nix
     ./wms/waybar.nix
     ./wms/hyprlock.nix
     ./wms/hypridle.nix
     ./wms/hyprland.nix
     ./wms/ags.nix
+    ./wms/kanshi.nix
     ./defaults/tty.nix
     ./defaults/babUser.nix
     ./defaults/packages.nix
