@@ -14,6 +14,7 @@ with lib; {
   };
 
   config = mkIf config.kanshi.enable {
+    home.packages = [ kanshi ];
     services.kanshi = {
       enable = true;
       profiles = {
