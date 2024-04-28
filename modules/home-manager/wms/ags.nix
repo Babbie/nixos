@@ -9,7 +9,7 @@ with lib; {
     home.packages = [ pkgs.ags pkgs.bun ];
     home.file.".config/ags" = {
       enable = true;
-      path = ./ags;
+      source = ./ags;
     };
   };
 }
