@@ -12,6 +12,7 @@
     ./wms/hyprlock.nix
     ./wms/hypridle.nix
     ./wms/hyprland.nix
+    ./wms/ags.nix
     ./defaults/tty.nix
     ./defaults/babUser.nix
     ./defaults/packages.nix
