@@ -13,11 +13,12 @@
     ./wms/hypridle.nix
     ./wms/hyprland.nix
     ./defaults/tty.nix
-    ./defaults/git.nix
     ./defaults/babUser.nix
     ./defaults/packages.nix
+    ./defaults/git.nix
     ./colors.nix
     ./ssh/ssh.nix
     ./files.nix
+    ./dev/js.nix
   ];
 }
