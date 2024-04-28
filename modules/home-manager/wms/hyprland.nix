@@ -23,6 +23,7 @@ with lib; {
 
   config = mkIf config.hyprland.enable {
     waybar.enable = true;
+    ags.enable = true;
     wlsunset.enable = true;
     dunst.enable = true;
     kanshi.enable = true;
