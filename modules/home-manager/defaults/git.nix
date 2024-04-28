@@ -19,11 +19,5 @@ with lib; {
       userEmail = "bab@bab.cloud";
       userName = "Babbie";
     };
-    home.packages = with pkgs; [
-      discord
-      pavucontrol
-      networkmanagerapplet
-      xfce.thunar
-    ];
   };
 }
