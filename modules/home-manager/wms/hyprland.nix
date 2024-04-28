@@ -43,6 +43,7 @@ with lib; {
       wofi
       swaybg
       xdg-utils
+      wl-clipboard
     ];
     wayland.windowManager.hyprland = {
       enable = true;
