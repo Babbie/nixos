@@ -5,7 +5,7 @@ with lib; {
   ];
 
   options = {
-    jsDev.enable = mkEnable "Enable js/ts dev environment";
+    jsDev.enable = mkEnableOption "Enable js/ts dev environment";
   };
 
   config = mkIf config.jsDev.enable {
