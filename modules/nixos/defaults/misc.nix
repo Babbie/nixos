@@ -13,6 +13,13 @@ with lib; {
 
   config = mkIf config.miscDefaults.enable {
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.gc = {
+      automatic = true;
+      persistent = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+      randomizedDelaySec = "1h";
+    };
     programs.dconf.enable = true;
     nixpkgs.config.allowUnfree = true;
     home-manager.useGlobalPkgs = true;
