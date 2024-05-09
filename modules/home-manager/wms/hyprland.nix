@@ -45,6 +45,7 @@ with lib; {
       swaybg
       xdg-utils
       wl-clipboard
+      grimblast
     ];
     wayland.windowManager.hyprland = {
       enable = true;
@@ -195,8 +196,13 @@ with lib; {
             "$mainMod SHIFT, 9, movetoworkspace, 9"
             "$mainMod SHIFT, 0, movetoworkspace, 0"
 
-            "$mainMod, S, togglespecialworkspace, magic"
-            "$mainMod SHIFT, S, movetoworkspace, special:magic"
+            "$mainMod, W, togglespecialworkspace, magic"
+            "$mainMod SHIFT, W, movetoworkspace, special:magic"
+
+            "$mainMod, S, exec, grimblast --notify copy area"
+            "$mainMod SHIFT, S, exec, grimblast --notify copy active"
+            "$mainMod ALT, S, exec, grimblast --notify save area"
+            "$mainMod SHIFT ALT, S, exec, grimblast --notify save active"
 
             "$mainMod, mouse_down, workspace, e+1"
             "$mainMod, mouse_up, workspace, e-1"
