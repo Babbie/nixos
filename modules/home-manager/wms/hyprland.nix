@@ -64,7 +64,7 @@ with lib; {
           "firefox"
             "${config.home.homeDirectory}/.scripts/wallpaper"
             "hyprctl setcursor ${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}"
-            "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
+            "${pkgs.polkit-gnome}/libexec/polkit-kde-authentication-agent-1"
             "hypridle"
         ];
         input = {

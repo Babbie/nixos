@@ -15,7 +15,7 @@ with lib; {
     environment.systemPackages = with pkgs; [
       neovim
       curl
-      libsForQt5.polkit-kde-agent
+      polkit-gnome
     ];
   };
 }
