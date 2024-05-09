@@ -139,6 +139,8 @@ with lib; {
         windowrulev2 = [
           "opacity 1.0 override,title:(- YouTube)"
             "idleinhibit focus,title:(- YouTube)"
+            "opacity 1.0 override,title:(KPN TV)"
+            "idleinhibit focus,title:(KPN TV)"
             "idleinhibit fullscreen,fullscreen:1"
         ];
         blurls = [
@@ -151,7 +153,7 @@ with lib; {
             "XCURSOR_THEME, ${config.gtk.cursorTheme.name}"
             "XCURSOR_SIZE, ${toString config.gtk.cursorTheme.size}"
             "NIXOS_OZONE_WL, 1"
-            "SLURP_ARGS, -d -b #${config.colorScheme.palette.base02}7f -c #${config.colorScheme.palette.base0A} -B #${config.colorScheme.palette.base01}7f"
+            "SLURP_ARGS, -b #${config.colorScheme.palette.base02}af -c #${config.colorScheme.palette.base0A} -B #${config.colorScheme.palette.base02}af"
         ];
         bind = [
           "$mainMod, RETURN, exec, $terminal"
