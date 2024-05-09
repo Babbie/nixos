@@ -40,7 +40,6 @@ with lib; {
       extraPortals = with pkgs; [ xdg-desktop-portal-hyprland xdg-desktop-portal-gtk ];
       config.hyprland.default = [ "hyprland" "gtk" ];
     };
-    services.flameshot.enable = true;
     home.packages = with pkgs; [ 
       wofi
       swaybg
