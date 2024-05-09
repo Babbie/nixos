@@ -24,10 +24,10 @@ with lib; {
     services.greetd = {
       settings = rec {
         initial_session = {
-	  command = config.greetd.command;
-	  user = config.greetd.user;
+          command = config.greetd.command;
+          user = config.greetd.user;
         };
-	default_session = initial_session;
+        default_session = initial_session;
       };
     };
   };

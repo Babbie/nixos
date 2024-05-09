@@ -33,6 +33,7 @@ with lib; {
     ];
     hyprlock.enable = true;
     hypridle.enable = true;
+    gnome-keyring.enable = true;
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;
