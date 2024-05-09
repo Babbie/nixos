@@ -13,6 +13,7 @@
     ./wms/hyprland.nix
     ./wms/ags.nix
     ./wms/kanshi.nix
+    ./wms/gnome-keyring.nix
     ./defaults/tty.nix
     ./defaults/babUser.nix
     ./defaults/packages.nix
