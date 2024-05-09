@@ -12,9 +12,9 @@
     ./defaults/homeManagerDefaults.nix
     ./defaults/audio.nix
     ./defaults/bluetooth.nix
-    ./defaults/packages.nix
     ./defaults/misc.nix
     ./defaults/autoUpgrade.nix
     ./defaults/gnome-keyring.nix
+    ./defaults/packages.nix
   ];
 }
