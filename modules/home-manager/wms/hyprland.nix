@@ -200,10 +200,10 @@ with lib; {
             "$mainMod, W, togglespecialworkspace, magic"
             "$mainMod SHIFT, W, movetoworkspace, special:magic"
 
-            "$mainMod, S, exec, grimblast --notify copy area"
-            "$mainMod SHIFT, S, exec, grimblast --notify copy active"
-            "$mainMod ALT, S, exec, grimblast --notify save area ~/Pictures/Screenshots/$(date +%FT%T).png"
-            "$mainMod SHIFT ALT, S, exec, grimblast --notify save active ~/Pictures/Screenshots/$(date +%FT%T).png"
+            "$mainMod, S, exec, grimblast --notify copy active"
+            "$mainMod SHIFT, S, exec, grimblast --notify copy area"
+            "$mainMod ALT, S, exec, grimblast --notify save active ~/Pictures/Screenshots/$(date +%FT%T).png"
+            "$mainMod SHIFT ALT, S, exec, grimblast --notify save area ~/Pictures/Screenshots/$(date +%FT%T).png"
 
             "$mainMod, mouse_down, workspace, e+1"
             "$mainMod, mouse_up, workspace, e-1"
