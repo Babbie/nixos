@@ -7,7 +7,6 @@ with lib; {
 
   config = mkIf config.gnome-keyring.enable {
     xdg.portal.config.common."org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
-    services.gnome-keyring.enable = true;
     home.packages = [ pkgs.gnome.seahorse ];
   };
 }
