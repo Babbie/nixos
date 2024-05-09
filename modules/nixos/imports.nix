@@ -15,5 +15,6 @@
     ./defaults/packages.nix
     ./defaults/misc.nix
     ./defaults/autoUpgrade.nix
+    ./defaults/gnome-keyring.nix
   ];
 }
