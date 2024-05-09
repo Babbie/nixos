@@ -10,10 +10,10 @@
     ./wms/waybar.nix
     ./wms/hyprlock.nix
     ./wms/hypridle.nix
-    ./wms/hyprland.nix
     ./wms/ags.nix
     ./wms/kanshi.nix
     ./wms/gnome-keyring.nix
+    ./wms/hyprland.nix
     ./defaults/tty.nix
     ./defaults/babUser.nix
     ./defaults/packages.nix
