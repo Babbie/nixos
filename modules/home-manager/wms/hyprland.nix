@@ -202,8 +202,8 @@ with lib; {
 
             "$mainMod, S, exec, grimblast --notify copy area"
             "$mainMod SHIFT, S, exec, grimblast --notify copy active"
-            "$mainMod ALT, S, exec, grimblast --notify save area"
-            "$mainMod SHIFT ALT, S, exec, grimblast --notify save active"
+            "$mainMod ALT, S, exec, grimblast --notify save area ~/Pictures/Screenshots/$(date +%FT%T).png"
+            "$mainMod SHIFT ALT, S, exec, grimblast --notify save active ~/Pictures/Screenshots/$(date +%FT%T).png"
 
             "$mainMod, mouse_down, workspace, e+1"
             "$mainMod, mouse_up, workspace, e-1"
