@@ -8,12 +8,12 @@
   zsh.enable = true;
   hyprland.enable = true;
   jsDev.enable = true;
+  dotNetDev.enable = true;
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     bitwig-studio
-    jetbrains.rider
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
