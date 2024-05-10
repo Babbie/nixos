@@ -153,7 +153,7 @@ with lib; {
             "XCURSOR_THEME, ${config.gtk.cursorTheme.name}"
             "XCURSOR_SIZE, ${toString config.gtk.cursorTheme.size}"
             "NIXOS_OZONE_WL, 1"
-            "SLURP_ARGS, -b #${config.colorScheme.palette.base02}af -c #${config.colorScheme.palette.base0A} -B #${config.colorScheme.palette.base02}af"
+            "SLURP_ARGS, '-b #${config.colorScheme.palette.base02}af -c #${config.colorScheme.palette.base0A} -B #${config.colorScheme.palette.base02}af'"
         ];
         bind = [
           "$mainMod, RETURN, exec, $terminal"
