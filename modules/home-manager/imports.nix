@@ -22,5 +22,6 @@
     ./ssh/ssh.nix
     ./files.nix
     ./dev/js.nix
+    ./dev/dotnet.nix
   ];
 }
