@@ -9,7 +9,7 @@ with lib; {
   };
 
   config = mkIf config.dotNetDev.enable {
-    environment = let 
+    home = let 
       dotnet-combined = (with pkgs.dotnetCorePackages; combinePackages [
           sdk_8_0
           sdk_7_0
