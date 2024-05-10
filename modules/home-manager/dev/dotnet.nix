@@ -13,6 +13,7 @@ with lib; {
       dotnet-combined = (with pkgs.dotnetCorePackages; combinePackages [
           sdk_8_0
           sdk_7_0
+          sdk_6_0
       ]).overrideAttrs (finalAttrs: previousAttrs: {
         # This is needed to install workload in $HOME
         # https://discourse.nixos.org/t/dotnet-maui-workload/20370/2
