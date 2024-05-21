@@ -17,70 +17,82 @@ with lib; {
     home.packages = [ pkgs.kanshi ];
     services.kanshi = {
       enable = true;
-      profiles = {
-        laptop = {
-          outputs = [
-          {
-            criteria = "eDP-1";
-            status = "enable";
-            scale = 1.0;
-          }
-          ];
-          exec = config.kanshi.exec;
-        };
-        klz = {
-          outputs = [
-          {
-            criteria = "eDP-1";
-            status = "disable";
-            scale = 1.0;
-          }
-          {
-            criteria = "Iiyama North America PL2783Q 1142982501719";
-            status = "enable";
-            position = "0,0";
-          }
-          {
-            criteria = "LG Electronics 23MP75 ";
-            status = "enable";
-            position = "1920,0";
-          }
-          ];
-          exec = config.kanshi.exec;
-        };
-        "single" = {
-          outputs = [
-          {
-            criteria = "eDP-1";
-            status = "enable";
-            scale = 1.333333;
-          }
-          {
-            criteria = "*";
-            status = "enable";
-          }
-          ];
-          exec = config.kanshi.exec;
-        };
-        "double" = {
-          outputs = [
-          {
-            criteria = "eDP-1";
-            status = "disable";
-            scale = 1.0;
-          }
-          {
-            criteria = "*";
-            status = "enable";
-          }
-          {
-            criteria = "*";
-            status = "enable";
-          }
-          ];
-          exec = config.kanshi.exec;
-        };
-      };
+      settings = [
+        {
+          profile = {
+            name = "laptop";
+            outputs = [
+            {
+              criteria = "eDP-1";
+              status = "enable";
+              scale = 1.0;
+            }
+            ];
+            exec = config.kanshi.exec;
+          };
+        }
+        {
+          profile = {
+            name = "klz";
+            outputs = [
+            {
+              criteria = "eDP-1";
+              status = "disable";
+              scale = 1.0;
+            }
+            {
+              criteria = "Iiyama North America PL2783Q 1142982501719";
+              status = "enable";
+              position = "0,0";
+            }
+            {
+              criteria = "LG Electronics 23MP75 ";
+              status = "enable";
+              position = "1920,0";
+            }
+            ];
+            exec = config.kanshi.exec;
+          };
+        }
+        {
+          profile = {
+            name = "single";
+            outputs = [
+            {
+              criteria = "eDP-1";
+              status = "enable";
+              scale = 1.333333;
+            }
+            {
+              criteria = "*";
+              status = "enable";
+            }
+            ];
+            exec = config.kanshi.exec;
+          };
+        }
+        {
+          profile = {
+            name = "double";
+            outputs = [
+            {
+              criteria = "eDP-1";
+              status = "disable";
+              scale = 1.0;
+            }
+            {
+              criteria = "*";
+              status = "enable";
+            }
+            {
+              criteria = "*";
+              status = "enable";
+            }
+            ];
+            exec = config.kanshi.exec;
+          };
+        }
+      ];
       systemdTarget = config.kanshi.systemdTarget;
     };
   };
