@@ -14,7 +14,7 @@ with lib; {
   config = mkIf config.autoUpgrade.enable {
     system.autoUpgrade = {
       enable = true;
-      flake = inputs.self.outPath;
+      flake = "path:${rootPath}";
       flags = [
         "-L"
         "--commit-lock-file"
