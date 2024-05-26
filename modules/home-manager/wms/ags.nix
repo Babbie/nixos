@@ -9,7 +9,7 @@ with lib; {
     home.packages = [ pkgs.ags pkgs.bun ];
     xdg.configFile."ags" = {
       enable = true;
-      source = config.lib.file.mkOutOfStoreSymlink "/home/bab/.config/nixos/modules/home-manager/wms/ags";
+      source = ./ags;
     };
   };
 }
