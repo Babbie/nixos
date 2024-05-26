@@ -10,6 +10,7 @@ with lib; {
 
   config = mkIf config.jsDev.enable {
     home.packages = with pkgs; [
+      vimPlugins.nvim-treesitter.withAllGrammars
       lunarvim
       nodejs
       yarn
