@@ -1,4 +1,4 @@
-{ lib, config, pkgs, inputs, nix-colors, ... }:
+{ lib, config, pkgs, inputs, nix-colors, rootPath, ... }:
 
 with lib; {
   imports = [
@@ -14,7 +14,7 @@ with lib; {
   config = mkIf config.homeManagerDefaults.enable {
     home-manager = {
       useGlobalPkgs = true;
-      extraSpecialArgs = { inherit inputs nix-colors; };
+      extraSpecialArgs = { inherit inputs nix-colors rootPath; };
     };
   };
 }
