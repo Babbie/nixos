@@ -1,4 +1,4 @@
-{ config, lib, pkgs, rootPath, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib; {
   options = {
@@ -7,9 +7,9 @@ with lib; {
 
   config = mkIf config.ags.enable {
     home.packages = [ pkgs.ags pkgs.bun ];
-    xdg.configFile."ags" = {
+    home.file.".config/ags" = {
       enable = true;
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/modules/home-manager/wms/ags";
+      source = config.lib.file.mkOutOfStoreSymlink ./ags;
     };
   };
 }
