@@ -33,12 +33,35 @@ with lib; {
         }
         {
           profile = {
+            name = "home";
+            outputs = [
+            {
+              criteria = "eDP-1";
+              status = "disable";
+            }
+            {
+              criteria = "LG Electronics LG ULTRAGEAR 308NTABAS360";
+              status = "enable";
+              mode = "3440x1440";
+              position = "1440,550";
+            }
+            {
+              criteria = "LG Electronics 27GL850 007NTSUMH150";
+              status = "enable";
+              transform = "90";
+              position = "0,0";
+            }
+            ];
+            exec = config.kanshi.exec;
+          };
+        }
+        {
+          profile = {
             name = "klz";
             outputs = [
             {
               criteria = "eDP-1";
               status = "disable";
-              scale = 1.0;
             }
             {
               criteria = "Iiyama North America PL2783Q 1142982501719";
@@ -78,7 +101,6 @@ with lib; {
             {
               criteria = "eDP-1";
               status = "disable";
-              scale = 1.0;
             }
             {
               criteria = "*";
