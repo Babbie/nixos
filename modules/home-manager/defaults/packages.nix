@@ -19,7 +19,7 @@ with lib; {
       xfce.thunar
       inkscape-with-extensions
       spotify
-      wdesktops
+      wdisplays
     ];
   };
 }
