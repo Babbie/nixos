@@ -46,6 +46,8 @@ with lib; {
       xdg-utils
       wl-clipboard
       grimblast
+      wdisplays
+      wev
     ];
     wayland.windowManager.hyprland = {
       enable = true;
