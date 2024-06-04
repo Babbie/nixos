@@ -136,6 +136,7 @@ with lib; {
           background_color = "0x0";
           enable_swallow = true;
           swallow_regex = "kitty";
+          swallow_exception_regex = "wev";
         };
         windowrulev2 = [
           "opacity 1.0 override,title:(- YouTube)"
