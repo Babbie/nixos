@@ -18,6 +18,8 @@ with lib; {
       networkmanagerapplet
       xfce.thunar
       inkscape-with-extensions
+      spotify
+      wdesktops
     ];
   };
 }
