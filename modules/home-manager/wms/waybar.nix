@@ -241,8 +241,8 @@ with lib; {
               };
               on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
               on-click-right = "${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle";
-	      reverse-scrolling = true;
-	      smooth-scrolling-threshold = 2;
+              reverse-scrolling = true;
+              smooth-scrolling-threshold = 2;
             };
             network = {
               format-wifi = "{essid} ({signalStrength}%) {icon}";
