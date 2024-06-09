@@ -21,13 +21,13 @@
   };
 
   userSsh.matchBlocks = {
-    "github.com:work" = {
+    "github.com" = {
       hostname = "github.com";
       user = "git";
       identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
     };
-    "github.com:private" = {
-      hostname = "github.com:Babbie";
+    "github.com:Babbie" = {
+      hostname = "github.com";
       user = "git";
       identityFile = "${config.home.homeDirectory}/.ssh/babbie";
     };
