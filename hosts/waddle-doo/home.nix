@@ -26,7 +26,7 @@
       user = "git";
       identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
     };
-    "github.com:Babbie" = {
+    "github.com-babbie" = {
       hostname = "github.com";
       user = "git";
       identityFile = "${config.home.homeDirectory}/.ssh/babbie";
