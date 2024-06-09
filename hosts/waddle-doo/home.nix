@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, home, ... }:
 
 {
   imports = [
@@ -18,6 +18,19 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+  };
+
+  config.userSsh.matchBlocks = {
+    "github.com:work" = {
+      hostname = "github.com";
+      user = "git";
+      identityFile = "${home.homeDirectory}/.ssh/id_ed25519";
+    };
+    "github.com:private" = {
+      hostname = "github.com:Babbie";
+      user = "git";
+      identityFile = "${home.homeDirectory}/.ssh/babbie";
+    };
   };
 
   # This value determines the Home Manager release that your configuration is
