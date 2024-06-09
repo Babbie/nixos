@@ -20,7 +20,7 @@
   home.file = {
   };
 
-  config.userSsh.matchBlocks = {
+  userSsh.matchBlocks = {
     "github.com:work" = {
       hostname = "github.com";
       user = "git";
