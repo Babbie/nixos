@@ -1,4 +1,4 @@
-{ config, pkgs, home, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -24,12 +24,12 @@
     "github.com:work" = {
       hostname = "github.com";
       user = "git";
-      identityFile = "${home.homeDirectory}/.ssh/id_ed25519";
+      identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
     };
     "github.com:private" = {
       hostname = "github.com:Babbie";
       user = "git";
-      identityFile = "${home.homeDirectory}/.ssh/babbie";
+      identityFile = "${config.home.homeDirectory}/.ssh/babbie";
     };
   };
 
