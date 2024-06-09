@@ -19,14 +19,24 @@
     in
     {
       nixosConfigurations.waddle-dee = nixpkgs.lib.nixosSystem {
-          specialArgs = { 
-            inherit inputs nix-colors; 
-            rootPath = ./.;
-          };
-          modules = [ 
-            ./hosts/waddle-dee/configuration.nix
-            inputs.home-manager.nixosModules.default
-          ];
+        specialArgs = { 
+          inherit inputs nix-colors; 
+          rootPath = ./.;
         };
+        modules = [ 
+          ./hosts/waddle-dee/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+      nixosConfigurations.waddle-doo = nixpkgs.lib.nixosSystem {
+        specialArgs = { 
+          inherit inputs nix-colors; 
+          rootPath = ./.;
+        };
+        modules = [ 
+          ./hosts/waddle-doo/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
 }
