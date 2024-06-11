@@ -2,19 +2,19 @@
 
 {
   imports = [
-    ./defaults/audio.nix
-    ./defaults/autoUpgrade.nix
     ./defaults/babUser.nix
-    ./defaults/bluetooth.nix
+    ./defaults/locale.nix
+    ./defaults/plymouth.nix
     ./defaults/defaultBoot.nix
-    ./defaults/gnome-keyring.nix
+    ./defaults/networkmanager.nix
+    ./defaults/sudo.nix
     ./defaults/greetd.nix
     ./defaults/homeManagerDefaults.nix
-    ./defaults/locale.nix
+    ./defaults/audio.nix
+    ./defaults/bluetooth.nix
     ./defaults/misc.nix
-    ./defaults/networkmanager.nix
+    ./defaults/autoUpgrade.nix
+    ./defaults/gnome-keyring.nix
     ./defaults/packages.nix
-    ./defaults/plymouth.nix
-    ./defaults/sudo.nix
   ];
 }
