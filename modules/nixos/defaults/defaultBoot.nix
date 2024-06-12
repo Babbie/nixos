@@ -19,7 +19,8 @@ with lib; {
     boot.loader = {
       systemd-boot = {
         enable = true;
-	consoleMode = "auto";
+        consoleMode = "auto";
+        configurationLimit = 8;
       };
       efi.canTouchEfiVariables = true;
       timeout = config.defaultBoot.timeout;
