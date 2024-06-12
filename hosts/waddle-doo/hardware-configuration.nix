@@ -47,6 +47,10 @@
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      nvidia-vaapi-driver
+      libvdpau-va-gl
+    ];
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];

@@ -10,6 +10,17 @@
   jsDev.enable = true;
   dotNetDev.enable = true;
 
+  hyprland.env = [
+    "LIBVA_DRIVER_NAME,nvidia"
+    "XDG_SESSION_TYPE,wayland"
+    "GBM_BACKEND,nvidia-drm"
+    "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+  ];
+  hyprland.exec-once = [
+    "${pkgs.teams-for-linux}/bin/teams-for-linux"
+    "${pkgs.slack}/bin/slack"
+  ];
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
