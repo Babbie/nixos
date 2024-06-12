@@ -9,9 +9,9 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "nvidia" ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.lenovo-legion-module ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-label/nixos";
