@@ -18,21 +18,21 @@ with lib; {
         name = "Catppuccin-Macchiato-Standard-Green-Dark";
         package = pkgs.catppuccin-gtk.override {
           accents = [ "green" ];
-          tweaks = [ "rimless" ];
-          variant = "macchiato";
-        };
+	  tweaks = [ "rimless" ];
+	  variant = "macchiato";
+	};
       };
       cursorTheme = {
         name = "Catppuccin-Macchiato-Dark-Cursors";
-        package = pkgs.catppuccin-cursors.macchiatoDark;
-        size = 32;
+	package = pkgs.catppuccin-cursors.macchiatoDark;
+	size = 32;
       };
       iconTheme = {
         name = "Papirus-Dark";
         package = pkgs.catppuccin-papirus-folders.override {
-          flavor = "macchiato";
-          accent = "green";
-        };
+	  flavor = "macchiato";
+	  accent = "green";
+	};
       };
     };
     xdg.configFile = {
