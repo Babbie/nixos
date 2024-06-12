@@ -50,10 +50,7 @@
   hardware.nvidia.modesetting.enable = true;
 
   hardware.nvidia.prime = {
-    offload = {
-      enable = true;
-      enableOffloadCmd = true;
-    };
+    sync.enable = true;
     
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
