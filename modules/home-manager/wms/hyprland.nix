@@ -20,23 +20,11 @@ with lib; {
       description = "The modifier key used for most operations";
     };
     hyprland.exec-once = mkOption {
-      default = [
-        "firefox"
-          "${config.home.homeDirectory}/.scripts/wallpaper"
-          "hyprctl setcursor ${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}"
-          "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
-          "hypridle"
-      ];
+      default = [];
       description = "Commands to run on startup";
     };
     hyprland.env = mkOption {
-      default = [
-        "QT_QPA_PLATFORMTHEME, qt6ct"
-          "XCURSOR_THEME, ${config.gtk.cursorTheme.name}"
-          "XCURSOR_SIZE, ${toString config.gtk.cursorTheme.size}"
-          "NIXOS_OZONE_WL, 1"
-          "SLURP_ARGS, '-b #${config.colorScheme.palette.base02}af -c #${config.colorScheme.palette.base0A} -B #${config.colorScheme.palette.base02}af'"
-      ];
+      default = [];
       description = "Env values to pass to hyprland";
     };
   };
@@ -83,7 +71,13 @@ with lib; {
         "$terminal" = config.hyprland.terminal;
         "$menu" = "wofi " + config.hyprland.menuOptions;
         "$mainMod" = config.hyprland.mainMod;
-        exec-once = config.hyprland.exec-once;
+        exec-once = config.hyprland.exec-once ++ [
+          "firefox"
+            "${config.home.homeDirectory}/.scripts/wallpaper"
+            "hyprctl setcursor ${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}"
+            "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
+            "hypridle"
+        ];
         input = {
           kb_layout = "us";
           follow_mouse = 1;
@@ -165,7 +159,13 @@ with lib; {
             "waybar"
             "wofi"
         ];
-        env = config.hyprland.env;
+        env = config.hyprland.env ++ [
+          "QT_QPA_PLATFORMTHEME, qt6ct"
+            "XCURSOR_THEME, ${config.gtk.cursorTheme.name}"
+            "XCURSOR_SIZE, ${toString config.gtk.cursorTheme.size}"
+            "NIXOS_OZONE_WL, 1"
+            "SLURP_ARGS, '-b #${config.colorScheme.palette.base02}af -c #${config.colorScheme.palette.base0A} -B #${config.colorScheme.palette.base02}af'"
+        ];
         bind = [
           ", XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
           ", XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous"
