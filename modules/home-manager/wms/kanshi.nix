@@ -79,32 +79,12 @@ with lib; {
         }
         {
           profile = {
-            name = "single";
+            name = "wildcard";
             outputs = [
             {
               criteria = "eDP-1";
               status = "enable";
               scale = 1.333333;
-            }
-            {
-              criteria = "*";
-              status = "enable";
-            }
-            ];
-            exec = config.kanshi.exec;
-          };
-        }
-        {
-          profile = {
-            name = "double";
-            outputs = [
-            {
-              criteria = "eDP-1";
-              status = "disable";
-            }
-            {
-              criteria = "*";
-              status = "enable";
             }
             {
               criteria = "*";
