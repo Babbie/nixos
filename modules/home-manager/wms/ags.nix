@@ -8,13 +8,11 @@ with lib; {
   };
 
   config = mkIf config.ags.enable {
+    home.packages = [ pkgs.bun ];
+
     programs.ags = {
       enable = true;
       #configDir = ./ags;
-
-      extraPackages = with pkgs; [
-        bun
-      ];
     };
   };
 }
