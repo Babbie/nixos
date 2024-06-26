@@ -1,4 +1,4 @@
-{ config, lib, inputs, ... }:
+{ config, lib, inputs, pkgs, ... }:
 
 with lib; {
   imports = [ inputs.ags.homeManagerModules.default ];
@@ -11,6 +11,10 @@ with lib; {
     programs.ags = {
       enable = true;
       #configDir = ./ags;
+
+      extraPackages = with pkgs; [
+        bun
+      ];
     };
   };
 }
