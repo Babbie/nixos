@@ -10,6 +10,7 @@
     };
 
     nix-colors.url = "github:misterio77/nix-colors";
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = { self, nixpkgs, nix-colors, ... }@inputs:
