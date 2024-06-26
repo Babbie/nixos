@@ -23,7 +23,7 @@ with lib; {
     programs.dconf.enable = true;
     nixpkgs.config.allowUnfree = true;
     home-manager.useGlobalPkgs = true;
-    hardware.opengl.enable = true;
+    hardware.graphics.enable = true;
     fonts.enableDefaultPackages = true;
     security.polkit.enable = true;
     services.gvfs.enable = true;
