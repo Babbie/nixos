@@ -10,10 +10,13 @@ with lib; {
 
   config = mkIf config.gtkConfig.enable {
     fonts.fontconfig.enable = true;
-    home.packages = [ pkgs.fira ];
     gtk = {
       enable = true;
-      font.name = "Fira Sans 11";
+      font = {
+        name = "Fira Sans";
+        size = 11;
+        package = pkgs.fira;
+      };
       theme = { 
         name = "catppuccin-macchiato-green-standard+rimless";
         package = pkgs.catppuccin-gtk.override {
