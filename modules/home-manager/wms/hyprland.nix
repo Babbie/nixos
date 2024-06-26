@@ -158,7 +158,7 @@ with lib; {
           "notifications"
             "waybar"
             "wofi"
-            "agsbar*"
+            "agsbar"
         ];
         env = config.hyprland.env ++ [
           "QT_QPA_PLATFORMTHEME, qt6ct"
