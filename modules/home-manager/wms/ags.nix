@@ -6,10 +6,9 @@ with lib; {
   };
 
   config = mkIf config.ags.enable {
-    home.packages = [ pkgs.ags pkgs.bun ];
-    xdg.configFile."ags" = {
-      enable = false;
-      source = ./ags;
+    programs.ags = {
+      enable = true;
+      configDir = ./ags;
     };
   };
 }
