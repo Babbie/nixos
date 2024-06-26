@@ -15,7 +15,7 @@ with lib; {
       enable = true;
       font.name = "Fira Sans 11";
       theme = { 
-        name = "Catppuccin-Macchiato-Standard-Green-Dark";
+        name = "catppuccin-macchiato-standard-green-dark";
         package = pkgs.catppuccin-gtk.override {
           accents = [ "green" ];
           tweaks = [ "rimless" ];
