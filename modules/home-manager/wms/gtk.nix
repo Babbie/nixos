@@ -22,11 +22,11 @@ with lib; {
           variant = "macchiato";
         };
       };
-      cursorTheme = {
-        name = "Catppuccin-Macchiato-Dark-Cursors";
-        package = pkgs.catppuccin-cursors.macchiatoDark;
-        size = 32;
-      };
+      # cursorTheme = {
+      #   name = "Catppuccin-Macchiato-Dark-Cursors";
+      #   package = pkgs.catppuccin-cursors.macchiatoDark;
+      #   size = 32;
+      # };
       iconTheme = {
         name = "Papirus-Dark";
         package = pkgs.catppuccin-papirus-folders.override {
