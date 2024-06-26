@@ -15,7 +15,7 @@ with lib; {
       enable = true;
       font.name = "Fira Sans 11";
       theme = { 
-        name = "catppuccin-macchiato-standard-green-dark+rimless";
+        name = "catppuccin-macchiato-green-standard+rimless";
         package = pkgs.catppuccin-gtk.override {
           accents = [ "green" ];
           tweaks = [ "rimless" ];
@@ -28,7 +28,7 @@ with lib; {
       #   size = 32;
       # };
       iconTheme = {
-        name = "papirus-dark";
+        name = "Papirus-Dark";
         package = pkgs.catppuccin-papirus-folders.override {
           flavor = "macchiato";
           accent = "green";
