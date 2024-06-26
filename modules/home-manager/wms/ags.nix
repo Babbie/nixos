@@ -8,7 +8,7 @@ with lib; {
   config = mkIf config.ags.enable {
     home.packages = [ pkgs.ags pkgs.bun ];
     xdg.configFile."ags" = {
-      enable = true;
+      enable = false;
       source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/nixos/modules/home-manager/wms/ags";
     };
   };
