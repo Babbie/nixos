@@ -10,7 +10,7 @@ with lib; {
   config = mkIf config.ags.enable {
     programs.ags = {
       enable = true;
-      configDir = ./ags;
+      #configDir = ./ags;
     };
   };
 }
