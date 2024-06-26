@@ -27,6 +27,7 @@
         modules = [ 
           ./hosts/waddle-dee/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.ags.homeManagerModules.default
         ];
       };
       nixosConfigurations.waddle-doo = nixpkgs.lib.nixosSystem {
@@ -37,6 +38,7 @@
         modules = [ 
           ./hosts/waddle-doo/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.ags.homeManagerModules.default
         ];
       };
     };
