@@ -42,7 +42,7 @@ with lib; {
     };
     home.pointerCursor = {
       gtk.enable = true;
-      name = "Catppuccin-Macchiato-Dark-Cursors";
+      name = "catppuccin-macchiato-dark-cursors";
       package = pkgs.catppuccin-cursors.macchiatoDark;
       size = 32;
     };
