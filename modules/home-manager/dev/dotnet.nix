@@ -37,7 +37,9 @@ with lib; {
       packages = [
         dotnet-combined
         pkgs.jetbrains.rider
+        pkgs.android-studio
       ];
+      programs.adb.enable = true;
     };
   };
 }
