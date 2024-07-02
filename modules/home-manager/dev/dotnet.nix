@@ -39,7 +39,6 @@ with lib; {
         pkgs.jetbrains.rider
         pkgs.android-studio
       ];
-      programs.adb.enable = true;
     };
   };
 }
