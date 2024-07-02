@@ -66,6 +66,7 @@ with lib; {
           "WAYLAND_DISPLAY"
           "XDG_CURRENT_DESKTOP"
           "PATH"
+          "DOTNET_ROOT"
       ];
       settings = {
         "$terminal" = config.hyprland.terminal;
