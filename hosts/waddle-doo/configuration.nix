@@ -18,6 +18,7 @@
 
   environment.systemPackages = [ pkgs.egl-wayland ];
 
+  programs.adb.enable = true;
   babUser.extraGroups = [ "networkmanager" "wheel" "kvm" "adbusers" ];
 
   # This value determines the NixOS release from which the default
