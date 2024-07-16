@@ -134,9 +134,6 @@ with lib; {
           preserve_split = true;
           no_gaps_when_only = 1;
         };
-        master = {
-          new_is_master = true;
-        };
         gestures = {
           workspace_swipe = true;
         };
