@@ -18,6 +18,10 @@
 
   environment.systemPackages = [ pkgs.egl-wayland ];
 
+  dotnet.enable = true;
+  programs.adb.enable = true;
+  babUser.extraGroups = [ "networkmanager" "wheel" "kvm" "adbusers" ];
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

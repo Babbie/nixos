@@ -43,17 +43,15 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
       libvdpau-va-gl
     ];
   };
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" "intel" ];
   hardware.nvidia = {
     nvidiaSettings = true;
     modesetting.enable = true;
