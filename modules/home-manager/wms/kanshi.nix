@@ -69,7 +69,7 @@ with lib; {
               position = "0,0";
             }
             {
-              criteria = "LG Electronics 23MP75 ";
+              criteria = "LG Electronics 23MP75 0x0003C8A1";
               status = "enable";
               position = "1920,0";
             }
