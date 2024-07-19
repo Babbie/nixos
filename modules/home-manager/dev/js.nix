@@ -14,7 +14,7 @@ with lib; {
       lunarvim
       nodejs
       yarn
-      nodePackages.live-server
+      nodePackages.browser-sync
     ];
   };
 }
