@@ -15,6 +15,8 @@ with lib; {
       nodejs
       yarn
       nodePackages.browser-sync
+      vscode-langservers-extracted
+      hurl
     ];
   };
 }
