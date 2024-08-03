@@ -24,9 +24,28 @@ with lib; {
     nixpkgs.config.allowUnfree = true;
     home-manager.useGlobalPkgs = true;
     hardware.graphics.enable = true;
-    fonts.enableDefaultPackages = true;
     security.polkit.enable = true;
     services.gvfs.enable = true;
     services.upower.enable = true;
+
+    fonts.enableDefaultPackages = true;
+    fonts.packages = with pkgs; [
+      (nerdfonts.override { 
+        fonts = ["FiraCode"]; 
+      })
+      fira-sans
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      overpass
+      liberation_ttf
+    ];
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "Liberation Serif" ];
+        sansSerif = [ "Fira Sans" ];
+        monospace = [ "FiraCode Nerd Font" ];
+      };
+    };
   };
 }
