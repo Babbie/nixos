@@ -45,9 +45,9 @@ with lib; {
 
       fontconfig = {
         defaultFonts = {
-          serif = [ "Liberation Serif" ];
-          sansSerif = [ "Fira Sans" ];
-          monospace = [ "FiraCode Nerd Font" ];
+          serif = [ "Noto Serif" "Noto Serif CJK JP" ];
+          sansSerif = [ "Fira Sans" "Noto Sans CJK JP" ];
+          monospace = [ "FiraCode Nerd Font" "Noto Sans Mono CJK JP" ];
         };
       };
     };
