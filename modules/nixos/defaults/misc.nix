@@ -41,6 +41,7 @@ with lib; {
         noto-fonts-emoji
         overpass
         liberation_ttf
+        inter
       ];
 
       fontconfig = {
