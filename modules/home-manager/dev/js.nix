@@ -16,7 +16,6 @@ with lib; {
       yarn
       nodePackages.browser-sync
       vscode-langservers-extracted
-      hurl
       jq
     ];
   };
