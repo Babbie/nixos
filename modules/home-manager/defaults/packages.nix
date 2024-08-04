@@ -19,6 +19,7 @@ with lib; {
       xfce.thunar
       inkscape-with-extensions
       spotify
+      gtk4
     ];
   };
 }
