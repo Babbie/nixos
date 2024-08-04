@@ -16,7 +16,6 @@ with lib; {
       neovim
       curl
       polkit_gnome
-      gtk4
     ];
   };
 }
