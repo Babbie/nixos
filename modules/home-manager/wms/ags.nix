@@ -12,6 +12,7 @@ with lib; {
 
     programs.ags = {
       enable = true;
+      extraPackages = [ pkgs.libgtop ];
       #configDir = ./ags;
     };
   };
