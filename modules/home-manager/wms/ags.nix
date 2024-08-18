@@ -8,7 +8,7 @@ with lib; {
   };
 
   config = mkIf config.ags.enable {
-    home.packages = [ pkgs.bun pkgs.sassc ];
+    home.packages = [ pkgs.bun pkgs.sassc pkgs.libgtop ];
 
     programs.ags = {
       enable = true;
