@@ -23,5 +23,6 @@
     ./files.nix
     ./dev/js.nix
     ./dev/dotnet.nix
+    ./dev/azure.nix
   ];
 }
