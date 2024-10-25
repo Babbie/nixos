@@ -18,7 +18,7 @@ with lib; {
         name = "FiraCode Nerd Font";
         size = 11;
       };
-      theme = "Catppuccin-Macchiato";
+      themeFile = "Catppuccin-Macchiato";
     };
   };
 }
