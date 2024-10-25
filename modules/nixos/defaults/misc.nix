@@ -37,7 +37,7 @@ with lib; {
         })
         fira-sans
         noto-fonts
-        noto-fonts-cjk
+        noto-fonts-cjk-sans
         noto-fonts-emoji
         overpass
         liberation_ttf
