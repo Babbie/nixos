@@ -24,5 +24,6 @@
     ./dev/js.nix
     ./dev/dotnet.nix
     ./dev/azure.nix
+    ./dev/flutter.nix
   ];
 }
