@@ -16,7 +16,7 @@
     "GBM_BACKEND,nvidia-drm"
     "__GLX_VENDOR_LIBRARY_NAME,nvidia"
     "NVD_BACKEND,direct"
-    "AQ_DRM_DEVICES,/dev/dri/by-path/pci-0000:00:02.0-card:/dev/dri/by-path/pci-0000:01:00.0-card"
+    "AQ_DRM_DEVICES,/dev/dri/by-path/pci-0000:01:00.0-card:/dev/dri/by-path/pci-0000:00:02.0-card"
   ];
   hyprland.exec-once = [
     "${pkgs.teams-for-linux}/bin/teams-for-linux"
