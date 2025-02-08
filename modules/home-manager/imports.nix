@@ -23,7 +23,7 @@
     ./wms/hyprlock.nix
     ./wms/ags.nix
     ./wms/gnome-keyring.nix
-    ./wms/hyprland.nix
     ./wms/kanshi.nix
+    ./wms/hyprland.nix
   ];
 }
