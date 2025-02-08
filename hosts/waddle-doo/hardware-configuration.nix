@@ -13,7 +13,6 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ 
     config.boot.kernelPackages.lenovo-legion-module
-    config.boot.kernelPackages.nvidiaPackages.beta
   ];
 
   fileSystems."/" =
