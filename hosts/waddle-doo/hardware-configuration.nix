@@ -13,7 +13,7 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ 
     config.boot.kernelPackages.lenovo-legion-module
-    config.boot.kernelPackages.nvidiaPackages.legacy_535
+    config.boot.kernelPackages.nvidiaPackages.beta
   ];
 
   fileSystems."/" =
@@ -55,8 +55,8 @@
   hardware.nvidia = {
     nvidiaSettings = true;
     modesetting.enable = true;
-    open = false;
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
+    open = true;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
 
     prime = {
       sync.enable = true;
