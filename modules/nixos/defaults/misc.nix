@@ -32,9 +32,7 @@ with lib; {
       enableDefaultPackages = true;
 
       packages = with pkgs; [
-        (nerdfonts.override { 
-         fonts = ["FiraCode"]; 
-        })
+        nerd-fonts.fira-code
         fira-sans
         noto-fonts
         noto-fonts-cjk-sans
