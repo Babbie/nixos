@@ -12,9 +12,7 @@ with lib; {
     programs.kitty = {
       enable = true;
       font = {
-        package = pkgs.nerdfonts.override {
-	  fonts = [ "FiraCode" ];
-	};
+        package = pkgs.nerdfonts.fira-code;
         name = "FiraCode Nerd Font";
         size = 11;
       };
