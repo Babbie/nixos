@@ -21,9 +21,7 @@ with lib; {
     fonts.fontconfig.enable = true;
     home.packages = [ 
       pkgs.fira
-      (pkgs.nerdfonts.override {
-        fonts = [ "FiraCode" ];
-      })
+      pkgs.nerdfonts.fira-code
     ];
     programs.waybar =
       let 
