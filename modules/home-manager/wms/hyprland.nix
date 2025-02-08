@@ -113,10 +113,12 @@ with lib; {
             vibrancy_darkness = 0;
             special = true;
           };
-          drop_shadow = true;
-          shadow_range = 4;
-          shadow_render_power = 3;
-          "col.shadow" = "rgba(1a1a1aee)";
+          shadow = {
+            enabled = true;
+            range = 4;
+            render_power = 3;
+            color = "rgba(1a1a1aee)";
+          };
         };
         animations = {
           enabled = true;
@@ -132,7 +134,6 @@ with lib; {
         };
         dwindle = {
           preserve_split = true;
-          no_gaps_when_only = 1;
         };
         gestures = {
           workspace_swipe = true;
@@ -145,12 +146,26 @@ with lib; {
           swallow_regex = "kitty";
           swallow_exception_regex = "wev";
         };
+        workspace = [
+          # smart gaps
+          "w[tv1], gapsout:0, gapsin:0"
+          "f[1], gapsout:0, gapsin:0"
+        ];
         windowrulev2 = [
+          # smart gaps
+          "bordersize 0, floating:0, onworkspace:w[tv1]"
+          "rounding 0, floating:0, onworkspace:w[tv1]"
+          "bordersize 0, floating:0, onworkspace:f[1]"
+          "rounding 0, floating:0, onworkspace:f[1]"
+
+          # opacity exception
           "opacity 1.0 override,title:(- YouTube)"
-            "idleinhibit focus,title:(- YouTube)"
-            "opacity 1.0 override,title:(KPN TV)"
-            "idleinhibit focus,title:(KPN TV)"
-            "idleinhibit fullscreen,fullscreen:1"
+          "opacity 1.0 override,title:(KPN TV)"
+
+          # prevent screen turn off
+          "idleinhibit focus,title:(- YouTube)"
+          "idleinhibit focus,title:(KPN TV)"
+          "idleinhibit fullscreen,fullscreen:1"
         ];
         blurls = [
           "notifications"
