@@ -55,7 +55,7 @@
     nvidiaSettings = true;
     modesetting.enable = true;
     open = false;
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
 
     prime = {
       sync.enable = true;
