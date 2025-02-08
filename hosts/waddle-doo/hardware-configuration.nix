@@ -55,6 +55,8 @@
   hardware.nvidia = {
     nvidiaSettings = true;
     modesetting.enable = true;
+    open = true;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
 
     prime = {
       sync.enable = true;
