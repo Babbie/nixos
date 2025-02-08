@@ -58,10 +58,10 @@
     package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       version = "570.86.16";
       sha256_64bit = "sha256-0000000000000000000000000000000000000000000=";
-      sha256_aarch64 = lib.fakeSha256;
-      openSha256 = lib.fakeSha256;
-      settingsSha256 = lib.fakeSha256;
-      persistencedSha256 = lib.fakeSha256;
+      sha256_aarch64 = "sha256-0000000000000000000000000000000000000000000=";
+      openSha256 = "sha256-0000000000000000000000000000000000000000000=";
+      settingsSha256 = "sha256-0000000000000000000000000000000000000000000=";
+      persistencedSha256 = "sha256-0000000000000000000000000000000000000000000=";
     };
 
     prime = {
