@@ -146,7 +146,6 @@ with lib; {
           swallow_regex = "kitty";
           swallow_exception_regex = "wev";
         };
-        opengl.nvidia_anti_flicker = false;
         workspace = [
           # smart gaps
           "w[tv1], gapsout:0, gapsin:0"
