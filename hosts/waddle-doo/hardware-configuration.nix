@@ -55,7 +55,7 @@
   hardware.nvidia = {
     nvidiaSettings = true;
     modesetting.enable = true;
-    open = true;
+    open = false;
     package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
 
     prime = {
