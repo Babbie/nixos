@@ -21,7 +21,7 @@ with lib; {
     fonts.fontconfig.enable = true;
     home.packages = [ 
       pkgs.fira
-      pkgs.nerdfonts.fira-code
+      pkgs.nerd-fonts.fira-code
     ];
     programs.waybar =
       let 
