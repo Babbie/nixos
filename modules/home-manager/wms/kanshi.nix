@@ -48,6 +48,7 @@ with lib; {
             {
               criteria = "LG Electronics 27GL850 007NTSUMH150";
               status = "enable";
+              mode = "640x480@60Hz"
               transform = "90";
               position = "0,0";
             }
