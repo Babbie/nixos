@@ -54,8 +54,8 @@
   hardware.nvidia = {
     nvidiaSettings = true;
     modesetting.enable = true;
-    open = false;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    open = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
     #package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
     #  version = "555.58";
 
