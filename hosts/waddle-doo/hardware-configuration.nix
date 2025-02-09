@@ -81,7 +81,7 @@
           ./Use-linux-aperture.c-for-removing-conflict.patch
           ./TTM-fbdev-emulation-for-Linux-6.13.patch
       ];
-    }
+    };
     prime = {
       sync.enable = true;
 
