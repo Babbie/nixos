@@ -12,11 +12,10 @@
 
   hyprland.env = [
     "LIBVA_DRIVER_NAME,nvidia"
-    "XDG_SESSION_TYPE,wayland"
-    "GBM_BACKEND,nvidia-drm"
-    "__GLX_VENDOR_LIBRARY_NAME,nvidia"
     "NVD_BACKEND,direct"
-    "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1"
+    "__GL_GSYNC_ALLOWED"
+
+    "XDG_SESSION_TYPE,wayland"
   ];
   hyprland.exec-once = [
     "${pkgs.teams-for-linux}/bin/teams-for-linux"
