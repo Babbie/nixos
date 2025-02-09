@@ -65,7 +65,7 @@
     #  settingsSha256 = "sha256-vWnrXlBCb3K5uVkDFmJDVq51wrCoqgPF03lSjZOuU8M=";
     #  persistencedSha256 = lib.fakeSha256;
     #};
-    package = config.boot.kernelPackagessssss.nvidiaPackages.mkDriver {
+    package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       version = "565.77";
       sha256_64bit = "sha256-CnqnQsRrzzTXZpgkAtF7PbH9s7wbiTRNcM0SPByzFHw=";
       sha256_aarch64 = "sha256-LSAYUnhfnK3rcuPe1dixOwAujSof19kNOfdRHE7bToE=";
