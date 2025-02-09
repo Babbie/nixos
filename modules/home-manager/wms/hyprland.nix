@@ -79,6 +79,8 @@ with lib; {
             "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
             "hypridle"
         ];
+        opengl.nvidia_anti_flicker = false;
+        debug.damage_tracking = 0;
         input = {
           kb_layout = "us";
           follow_mouse = 1;
