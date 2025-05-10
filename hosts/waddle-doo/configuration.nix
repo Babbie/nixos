@@ -18,7 +18,6 @@
 
   environment.systemPackages = [ pkgs.egl-wayland ];
 
-  dotnet.enable = true;
   programs.adb.enable = true;
   babUser.extraGroups = [ "networkmanager" "wheel" "kvm" "adbusers" ];
 
