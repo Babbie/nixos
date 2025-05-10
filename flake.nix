@@ -45,7 +45,7 @@
       in
       with pkgs;
       mkShell {
-        allowUnfree = true;
+        nixpkgs.config.allowUnfree = true;
         packages = [ dotnet jetbrains.rider android-studio ];
         sessionVariables = {
           DOTNET_PATH = "${dotnet}/bin/dotnet";
