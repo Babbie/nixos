@@ -8,7 +8,6 @@
   zsh.enable = true;
   hyprland.enable = true;
   jsDev.enable = true;
-  dotNetDev.enable = true;
 
   hyprland.env = [
     "LIBVA_DRIVER_NAME,nvidia"
