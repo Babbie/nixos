@@ -18,6 +18,7 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs.legacyPackages.${system};
     in
+    with pkgs;
     {
       nixosConfigurations.waddle-dee = nixpkgs.lib.nixosSystem {
         specialArgs = { 
@@ -41,10 +42,10 @@
       };
 
       devShells.${system}.dotnet = let
-        dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
+        dotnet = dotnetCorePackages.dotnet_9.sdk;
       in
-      pkgs.mkShell {
-        packages = with pkgs; [ dotnet jetbrains.rider android-studio ];
+      mkShell {
+        packages = [ dotnet jetbrains.rider android-studio ];
         sessionVariables = {
           DOTNET_PATH = "${dotnet}/bin/dotnet";
           DOTNET_ROOT = "${dotnet}/share/dotnet";
