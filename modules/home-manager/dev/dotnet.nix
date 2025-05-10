@@ -15,14 +15,14 @@ with lib; {
     home.packages = [ 
       dotnet
       pkgs.android-studio
-      pkgs.jetbrains.rider.overrideAttrs (attrs: {
+      (pkgs.jetbrains.rider.overrideAttrs (attrs: {
         postInstall = ''
           mv $out/bin/rider $out/bin/.rider-toolless
           makeWrapper $out/bin/.rider-toolless $out/bin/rider \
             --argv0 rider \
             --prefix PATH : "${makeBinPath [ dotnet pkgs.dotnetPackages.Nuget pkgs.mono pkgs.msbuild ]}"
         '' + attrs.postInstall or "";
-      })
+      }))
     ];
     home.sessionVariables = {
       DOTNET_PATH = "${dotnet}/bin/dotnet";
