@@ -6,9 +6,9 @@
     profiles.default = {
       id = 0;
       search = {
-        default = "DuckDuckGo";
+        default = "ddg";
 	force = true;
-	order = [ "DuckDuckGo" "Wikipedia" "Nix Packages" "NixOS Wiki" ];
+	order = [ "ddg" "wikipedia" "Nix Packages" "NixOS Wiki" ];
 	engines = {
 	  "Nix Packages" = {
             urls = [{
@@ -18,23 +18,23 @@
                 { name = "query"; value = "{searchTerms}"; }
               ];
             }];
-	    icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@np" ];
           };
 
           "NixOS Wiki" = {
             urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
-            iconUpdateURL = "https://nixos.wiki/favicon.png";
+            icon = "https://nixos.wiki/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@nw" ];
           };
 	  
-	  "DuckDuckGo".metaData.hidden = false;
-	  "Wikipedia".metaData.hidden = false;
-	  "Google".metaData.hidden = true;
-	  "Amazon.com".metaData.hidden = true;
-	  "Bing".metaData.hidden = true;
-	  "eBay".metaData.hidden = true;
+	  "ddg".metaData.hidden = false;
+	  "wikipedia".metaData.hidden = false;
+	  "google".metaData.hidden = true;
+	  "amazondotcom-us".metaData.hidden = true;
+	  "bing".metaData.hidden = true;
+	  "ebay".metaData.hidden = true;
 	};
       };
     };

@@ -49,7 +49,7 @@ with lib; {
         zstyle ':completion:*' verbose true
         autoload -U compinit && compinit
       ";
-      initExtra = ''
+      initContent = ''
         setopt beep extendedglob nomatch transientrprompt
         
         case $(tty) in  
