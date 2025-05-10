@@ -49,10 +49,8 @@
       in
       mkShell {
         packages = [ dotnet jetbrains.rider android-studio ];
-        sessionVariables = {
-          DOTNET_PATH = "${dotnet}/bin/dotnet";
-          DOTNET_ROOT = "${dotnet}/share/dotnet";
-        };
+        DOTNET_PATH = "${dotnet}/bin/dotnet";
+        DOTNET_ROOT = "${dotnet}/share/dotnet";
       };
     };
 }
