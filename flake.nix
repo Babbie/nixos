@@ -40,7 +40,7 @@
         ];
       };
 
-      devShells.system."dotnet" = let
+      devShells.${system}.dotnet = let
         dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
       in
       with pkgs;
