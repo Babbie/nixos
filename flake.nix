@@ -2,10 +2,7 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
-      config.allowUnfree = true;
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -26,7 +23,6 @@
         specialArgs = { 
           inherit inputs nix-colors; 
           rootPath = ./.;
-          pkgs = pkgs;
         };
         modules = [ 
           ./hosts/waddle-dee/configuration.nix
@@ -37,7 +33,6 @@
         specialArgs = { 
           inherit inputs nix-colors; 
           rootPath = ./.;
-          pkgs = pkgs;
         };
         modules = [ 
           ./hosts/waddle-doo/configuration.nix

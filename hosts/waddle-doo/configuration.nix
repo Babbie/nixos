@@ -12,6 +12,8 @@
       ../../modules/nixos/imports.nix
     ];
 
+  nixpkgs.config.allowUnfree = true;
+
   networking.hostName = "waddle-doo"; # Define your hostname.
 
   home-manager.users."bab" = import ./home.nix;
