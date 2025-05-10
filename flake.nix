@@ -16,13 +16,17 @@
   outputs = { self, nixpkgs, nix-colors, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
     in
     {
       nixosConfigurations.waddle-dee = nixpkgs.lib.nixosSystem {
         specialArgs = { 
           inherit inputs nix-colors; 
           rootPath = ./.;
+          pkgs = pkgs;
         };
         modules = [ 
           ./hosts/waddle-dee/configuration.nix
@@ -33,6 +37,7 @@
         specialArgs = { 
           inherit inputs nix-colors; 
           rootPath = ./.;
+          pkgs = pkgs;
         };
         modules = [ 
           ./hosts/waddle-doo/configuration.nix
