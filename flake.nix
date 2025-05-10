@@ -41,7 +41,7 @@
       };
 
       devShells.system."dotnet" = let
-        dotnet = dotnetCorePackages.dotnet_9.sdk;
+        dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
       in
       mkShell {
         packages = [ dotnet jetbrains.rider android-studio ];
