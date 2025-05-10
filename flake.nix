@@ -48,7 +48,13 @@
         dotnet = dotnetCorePackages.dotnet_9.sdk;
       in
       mkShell {
-        packages = [ dotnet jetbrains.rider android-studio ];
+        packages = [ 
+          dotnet
+          jetbrains.rider.overrideAttrs (finalAttrs: previousAttrs: {
+            buildInputs = previousAttrs.buildInputs + [ dotnet ];
+          })
+          android-studio
+        ];
         DOTNET_PATH = "${dotnet}/bin/dotnet";
         DOTNET_ROOT = "${dotnet}/share/dotnet";
       };
