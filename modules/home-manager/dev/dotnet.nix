@@ -12,7 +12,6 @@ with lib; {
     dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
   in
   mkIf config.dotnet.enable {
-    nixpkgs.config.permittedInsecurePackages = [ "dotnet-sdk-6.0.428" ];
     home.packages = [ 
       dotnet
       pkgs.dotnetCorePackages.dotnet_9.aspnetcore
