@@ -12,7 +12,7 @@ with lib; {
     dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
   in
   mkIf config.dotnet.enable {
-    packages = [ 
+    home.packages = [ 
       dotnet
       pkgs.android-studio
       pkgs.jetbrains.rider.overrideAttrs (attrs: {
@@ -24,7 +24,7 @@ with lib; {
         '' + attrs.postInstall or "";
       })
     ];
-    sessionVariables = {
+    home.sessionVariables = {
       DOTNET_PATH = "${dotnet}/bin/dotnet";
       DOTNET_ROOT = "${dotnet}/share/dotnet";
     };
