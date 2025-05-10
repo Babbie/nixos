@@ -20,7 +20,7 @@ with lib; {
           mv $out/bin/rider $out/bin/.rider-toolless
           makeWrapper $out/bin/.rider-toolless $out/bin/rider \
             --argv0 rider \
-            --prefix PATH : "${makeBinPath [ dotnet pkgs.dotnetPackages.Nuget pkgs.mono pkgs.msbuild ]}"
+            --prefix PATH : "${makeBinPath [ dotnet pkgs.msbuild ]}"
         '' + attrs.postInstall or "";
       }))
     ];
