@@ -8,7 +8,6 @@
     ./defaults/git.nix
     ./defaults/packages.nix
     ./defaults/tty.nix
-    ./dev/dotnet.nix
     ./dev/azure.nix
     ./dev/flutter.nix
     ./dev/js.nix
