@@ -2,7 +2,10 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+      config.allowUnfree = true;
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -16,10 +19,7 @@
   outputs = { self, nixpkgs, nix-colors, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        system = "x86_64-linux";
-        config.allowUnfree = true;
-      };
+      pkgs = import nixpkgs.legacyPackages.${system};
     in
     {
       nixosConfigurations.waddle-dee = nixpkgs.lib.nixosSystem {
@@ -50,7 +50,6 @@
       in
       with pkgs;
       mkShell {
-        nixpkgs.config.allowUnfree = true;
         packages = [ dotnet jetbrains.rider android-studio ];
         sessionVariables = {
           DOTNET_PATH = "${dotnet}/bin/dotnet";
