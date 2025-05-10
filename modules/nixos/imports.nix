@@ -16,6 +16,5 @@
     ./defaults/plymouth.nix
     ./defaults/sudo.nix
     ./defaults/misc.nix
-    ./dotnet.nix
   ];
 }
