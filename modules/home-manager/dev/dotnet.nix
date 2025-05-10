@@ -9,7 +9,7 @@ with lib; {
   };
 
   config = let
-    dotnet = dotnetCorePackages.dotnet_9.sdk;
+    dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
   in
   mkIf config.dotnet.enable {
     packages = [ 
