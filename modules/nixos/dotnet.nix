@@ -10,7 +10,7 @@ with lib; {
 
   config = mkIf config.dotnet.enable {
     environment = let 
-      dotnet = sdk_9_0.overrideAttrs (finalAttrs: previousAttrs: {
+      dotnet = pkgs.dotnetCorePackages.sdk_9_0.overrideAttrs (finalAttrs: previousAttrs: {
         # This is needed to install workload in $HOME
         # https://discourse.nixos.org/t/dotnet-maui-workload/20370/2
         postBuild = (previousAttrs.postBuild or '''') + ''
