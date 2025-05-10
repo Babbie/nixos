@@ -9,10 +9,10 @@ with lib; {
   };
 
   config = mkIf config.dotnet.enable {
-    environment = let 
+    let
       dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
     in
-    {
+    pkgs.mkShell {
       packages = [ dotnet ];
       sessionVariables = {
         DOTNET_PATH = "${dotnet}/bin/dotnet";
