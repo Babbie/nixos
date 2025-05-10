@@ -11,6 +11,7 @@
     ./dev/azure.nix
     ./dev/flutter.nix
     ./dev/js.nix
+    ./dev/dotnet.nix
     ./files.nix
     ./shells/zsh.nix
     ./ssh/ssh.nix
