@@ -13,7 +13,7 @@
     ];
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [ "dotnet-sdk-6.0.428" ];
+  nixpkgs.config.permittedInsecurePackages = [ "dotnet-sdk-6.0.428" "dotnet-runtime-6.0.36" ];
 
   networking.hostName = "waddle-doo"; # Define your hostname.
 
