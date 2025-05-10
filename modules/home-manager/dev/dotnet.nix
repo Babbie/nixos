@@ -14,15 +14,9 @@ with lib; {
   mkIf config.dotnet.enable {
     home.packages = [ 
       dotnet
+      pkgs.msbuild
       pkgs.android-studio
-      (pkgs.jetbrains.rider.overrideAttrs (attrs: {
-        postInstall = ''
-          mv $out/bin/rider $out/bin/.rider-toolless
-          makeWrapper $out/bin/.rider-toolless $out/bin/rider \
-            --argv0 rider \
-            --prefix PATH : "${makeBinPath [ dotnet ]}"
-        '' + attrs.postInstall or "";
-      }))
+      pkgs.jetbrains.rider
     ];
     home.sessionVariables = {
       DOTNET_PATH = "${dotnet}/bin/dotnet";
