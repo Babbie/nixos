@@ -43,7 +43,7 @@
       devShells.system."dotnet" = let
         dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
       in
-      mkShell {
+      pkgs.mkShell {
         packages = [ dotnet jetbrains.rider android-studio ];
         sessionVariables = {
           DOTNET_PATH = "${dotnet}/bin/dotnet";
