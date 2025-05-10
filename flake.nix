@@ -16,7 +16,7 @@
   outputs = { self, nixpkgs, nix-colors, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs.legacyPackages.${system};
     in
     {
       nixosConfigurations.waddle-dee = nixpkgs.lib.nixosSystem {
