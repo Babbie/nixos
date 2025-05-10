@@ -15,7 +15,6 @@ with lib; {
     home.packages = [ 
       dotnet
       pkgs.dotnetCorePackages.dotnet_9.aspnetcore
-      pkgs.msbuild
       pkgs.mono
       pkgs.android-studio
       pkgs.jetbrains.rider
