@@ -8,6 +8,7 @@
   zsh.enable = true;
   hyprland.enable = true;
   jsDev.enable = true;
+  dotnet.enable = true;
   flutterDev.enable = true;
   # azureDev.enable = true;
 
