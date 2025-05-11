@@ -11,7 +11,7 @@ with lib; {
   config = mkIf config.flutter.enable {
     home.packages = [
       pkgs.android-studio
-      pkgs.flutter
+      (lowPrio pkgs.flutter)
       pkgs.unzip
     ];
 
