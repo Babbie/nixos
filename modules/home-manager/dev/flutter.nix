@@ -14,7 +14,7 @@ with lib; {
       (pkgs.buildFHSEnv {
         name = "fvm env";
         targetPkgs = pkgs: ([ pkgs.fvm ]);
-      })
+      }).env
       pkgs.unzip
     ];
 
