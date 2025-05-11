@@ -9,6 +9,7 @@
   hyprland.enable = true;
   jsDev.enable = true;
   dotnet.enable = true;
+  flutter.enable = true;
 
   hyprland.env = [
     "LIBVA_DRIVER_NAME,nvidia"
