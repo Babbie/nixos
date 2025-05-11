@@ -18,6 +18,6 @@ with lib; {
       enable = true;
       mutableExtensionsDir = true;
       package = pkgs.vscode-with-extensions;
-    }
+    };
   };
 }
