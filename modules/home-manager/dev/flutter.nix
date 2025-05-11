@@ -13,7 +13,7 @@ with lib; {
       pkgs.android-studio
       (pkgs.buildFHSEnv {
         name = "fvm env";
-        targetPkgs = pkgs.fvm;
+        targetPkgs = [ pkgs.fvm ];
       })
       pkgs.unzip
     ];
