@@ -15,6 +15,8 @@ with lib; {
       pkgs.unzip
     ];
 
+    home.sessionPath = [ "$HOME/.pub-cache/bin" ]
+
     programs.vscode = {
       enable = true;
       mutableExtensionsDir = true;
