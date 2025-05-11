@@ -11,7 +11,13 @@ with lib; {
   config = mkIf config.flutterDev.enable {
     home.packages = [
       pkgs.android-studio
-      (lowPrio pkgs.flutter)
+      pkgs.fvm
     ];
+
+    programs.vscode = {
+      enable = true;
+      mutableExtensionsDir = true;
+      package = pkgs.vscode-with-extensions;
+    }
   };
 }
