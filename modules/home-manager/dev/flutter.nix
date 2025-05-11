@@ -11,7 +11,10 @@ with lib; {
   config = mkIf config.flutter.enable {
     home.packages = [
       pkgs.android-studio
-      pkgs.fvm
+      (pkgs.buildFHSEnv {
+        name = "fvm env";
+        targetPkgs = pkgs.fvm;
+      })
       pkgs.unzip
     ];
 
