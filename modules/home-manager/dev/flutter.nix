@@ -12,6 +12,7 @@ with lib; {
     home.packages = [
       pkgs.android-studio
       pkgs.fvm
+      pkgs.unzip
     ];
 
     programs.vscode = {
