@@ -15,7 +15,7 @@ with lib; {
       pkgs.unzip
     ];
 
-    home.sessionPath = [ "$HOME/.pub-cache/bin" ]
+    home.sessionPath = [ "$HOME/.pub-cache/bin" ];
 
     programs.vscode = {
       enable = true;
