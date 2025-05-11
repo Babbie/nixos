@@ -5,10 +5,10 @@ with lib; {
   ];
 
   options = {
-    flutterDev.enable = mkEnableOption "Enable flutter dev environment";
+    flutter.enable = mkEnableOption "Enable flutter dev environment";
   };
 
-  config = mkIf config.flutterDev.enable {
+  config = mkIf config.flutter.enable {
     home.packages = [
       pkgs.android-studio
       pkgs.fvm
