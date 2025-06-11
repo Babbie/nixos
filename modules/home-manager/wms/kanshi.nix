@@ -89,7 +89,7 @@ with lib; {
               criteria = "Samsung Electric Company SAMSUNG 0x00000001";
               status = "enable";
               position = "0,0";
-              scale = "2.0";
+              scale = 2.0;
             }
             ];
             exec = config.kanshi.exec;
