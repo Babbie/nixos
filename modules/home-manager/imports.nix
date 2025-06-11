@@ -2,28 +2,28 @@
 
 {
   imports = [
-    ./browsers/firefox.nix
-    ./colors.nix
-    ./defaults/babUser.nix
-    ./defaults/git.nix
-    ./defaults/packages.nix
-    ./defaults/tty.nix
-    ./dev/azure.nix
-    ./dev/flutter.nix
-    ./dev/js.nix
-    ./dev/dotnet.nix
-    ./files.nix
     ./shells/zsh.nix
-    ./ssh/ssh.nix
-    ./wms/dunst.nix
-    ./wms/hypridle.nix
-    ./wms/waybar.nix
+    ./browsers/firefox.nix
     ./wms/wlsunset.nix
+    ./wms/dunst.nix
     ./wms/gtk.nix
     ./wms/hyprlock.nix
+    ./wms/hypridle.nix
     ./wms/ags.nix
     ./wms/gnome-keyring.nix
     ./wms/kanshi.nix
     ./wms/hyprland.nix
+    ./wms/waybar.nix
+    ./defaults/babUser.nix
+    ./defaults/git.nix
+    ./defaults/packages.nix
+    ./defaults/tty.nix
+    ./colors.nix
+    ./ssh/ssh.nix
+    ./files.nix
+    ./dev/js.nix
+    ./dev/azure.nix
+    ./dev/dotnet.nix
+    ./dev/flutter.nix
   ];
 }
