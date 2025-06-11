@@ -9,7 +9,7 @@
   hyprland.enable = true;
   jsDev.enable = true;
   dotnet.enable = true;
-  flutterDev.enable = true;
+  # flutterDev.enable = true;
   # azureDev.enable = true;
 
   # The home.packages option allows you to install Nix packages into your
