@@ -79,6 +79,24 @@ with lib; {
         }
         {
           profile = {
+            name = "holiday";
+            outputs = [
+            {
+              criteria = "eDP-1";
+              status = "disable";
+            }
+            {
+              criteria = "Samsung Electric Company SAMSUNG 0x00000001";
+              status = "enable";
+              position = "0,0";
+              scale = "2.0";
+            }
+            ];
+            exec = config.kanshi.exec;
+          };
+        }
+        {
+          profile = {
             name = "wildcard";
             outputs = [
             {
