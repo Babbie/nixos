@@ -15,7 +15,7 @@ with lib; {
       description = "List of user packages to install for bab";
     };
     babUser.extraGroups = mkOption {
-      default = [ "networkmanager" "wheel" ];
+      default = [ "networkmanager" "wheel" "docker" ];
       type = with types; listOf str;
       description = "List of groups";
     };
