@@ -27,7 +27,7 @@ with lib; {
     security.polkit.enable = true;
     services.gvfs.enable = true;
     services.upower.enable = true;
-    virtualisation.docker = {
+    virtualisation.docker.rootless = {
       autoPrune.enable = true;
       enable = true;
     };
