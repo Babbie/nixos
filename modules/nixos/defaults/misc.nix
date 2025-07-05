@@ -28,6 +28,7 @@ with lib; {
     services.gvfs.enable = true;
     services.upower.enable = true;
     virtualisation.docker = {
+      enable = true;
       autoPrune.enable = true;
       rootless.enable = true;
     };
