@@ -20,6 +20,7 @@ with lib; {
       inkscape-with-extensions
       spotify
       gtk4.dev
+      azure-cli
     ];
   };
 }
