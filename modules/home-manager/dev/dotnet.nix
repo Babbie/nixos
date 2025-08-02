@@ -18,6 +18,7 @@ with lib; {
       pkgs.mono
       pkgs.android-studio
       pkgs.jetbrains.rider
+      pkgs.azure-functions-core-tools
     ];
     home.sessionVariables = {
       DOTNET_PATH = "${dotnet}/bin/dotnet";
