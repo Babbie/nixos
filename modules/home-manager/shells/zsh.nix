@@ -16,14 +16,13 @@ with lib; {
   config = mkIf config.zsh.enable {
     programs.zsh = {
       enable = true;
-      dotDir = config.xdg.configHome + ./zsh;
+      dotDir = xdg.configHome + ./zsh;
       defaultKeymap = "viins";
       autosuggestion.enable = true;
       enableCompletion = true;
       shellAliases = {
         ls = "ls --color=auto";
         ll = "ls -al --color=auto";
-        betterdiscord = "nix run 'nixpkgs#betterdiscordctl' install";
       };
       syntaxHighlighting = {
         enable = true;
