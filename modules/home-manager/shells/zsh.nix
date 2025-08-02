@@ -16,7 +16,7 @@ with lib; {
   config = mkIf config.zsh.enable {
     programs.zsh = {
       enable = true;
-      dotDir = config.xdg.configHome + /zsh;
+      dotDir = config.xdg.configHome + ./zsh;
       defaultKeymap = "viins";
       autosuggestion.enable = true;
       enableCompletion = true;
