@@ -16,6 +16,7 @@
   # environment.
   home.packages = with pkgs; [
     bitwig-studio
+    sweethome3d.application
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
