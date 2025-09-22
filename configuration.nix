@@ -4,6 +4,8 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./rider.nix
+      ./idea-flutter.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -40,7 +42,12 @@
   users.users.bab = {
     isNormalUser = true;
     createHome = true;
-    extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "adbusers"
+      "networkmanager"
+      "wheel"
+      "kvm"
+    ];
   };
 
   environment.systemPackages = with pkgs; [

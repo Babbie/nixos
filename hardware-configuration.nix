@@ -10,7 +10,7 @@
 
   boot.initrd = {
     availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "sd_mod" ];
-    kernelModules = [ "dm-snapshot" "cryptd" ];
+    kernelModules = [ "dm-snapshot" "cryptd" "amdgpu" ];
     systemd.enable = true;
     luks.fido2Support = false;
     luks.devices."cryptroot" = {
@@ -60,7 +60,7 @@
   };
   hardware.amdgpu.initrd.enable = lib.mkDefault true;
 
-  services.xserver.videoDrivers = lib.mkDefault [ "modesetting" ];
+  services.xserver.videoDrivers = lib.mkDefault [ "amdgpu" ];
   services.tlp.enable = lib.mkDefault (
     !config.services.power-profiles-daemon.enable
   );
