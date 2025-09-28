@@ -1,12 +1,16 @@
 { inputs, config, lib, pkgs, ... }:
-
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./rider.nix
-      ./idea-flutter.nix
-    ];
+  imports = [
+    inputs.hardware.nixosModules.common-cpu-amd
+    inputs.hardware.nixosModules.common-gpu-amd
+    inputs.hardware.nixosModules.common-pc-laptop
+    inputs.hardware.nixosModules.common-pc-ssd
+
+    ./hardware-configuration.nix
+
+    ../../rider.nix
+    ../../idea-flutter.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -48,6 +52,14 @@
       "wheel"
       "kvm"
     ];
+  };
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages= true;
+    users.bab = import ./home.nix;
+    backupFileExtension = "backup";
+    extraSpecialArgs = { inherit inputs; };
   };
 
   environment.systemPackages = with pkgs; [

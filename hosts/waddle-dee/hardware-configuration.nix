@@ -53,16 +53,4 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   hardware.enableAllFirmware = true;
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  hardware.graphics = {
-    enable = lib.mkDefault true;
-    enable32Bit = lib.mkDefault true;
-  };
-  hardware.amdgpu.initrd.enable = lib.mkDefault true;
-
-  services.xserver.videoDrivers = lib.mkDefault [ "amdgpu" ];
-  services.tlp.enable = lib.mkDefault (
-    !config.services.power-profiles-daemon.enable
-  );
-  services.fstrim.enable = lib.mkDefault true;
 }
