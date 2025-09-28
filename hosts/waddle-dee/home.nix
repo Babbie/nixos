@@ -3,6 +3,9 @@
 {
   imports = [
     inputs.zen-browser.homeModules.beta
+
+    ../../dev/rider.nix
+    ../../dev/idea-flutter.nix
   ];
 
   home.username = "bab";

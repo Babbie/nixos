@@ -29,5 +29,5 @@ let
     '' + attrs.postInstall or "";
   });
 in {
-  environment.systemPackages = [ rider ];
+  home.packages = [ rider ];
 }

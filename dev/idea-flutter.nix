@@ -40,10 +40,8 @@ let
     '' + attrs.postInstall or "";
   });
 in {
-  nixpkgs.config.android_sdk.accept_license = true;
-  environment.systemPackages = with pkgs; [ 
+  home.packages = with pkgs; [ 
     idea 
     androidComposition.androidsdk
   ];
-  programs.adb.enable = true;
 }

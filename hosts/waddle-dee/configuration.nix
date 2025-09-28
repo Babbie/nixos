@@ -8,8 +8,7 @@
 
     ./hardware-configuration.nix
 
-    ../../rider.nix
-    ../../idea-flutter.nix
+    ../../misc/adb.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
