@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
 
     ../../misc/adb.nix
+    ../../system/bluetooth.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
