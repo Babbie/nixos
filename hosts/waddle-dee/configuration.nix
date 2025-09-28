@@ -65,8 +65,6 @@
   environment.systemPackages = with pkgs; [
     neovim
 
-    #KDE
-    kdePackages.sddm-kcm
     wayland-utils
     wl-clipboard
   ];
