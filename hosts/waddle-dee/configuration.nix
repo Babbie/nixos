@@ -10,73 +10,73 @@
 
     ../../misc/adb.nix
     ../../system/bluetooth.nix
+    ../../displaymanager/ly.nix
+    ../../secretservice/kwallet.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  config = {
+    displayManager = "ly";
 
-  networking.hostName = "waddle-dee";
-  networking.networkmanager.enable = true;
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
-  time.timeZone = "Europe/Amsterdam";
+    networking.hostName = "waddle-dee";
+    networking.networkmanager.enable = true;
 
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-    extraLocales = [ "nl_NL.UTF-8/UTF-8" ];
-    extraLocaleSettings = {
-      LC_MONETARY = "nl_NL.UTF-8";
-      LC_PAPER = "nl_NL.UTF-8";
-      LC_ADDRESS = "nl_NL.UTF-8";
-      LC_TELEPHONE = "nl_NL.UTF-8";
-      LC_MEASUREMENT = "nl_NL.UTF-8";
-      LC_IDENTIFICATION = "nl_NL.UTF-8";
+    time.timeZone = "Europe/Amsterdam";
+
+    i18n = {
+      defaultLocale = "en_US.UTF-8";
+      extraLocales = [ "nl_NL.UTF-8/UTF-8" ];
+      extraLocaleSettings = {
+        LC_MONETARY = "nl_NL.UTF-8";
+        LC_PAPER = "nl_NL.UTF-8";
+        LC_ADDRESS = "nl_NL.UTF-8";
+        LC_TELEPHONE = "nl_NL.UTF-8";
+        LC_MEASUREMENT = "nl_NL.UTF-8";
+        LC_IDENTIFICATION = "nl_NL.UTF-8";
+      };
     };
-  };
 
-  services = {
-    desktopManager.plasma6.enable = true;
-    displayManager.ly = {
+    services = {
+      desktopManager.plasma6.enable = true;
+    };
+
+    services.pipewire = {
       enable = true;
-      x11Support = false;
+      pulse.enable = true;
     };
-  };
 
-  security.pam.services.ly.kwallet.enable = true;
+    users.users.bab = {
+      isNormalUser = true;
+      createHome = true;
+      extraGroups = [
+        "adbusers"
+        "networkmanager"
+        "wheel"
+        "kvm"
+      ];
+    };
 
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
+    home-manager = {
+      useGlobalPkgs = true;
+      useUserPackages= true;
+      users.bab = import ./home.nix;
+      backupFileExtension = "backup";
+      extraSpecialArgs = { inherit inputs; };
+    };
 
-  users.users.bab = {
-    isNormalUser = true;
-    createHome = true;
-    extraGroups = [
-      "adbusers"
-      "networkmanager"
-      "wheel"
-      "kvm"
+    environment.systemPackages = with pkgs; [
+      neovim
+
+      wayland-utils
+      wl-clipboard
     ];
+
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nixpkgs.config.allowUnfree = true;
+
+    system.stateVersion = "25.05";
   };
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages= true;
-    users.bab = import ./home.nix;
-    backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs; };
-  };
-
-  environment.systemPackages = with pkgs; [
-    neovim
-
-    wayland-utils
-    wl-clipboard
-  ];
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nixpkgs.config.allowUnfree = true;
-
-  system.stateVersion = "25.05";
 }
 
