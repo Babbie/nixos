@@ -35,8 +35,13 @@
 
   services = {
     desktopManager.plasma6.enable = true;
-    displayManager.ly.enable = true;
+    displayManager.ly = {
+      enable = true;
+      x11Support = false;
+    };
   };
+
+  security.pam.services.ly.kwallet.enable = true;
 
   services.pipewire = {
     enable = true;
