@@ -1,6 +1,7 @@
 { inputs, config, lib, pkgs, ... }:
 {
   imports = [
+    ../../boot
     ../../system
     ../../displaymanager
     ../../secretservice
