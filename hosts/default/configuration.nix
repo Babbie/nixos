@@ -35,7 +35,6 @@
 
     users.users.bab = {
       isNormalUser = mkDefault true;
-      createHome = mkDefault true;
       extraGroups = mkDefault [
         "adbusers"
         "networkmanager"

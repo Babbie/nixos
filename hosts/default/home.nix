@@ -2,7 +2,10 @@
 
 {
   imports = [
+    inputs.nixvim.homeModules.nixvim
     inputs.zen-browser.homeModules.beta
+
+    ../../home/editor/nixvim
   ];
 
   config = with lib; {
