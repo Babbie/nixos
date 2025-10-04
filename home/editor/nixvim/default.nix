@@ -31,6 +31,7 @@
       scrolloff = 4;
       shiftwidth = 2;
       sidescrolloff = 4;
+      signcolumn = "number";
       smartcase = true;
       smartindent = true;
       softtabstop = 2;
