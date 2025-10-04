@@ -13,7 +13,7 @@
         }
         {
           key = "K";
-          lspBufAction = "hover";
+          action = "<CMD>Lspsaga hover_doc<CR>";
         }
       ];
       servers = {
@@ -23,15 +23,9 @@
 
     plugins =  {
       fidget.enable = true;
+      lspsaga.enable = true;
       lspconfig.enable = true;
-      cmp = {
-        autoEnableSources = true;
-        settings.sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
-        ];
-      };
+      web-devicons.enable = true;
     };
     extraConfigLua =
     #lua

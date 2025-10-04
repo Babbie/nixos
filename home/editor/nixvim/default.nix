@@ -2,6 +2,7 @@
   imports = [
     ./lsp.nix
     ./treesitter.nix
+    ./cmp.nix
   ];
   
   programs.nixvim = {
