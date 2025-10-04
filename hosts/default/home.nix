@@ -5,6 +5,7 @@
     inputs.nixvim.homeModules.nixvim
     inputs.zen-browser.homeModules.beta
 
+    ../../home/applications
     ../../home/editor/nixvim
   ];
 
