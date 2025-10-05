@@ -1,15 +1,6 @@
-{ pkgs, ...}:
 {
   boot = {
-    plymouth = {
-      enable = true;
-      themePackages = [ 
-        (pkgs.adi1090x-plymouth-themes.override {
-          selected_themes = [ "hexagon" ]; 
-        })
-      ];
-      theme = "hexagon";
-    };
+    plymouth.enable = true;
 
     consoleLogLevel = 3;
     initrd.verbose = false;

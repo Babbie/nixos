@@ -3,6 +3,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     hardware.url = "github:nixos/nixos-hardware";
+    catppuccin.url = "github:catppuccin/nix";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -24,6 +25,7 @@
       system = "x86_64-linux";
       modules = [ 
         ./hosts/waddle-dee/configuration.nix
+        inputs.catppuccin.nixosModules.catppuccin
 	inputs.home-manager.nixosModules.default
       ];
       specialArgs = { inherit inputs; };

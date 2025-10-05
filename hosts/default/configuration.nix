@@ -33,6 +33,12 @@
       pulse.enable = mkDefault true;
     };
 
+    catppuccin = {
+      enable = mkDefault true;
+      accent = mkDefault "mauve";
+      flavor = mkDefault "macchiato";
+    };
+
     users.users.bab = {
       isNormalUser = mkDefault true;
       extraGroups = mkDefault [
@@ -50,6 +56,7 @@
     };
 
     environment.systemPackages = with pkgs; [
+      bash
       neovim
 
       wayland-utils
