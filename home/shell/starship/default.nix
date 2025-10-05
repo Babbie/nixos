@@ -22,7 +22,7 @@
           " ](fg:${config.starship.color})";
 
         status = {
-          format = "[ $common_meaning$signal_name$maybe_int ](inverted fg:red)[](fg:red)";
+          format = "[ $common_meaning$signal_name$maybe_int](inverted fg:red)[](fg:red)";
           disabled = false;
         };
         
