@@ -4,12 +4,20 @@
       inlayHints.enable = true;
       keymaps = [
         {
-          key = "<leader>do";
-          action = "<CMD>lua vim.diagnostic.open_float()<CR>";
+          key = "<leader>dn";
+          action = "<CMD>Lspsaga diagnostic_jump_next<CR>";
+        }
+        {
+          key = "<leader>dp";
+          action = "<CMD>Lspsaga diagnostic_jump_prev<CR>";
         }
         {
           key = "<leader>df";
-          lspBufAction = "code_action";
+          action = "<CMD>Lspsaga finder<CR>";
+        }
+        {
+          key = "<leader>dr";
+          action = "<CMD>Lspsaga rename<CR>";
         }
         {
           key = "K";
@@ -23,9 +31,18 @@
 
     plugins =  {
       fidget.enable = true;
-      lspsaga.enable = true;
       lspconfig.enable = true;
       web-devicons.enable = true;
+      lspsaga = {
+        enable = true;
+        settings = {
+          beacon.enable = false;
+          scroll_preview = {
+            scroll_down = [ "<leader>dj" ];
+            scroll_up = [ "<leader>dk" ];
+          };
+        };
+      };
     };
     extraConfigLua =
     #lua

@@ -1,8 +1,10 @@
 {
   imports = [
-    ./lsp.nix
-    ./treesitter.nix
     ./cmp.nix
+    ./lsp.nix
+    ./misc.nix
+    ./treesitter.nix
+    ./which-key.nix
   ];
   
   programs.nixvim = {
@@ -30,6 +32,7 @@
       relativenumber = true;
       scrolloff = 4;
       shiftwidth = 2;
+      showcmd = false;
       sidescrolloff = 4;
       signcolumn = "number";
       smartcase = true;
