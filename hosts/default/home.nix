@@ -8,6 +8,7 @@
 
     ../../home/applications
     ../../home/editor/nixvim
+    ../../home/shell
   ];
 
   config = with lib; {

@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   imports = [
     ../../boot
@@ -41,6 +41,7 @@
 
     users.users.bab = {
       isNormalUser = mkDefault true;
+      shell = pkgs.nushell;
       extraGroups = mkDefault [
         "adbusers"
         "networkmanager"
@@ -62,6 +63,8 @@
       wayland-utils
       wl-clipboard
     ];
+
+    environment.variables.EDITOR = "nvim";
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     nixpkgs.config.allowUnfree = true;
