@@ -4,7 +4,7 @@ with lib;
 let 
   androidComposition = pkgs.androidenv.composeAndroidPackages {
     platformVersions = [
-      "latest"
+      "36"
     ];
     systemImageTypes = [
       "google_apis_playstore"
