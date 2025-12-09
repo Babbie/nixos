@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./kdeconnect.nix
     ./kitty.nix
   ];
 

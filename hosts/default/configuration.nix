@@ -5,6 +5,7 @@
     ../../system
     ../../displaymanager
     ../../secretservice
+    ../../firewall
   ];
 
   config = with lib; {
