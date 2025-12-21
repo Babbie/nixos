@@ -21,14 +21,25 @@
     };
   };
   outputs = { nixpkgs, ... }@inputs: {
-    nixosConfigurations.waddle-dee = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [ 
-        ./hosts/waddle-dee/configuration.nix
-        inputs.catppuccin.nixosModules.catppuccin
-	inputs.home-manager.nixosModules.default
-      ];
-      specialArgs = { inherit inputs; };
+    nixosConfigurations = {
+      waddle-dee = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ 
+          ./hosts/waddle-dee/configuration.nix
+          inputs.catppuccin.nixosModules.catppuccin
+          inputs.home-manager.nixosModules.default
+        ];
+        specialArgs = { inherit inputs; };
+      };
+      waddle-doo = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ 
+          ./hosts/waddle-doo/configuration.nix
+          inputs.catppuccin.nixosModules.catppuccin
+          inputs.home-manager.nixosModules.default
+        ];
+        specialArgs = { inherit inputs; };
+      };
     };
   };
 }
