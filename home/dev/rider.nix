@@ -12,6 +12,8 @@ let
       mono
       msbuild
       ungoogled-chromium
+      nodejs
+      azure-cli
     ];
   };
   

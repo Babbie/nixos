@@ -55,7 +55,7 @@ let
 
       cat >$out/bin/idea <<EOL
       #!${pkgs.bash}/bin/bash
-      export ANDROID_HOME=${androidComposition.androidsdk}/libexec/android-sdk
+      export ANDROID_HOME=/libexec/android-sdk
       ${idea-fhs}/bin/idea-fhs $out/bin/.idea-unwrapped "\$@"
       EOL
 
