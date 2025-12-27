@@ -19,12 +19,11 @@
     home.packages = with pkgs; [
       unzip
       proton-pass
-      vesktop
     ];
 
     catppuccin = {
       enable = mkDefault true;
-      accent = mkDefault "mauve";
+      accent = mkDefault "blue";
       flavor = mkDefault "macchiato";
     };
 

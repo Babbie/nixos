@@ -8,7 +8,7 @@
       enable = true;
       settings = rec {
         initial_session = {
-          command = "${pkgs.kdePackages.plasma-workspace}/bin/startplasma-wayland";
+          command = "${pkgs.mangowc}/bin/mango";
           user = "bab";
         };
         default_session = initial_session;

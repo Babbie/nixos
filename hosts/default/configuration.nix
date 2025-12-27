@@ -36,7 +36,7 @@
 
     catppuccin = {
       enable = mkDefault true;
-      accent = mkDefault "mauve";
+      accent = mkDefault "blue";
       flavor = mkDefault "macchiato";
     };
 
