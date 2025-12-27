@@ -12,6 +12,8 @@ let
     platformVersions = [
       "36"
       "35"
+      "34"
+      "33"
     ];
     buildToolsVersions = [
       "34.0.0"
@@ -24,6 +26,9 @@ let
     ];
     ndkVersions = [
       "28.2.13676358"
+    ];
+    cmakeVersions = [
+      "3.22.1"
     ];
     includeSystemImages = true;
     includeEmulator = true;
@@ -45,6 +50,7 @@ let
       jdk17
       libGL
       fvm
+      cmake
     ];
   };
   

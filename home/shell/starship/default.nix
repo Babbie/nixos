@@ -11,6 +11,7 @@
   config = {
     programs.starship = {
       enable = true;
+      enableZshIntegration = true;
 
       settings = lib.recursiveUpdate (import ./nerd-font-symbols.nix) {
         format = "[$status$directory $all" +

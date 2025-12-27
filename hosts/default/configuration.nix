@@ -42,7 +42,7 @@
 
     users.users.bab = {
       isNormalUser = mkDefault true;
-      shell = pkgs.nushell;
+      shell = pkgs.zsh;
       extraGroups = mkDefault [
         "adbusers"
         "networkmanager"
@@ -50,6 +50,10 @@
         "kvm"
       ];
     };
+
+    # ZSH stuff
+    programs.zsh.enable = true;
+    environment.pathsToLink = [ "/share/zsh" ];
 
     home-manager = {
       useGlobalPkgs = mkDefault true;
