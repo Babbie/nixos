@@ -13,6 +13,8 @@
   config = {
     networking.hostName = "waddle-doo";
 
+    services.upower.enable = true;
+
     home-manager = { 
       users.bab = import ./home.nix;
       extraSpecialArgs = { inherit inputs; };

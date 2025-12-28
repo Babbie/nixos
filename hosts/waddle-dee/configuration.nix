@@ -16,6 +16,8 @@
   config = {
     networking.hostName = "waddle-dee";
 
+    services.upower.enable = true;
+
     home-manager = { 
       users.bab = import ./home.nix;
       extraSpecialArgs = { inherit inputs; };
