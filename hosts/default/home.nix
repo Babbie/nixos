@@ -9,6 +9,7 @@
     ../../home/applications
     ../../home/editor/nixvim
     ../../home/shell
+    ../../home/wms/mango
   ];
 
   config = with lib; {
@@ -18,7 +19,6 @@
     # Packages that should be installed to the user profile.
     home.packages = with pkgs; [
       unzip
-      proton-pass
     ];
 
     catppuccin = {

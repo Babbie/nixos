@@ -6,4 +6,7 @@
     ./vesktop.nix
   ];
 
+  home.packages = with pkgs; [
+    proton-pass
+  ];
 }

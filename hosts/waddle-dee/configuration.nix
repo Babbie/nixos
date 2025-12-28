@@ -16,10 +16,6 @@
   config = {
     networking.hostName = "waddle-dee";
 
-    services = {
-      desktopManager.plasma6.enable = true;
-    };
-
     home-manager = { 
       users.bab = import ./home.nix;
       extraSpecialArgs = { inherit inputs; };

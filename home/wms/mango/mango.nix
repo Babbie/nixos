@@ -5,15 +5,11 @@
     inputs.mango.hmModules.mango
   ];
   config = {
-    home.packages = [ pkgs.mangowc ];
-    #wayland.windowManager.mango = {
-    #  enable = true;
+    wayland.windowManager.mango = {
+      enable = true;
     #  settings = ''
 
     #  '';
-    #  autostart_sh = ''
-
-    #  '';
-    #};
+    };
   };
 }
