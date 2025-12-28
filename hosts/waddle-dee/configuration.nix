@@ -1,7 +1,8 @@
-{ inputs, config, lib, pkgs, ... }:
+{ inputs, ... }:
 {
   imports = [
     ../default/configuration.nix
+    ../default/laptop.nix
 
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-gpu-amd
@@ -15,8 +16,6 @@
 
   config = {
     networking.hostName = "waddle-dee";
-
-    services.upower.enable = true;
 
     home-manager = { 
       users.bab = import ./home.nix;

@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, lib, ... }:
 {
   imports = [ 
     ./options.nix
@@ -10,7 +10,7 @@
       enable = true;
       settings = rec {
         initial_session = {
-          command = "${inputs.mango.packages."x86_64-linux".mango}/bin/mango";
+          command = "${lib.getExe inputs.mango.packages."x86_64-linux".mango}";
           user = "bab";
         };
         default_session = initial_session;

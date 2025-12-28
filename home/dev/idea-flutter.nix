@@ -60,9 +60,9 @@ let
       mv $out/bin/idea $out/bin/.idea-unwrapped
 
       cat >$out/bin/idea <<EOL
-      #!${pkgs.bash}/bin/bash
+      #!${getExe pkgs.bash}
       export ANDROID_HOME=/libexec/android-sdk
-      ${idea-fhs}/bin/idea-fhs $out/bin/.idea-unwrapped "\$@"
+      ${getExe idea-fhs} $out/bin/.idea-unwrapped "\$@"
       EOL
 
       chmod +x $out/bin/idea

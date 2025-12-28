@@ -1,7 +1,8 @@
-{ inputs, config, lib, pkgs, ... }:
+{ inputs, ... }:
 {
   imports = [
     ../default/configuration.nix
+    ../default/laptop.nix
 
     inputs.hardware.nixosModules.lenovo-legion-16iah7h
 
@@ -12,8 +13,6 @@
 
   config = {
     networking.hostName = "waddle-doo";
-
-    services.upower.enable = true;
 
     home-manager = { 
       users.bab = import ./home.nix;

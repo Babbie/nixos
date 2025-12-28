@@ -53,7 +53,11 @@
 
     # ZSH stuff
     programs.zsh.enable = true;
-    environment.pathsToLink = [ "/share/zsh" ];
+    environment.pathsToLink = [
+      "/share/applications"
+      "/share/xdg-desktop-portal"
+      "/share/zsh" 
+    ];
 
     home-manager = {
       useGlobalPkgs = mkDefault true;

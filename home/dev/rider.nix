@@ -23,8 +23,8 @@ let
       mv $out/bin/rider $out/bin/.rider-unwrapped
 
       cat >$out/bin/rider <<EOL
-      #!${pkgs.bash}/bin/bash
-      ${rider-fhs}/bin/rider-fhs $out/bin/.rider-unwrapped "\$@"
+      #!${getExe pkgs.bash}
+      ${getExe rider-fhs} $out/bin/.rider-unwrapped "\$@"
       EOL
 
       chmod +x $out/bin/rider
