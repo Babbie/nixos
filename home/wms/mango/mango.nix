@@ -1,28 +1,18 @@
-{ inputs, pkgs, lib, ... }:
+{ inputs, pkgs, lib, config, ... }:
 {
   imports = [
     ../kanshi.nix
     ../cursor.nix
     ../portal.nix
+    ../noctalia
+    ../../../util/palette.nix
     inputs.mango.hmModules.mango
   ];
   config =
-    let
-      flavor = "macchiato";
-      palette = (lib.importJSON "${pkgs.catppuccin}/palette/palette.json").${flavor}.colors;
-      strip = lib.strings.removePrefix "#";
-      blue = strip palette.blue.hex;
-      green = strip palette.green.hex;
-      teal = strip palette.teal.hex;
-      mauve = strip palette.mauve.hex;
-      red = strip palette.red.hex;
-      surface = strip palette.surface1.hex;
-      base = strip palette.base.hex;
-    in
-      {
+    {
       wayland.windowManager.mango = {
         enable = true;
-        settings = ''
+        settings = with config.palette; ''
           # More option see https://github.com/DreamMaoMao/mango/wiki/
 
           # Startup
@@ -67,14 +57,14 @@
           gappov = 12
 
           ## Colors
-          rootcolor = 0x${base}ff
-          bordercolor = 0x${surface}ff
-          focuscolor = 0x${blue}ff
-          urgentcolor = 0x${red}ff
-          maximizescreencolor = 0x${green}ff
-          scratchpadcolor = 0x${teal}ff
-          globalcolor = 0x${mauve}ff
-          overlaycolor = 0x${mauve}ff
+          rootcolor = 0x${base.stripped}ff
+          bordercolor = 0x${surface1.stripped}ff
+          focuscolor = 0x${blue.stripped}ff
+          urgentcolor = 0x${red.stripped}ff
+          maximizescreencolor = 0x${green.stripped}ff
+          scratchpadcolor = 0x${teal.stripped}ff
+          globalcolor = 0x${mauve.stripped}ff
+          overlaycolor = 0x${mauve.stripped}ff
 
           ## Scratchpad appearance
           scratchpad_width_ratio = 0.8
@@ -96,7 +86,7 @@
           shadows_blur = 15
           shadows_position_x = 0
           shadows_position_y = 0
-          shadowscolor= 0x000000ff
+          shadowscolor= 0x${crust.stripped}ff
 
           ## Opacity & Corner Radius
           border_radius = 12
