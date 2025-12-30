@@ -11,6 +11,7 @@
   config = with lib; {
     boot.loader.systemd-boot.enable = mkDefault true;
     boot.loader.efi.canTouchEfiVariables = mkDefault true;
+    boot.tmp.cleanOnBoot = true;
 
     networking.networkmanager.enable = mkDefault true;
 
