@@ -208,8 +208,8 @@
           bind = ALT                  ,Tab    ,toggleoverview,
           bind = SUPER                ,z      ,toggle_scratchpad
           bind = SUPER                ,n      ,switch_layout
-          bind = SUPER                ,s      ,spawn,screenshot
-          bind = SUPER+SHIFT          ,s      ,spawn,screenshot active
+          bind = SUPER                ,s      ,spawn,~/.bin/screenshot
+          bind = SUPER+SHIFT          ,s      ,spawn,~/.bin/screenshot active
           mousebind = NONE            ,btn_left,toggleoverview,1
           mousebind = NONE            ,btn_right,killclient,0
           gesturebind = NONE          ,up,3   ,toggleoverview

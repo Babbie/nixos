@@ -9,7 +9,7 @@ case $1 in
       read _ _ W
       read _ _ H
     } < <(mmsg -x)
-    grim -g "$X,$Y ${W}x$H" - | tee "$FILE" | wl-copy && notify-send -a "Screenshot" "Active window screenshot copied to clipboard" "File saved to $FILE";;
+    wayfreeze --hide-cursor --after-freeze-cmd "grim -g '$X,$Y ${W}x$H' - | tee '$FILE' | wl-copy && notify-send -a 'Screenshot' 'Active window screenshot copied to clipboard' 'File saved to $FILE'; pkill -f wayfreeze";;
   *)
-    grim -g "$(slurp)" - | tee "$FILE" | wl-copy && notify-send -a "Screenshot" "Screenshot copied to clipboard" "File saved to $FILE";;
+    wayfreeze --hide-cursor --after-freeze-cmd "grim -g "'"$(slurp)"'" - | tee '$FILE' | wl-copy && notify-send -a 'Screenshot' 'Screenshot copied to clipboard' 'File saved to $FILE'; pkill -f wayfreeze";;
 esac

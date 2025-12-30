@@ -5,6 +5,7 @@
     slurp
     libnotify
     wl-clipboard
+    wayfreeze
   ];
 
   home.file.".bin/screenshot" = {
