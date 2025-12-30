@@ -8,6 +8,13 @@
     ../../../util/palette.nix
     inputs.mango.hmModules.mango
   ];
+  options = {
+    backlightDevice = lib.mkOption {
+      type = with lib.types; uniq str;
+      default = "intel_backlight";
+    };
+  };
+
   config =
     {
       wayland.windowManager.mango = {
@@ -180,6 +187,18 @@
           bind = SUPER                ,Return ,spawn,kitty
           bind = SUPER                ,space  ,spawn,noctalia-shell ipc call launcher toggle
           bind = CTRL+ALT+SHIFT       ,l      ,spawn,noctalia-shell ipc call lockScreen lock
+
+          ## Special keys
+          bind = NONE, XF86AudioMute          ,spawn,noctalia-shell ipc call volume muteOutput
+          bind = NONE, XF86AudioLowerVolume   ,spawn,noctalia-shell ipc call volume decrease
+          bind = NONE, XF86AudioRaiseVolume   ,spawn,noctalia-shell ipc call volume increase
+          bind = NONE, XF86AudioMicMute       ,spawn,noctalia-shell ipc call volume muteInput
+          bind = NONE, XF86MonBrightnessDown  ,spawn,brightnessctl --device ${config.backlightDevice} s 10%-
+          bind = NONE, XF86MonBrightnessUp    ,spawn,brightnessctl --device ${config.backlightDevice} s 10%+
+          bind = NONE, XF86AudioPlay          ,spawn,noctalia-shell ipc call media playPause
+          bind = NONE, XF86AudioStop          ,spawn,noctalia-shell ipc call media stop
+          bind = NONE, XF86AudioPrev          ,spawn,noctalia-shell ipc call media previous
+          bind = NONE, XF86AudioNext          ,spawn,noctalia-shell ipc call media next
 
           ## Misc
           bind = SUPER+SHIFT          ,q      ,killclient

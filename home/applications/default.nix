@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     proton-pass
+    pwvucontrol
   ];
 
   programs = {
