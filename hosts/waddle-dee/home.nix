@@ -9,5 +9,9 @@
     ../../home/games/default.nix
   ];
 
-  home.stateVersion = "25.05";
+  config = {
+    backlightDevice = "amdgpu_bl1";
+
+    home.stateVersion = "25.05";
+  };
 }

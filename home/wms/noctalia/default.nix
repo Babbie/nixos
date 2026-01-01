@@ -183,6 +183,7 @@
         analogClockInCalendar = true;
         name = "Groningen";
         showWeekNumberInCalendar = true;
+        weatherShowEffects = false;
       };
       calendar = {
         cards = [

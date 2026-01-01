@@ -23,7 +23,7 @@
       enable = true;
       settings = rec {
         initial_session = {
-          command = "uwsm start default > /dev/null";
+          command = "uwsm start -- mango-uwsm.desktop > /dev/null";
           user = "bab";
         };
         default_session = initial_session;

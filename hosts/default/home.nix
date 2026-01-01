@@ -21,6 +21,11 @@
       unzip
     ];
 
+    home.file."Pictures/Wallpapers" = {
+      source = ../../files/wallpapers;
+      recursive = true;
+    };
+
     catppuccin = {
       enable = mkDefault true;
       accent = mkDefault "blue";
