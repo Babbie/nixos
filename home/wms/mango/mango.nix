@@ -27,11 +27,11 @@
           exec-once = noctalia-shell
           exec = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 
-          windowrule = tags:2, isopensilent:1, istagsilent:1, appid:vesktop
+          windowrule = tags:2, monitor:DP-3, isopensilent:1, istagsilent:1, appid:vesktop
           exec-once = vesktop
 
           windowrule = tags:3, isopensilent:1, istagsilent:1, appid:zen.*
-          exec-once = zen
+          exec-once = zen-beta
 
 
           # General
@@ -174,6 +174,26 @@
           tagrule=id:7,monitor_name:eDP-1,layout_name:tgmix
           tagrule=id:8,monitor_name:eDP-1,layout_name:tgmix
           tagrule=id:9,monitor_name:eDP-1,layout_name:tgmix
+
+          tagrule=id:1,monitor_name:DP-1,layout_name:tgmix
+          tagrule=id:2,monitor_name:DP-1,layout_name:tgmix
+          tagrule=id:3,monitor_name:DP-1,layout_name:tgmix
+          tagrule=id:4,monitor_name:DP-1,layout_name:tgmix
+          tagrule=id:5,monitor_name:DP-1,layout_name:tgmix
+          tagrule=id:6,monitor_name:DP-1,layout_name:tgmix
+          tagrule=id:7,monitor_name:DP-1,layout_name:tgmix
+          tagrule=id:8,monitor_name:DP-1,layout_name:tgmix
+          tagrule=id:9,monitor_name:DP-1,layout_name:tgmix
+
+          tagrule=id:1,monitor_name:DP-3,layout_name:vertical_scroller
+          tagrule=id:2,monitor_name:DP-3,layout_name:vertical_scroller
+          tagrule=id:3,monitor_name:DP-3,layout_name:vertical_scroller
+          tagrule=id:4,monitor_name:DP-3,layout_name:vertical_scroller
+          tagrule=id:5,monitor_name:DP-3,layout_name:vertical_scroller
+          tagrule=id:6,monitor_name:DP-3,layout_name:vertical_scroller
+          tagrule=id:7,monitor_name:DP-3,layout_name:vertical_scroller
+          tagrule=id:8,monitor_name:DP-3,layout_name:vertical_scroller
+          tagrule=id:9,monitor_name:DP-3,layout_name:vertical_scroller
 
           ## Let Noctalia handle its own animations and disable blur for it (bugs out)
           layerrule = noblur:1,noanim:1,layer_name:noctalia.*

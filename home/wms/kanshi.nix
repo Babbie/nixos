@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
   services.kanshi = {
     enable = true;
@@ -28,12 +28,14 @@
               status = "enable";
               mode = "3440x1440";
               position = "1440,550";
+              adaptiveSync = true;
             }
             {
               criteria = "LG Electronics 27GL850 007NTSUMH150";
               status = "enable";
               transform = "90";
               position = "0,0";
+              adaptiveSync = true;
             }
           ];
         };
@@ -67,15 +69,17 @@
               criteria = "eDP-1";
               status = "enable";
               scale = 1.333333;
+              adaptiveSync = true;
             }
             {
               criteria = "*";
               status = "enable";
+              adaptiveSync = true;
             }
           ];
         };
       }
     ];
-    systemdTarget = "graphical.target";
+    systemdTarget = "graphical-session.target";
   };
 }
