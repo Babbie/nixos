@@ -29,8 +29,10 @@
 
           windowrule = tags:2, monitor:DP-3, isopensilent:1, istagsilent:1, appid:vesktop
           exec-once = vesktop
+          windowrule = tags:2, monitor:DP-3, isopensilent:1, istagsilent:1, appid:Slack
+          exec-once = slack
 
-          windowrule = tags:3, isopensilent:1, istagsilent:1, appid:zen.*
+          windowrule = tags:3, appid:zen.*
           exec-once = zen-beta
 
 
