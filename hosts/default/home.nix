@@ -10,6 +10,7 @@
     ../../home/editor/nixvim
     ../../home/shell
     ../../home/wms/mango
+    ../../home/secretService
   ];
 
   config = with lib; {

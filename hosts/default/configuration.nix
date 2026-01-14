@@ -35,6 +35,12 @@
       pulse.enable = mkDefault true;
     };
 
+    security.polkit.enable = true;
+
+    # yubikey
+    services.pcscd.enable = true;
+    services.udev.packages = [ pkgs.yubikey-personalization ];
+
     catppuccin = {
       enable = mkDefault true;
       accent = mkDefault "blue";

@@ -14,6 +14,9 @@ let
       ungoogled-chromium
       nodejs
       azure-cli
+      azurite
+      icu
+      openssl
     ];
   };
   

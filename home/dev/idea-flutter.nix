@@ -14,6 +14,8 @@ let
       "35"
       "34"
       "33"
+      "32"
+      "31"
     ];
     buildToolsVersions = [
       "34.0.0"
@@ -51,6 +53,7 @@ let
       libGL
       fvm
       cmake
+      azure-cli
     ];
   };
   

@@ -35,7 +35,7 @@
               status = "enable";
               transform = "90";
               position = "0,0";
-              adaptiveSync = true;
+              adaptiveSync = false;
             }
           ];
         };
@@ -52,11 +52,34 @@
               criteria = "Iiyama North America PL2783Q 1142982501719";
               status = "enable";
               position = "0,0";
+              adaptiveSync = false;
             }
             {
               criteria = "LG Electronics 23MP75 0x0003C8A1";
               status = "enable";
               position = "1920,0";
+              adaptiveSync = false;
+            }
+          ];
+        };
+      }
+      {
+        profile = {
+          name = "work";
+          outputs = [
+            {
+              criteria = "eDP-1";
+              status = "enable";
+              scale = 1.333333;
+              position = "0,550";
+              adaptiveSync = false;
+            }
+            {
+              criteria = "Dell Inc. DELL S2722DZ GMF68H3";
+              status = "enable";
+              mode = "2560x1440@75Hz";
+              position = "1921,0";
+              adaptiveSync = false;
             }
           ];
         };
@@ -69,12 +92,13 @@
               criteria = "eDP-1";
               status = "enable";
               scale = 1.333333;
-              adaptiveSync = true;
+              adaptiveSync = false;
             }
             {
               criteria = "*";
               status = "enable";
-              adaptiveSync = true;
+              position = "1921,0";
+              adaptiveSync = false;
             }
           ];
         };

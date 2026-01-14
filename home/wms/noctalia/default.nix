@@ -12,8 +12,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "noctalia-dev";
       repo = "noctalia-plugins";
-      rev = "e41dffb965ccb3c2b1e3a69a5bf153c99525e26a";
-      hash = "sha256-L8t/nY5/lORGqEtubx/34uSbGyWkQfadGom7w8AZznI=";
+      rev = "0713dacc1af7fc833ed59f36c5235ea95d234ab1";
+      hash = "sha256-VmPNgBfKGFhAza512+HF1DcmZrmvhfE1SUcfFNjwYnI=";
       sparseCheckout = [ 
         "mangowc-layout-switcher" 
         "privacy-indicator"
@@ -320,7 +320,7 @@
         };
         sounds = {
           enabled = true;
-          excludedApps = "vesktop,kde connect";
+          excludedApps = "vesktop,kde connect,slack";
         };
       };
       nightLight = {

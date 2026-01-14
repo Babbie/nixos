@@ -4,6 +4,7 @@
     ../kanshi.nix
     ../cursor.nix
     ../portal.nix
+    ../hypridle.nix
     ../noctalia
     ../../../util/palette.nix
     ../../applications/screenshot.nix
@@ -144,7 +145,7 @@
           # Layouts
           ## Scroller
           scroller_structs = 20
-          scroller_default_proportion = 0.8
+          scroller_default_proportion = 0.5
           scroller_focus_center = 0
           scroller_prefer_center = 0
           edge_scroller_pointer_focus = 1
@@ -186,6 +187,16 @@
           tagrule=id:7,monitor_name:DP-1,layout_name:tgmix
           tagrule=id:8,monitor_name:DP-1,layout_name:tgmix
           tagrule=id:9,monitor_name:DP-1,layout_name:tgmix
+
+          tagrule=id:1,monitor_name:DP-4,layout_name:tgmix
+          tagrule=id:2,monitor_name:DP-4,layout_name:tgmix
+          tagrule=id:3,monitor_name:DP-4,layout_name:tgmix
+          tagrule=id:4,monitor_name:DP-4,layout_name:tgmix
+          tagrule=id:5,monitor_name:DP-4,layout_name:tgmix
+          tagrule=id:6,monitor_name:DP-4,layout_name:tgmix
+          tagrule=id:7,monitor_name:DP-4,layout_name:tgmix
+          tagrule=id:8,monitor_name:DP-4,layout_name:tgmix
+          tagrule=id:9,monitor_name:DP-4,layout_name:tgmix
 
           tagrule=id:1,monitor_name:DP-3,layout_name:vertical_scroller
           tagrule=id:2,monitor_name:DP-3,layout_name:vertical_scroller
