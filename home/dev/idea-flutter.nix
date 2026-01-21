@@ -75,5 +75,6 @@ in {
   home.packages = with pkgs; [ 
     idea 
     gnumake
+    ungoogled-chromium
   ];
 }
