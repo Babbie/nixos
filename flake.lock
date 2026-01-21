@@ -3,11 +3,11 @@
     "bizhawk": {
       "flake": false,
       "locked": {
-        "lastModified": 1768041768,
-        "narHash": "sha256-vHyxQ5vG1R7UqqTwOtD/6/4cIHeXtNwSWrzxgSB2i5U=",
+        "lastModified": 1768882543,
+        "narHash": "sha256-0moOLfAx6Ywf3mgwcap1Eqv/9s9FW3XpnXyarARLODk=",
         "owner": "TASEmulators",
         "repo": "BizHawk",
-        "rev": "23fd0ba0ca473b2bec394afda13170d48e98e136",
+        "rev": "3e6951dbf890bf25b869647a4719197af14595db",
         "type": "github"
       },
       "original": {
