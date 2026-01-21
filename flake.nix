@@ -3,6 +3,12 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     hardware.url = "github:nixos/nixos-hardware";
+
+    bizhawk = {
+      url = "github:TASEmulators/BizHawk";
+      flake = false;
+    };
+
     catppuccin.url = "github:catppuccin/nix";
 
     home-manager = {
