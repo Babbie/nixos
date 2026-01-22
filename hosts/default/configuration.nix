@@ -75,7 +75,7 @@
     environment.systemPackages = with pkgs; [
       bash
       neovim
-
+      nix-tree
       wayland-utils
       wl-clipboard
     ];
