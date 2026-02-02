@@ -5,18 +5,24 @@
 
     ../../../util/palette.nix
   ];
-  home.packages = [ pkgs.brightnessctl ];
+  home.packages = with pkgs; [ 
+    brightnessctl 
+    gpu-screen-recorder
+    # To insert calendar events, run evolution via nix-shell
+    evolution-data-server
+  ];
 
   home.file.".config/noctalia/plugins" = {
     recursive = true;
     source = pkgs.fetchFromGitHub {
       owner = "noctalia-dev";
       repo = "noctalia-plugins";
-      rev = "0713dacc1af7fc833ed59f36c5235ea95d234ab1";
-      hash = "sha256-VmPNgBfKGFhAza512+HF1DcmZrmvhfE1SUcfFNjwYnI=";
+      rev = "91b121df5d1331b7dcad7f4db25263cea4562827";
+      hash = "sha256-S1gvbIEHrZ0F4wHT2rLununkbqYYrMXW0S5zX7yqJtw=";
       sparseCheckout = [ 
         "mangowc-layout-switcher" 
         "privacy-indicator"
+        "screen-recorder"
       ];
     };
   };
@@ -25,6 +31,13 @@
       hideInactive = true;
       iconSpacing = 4;
       removeMargins = false;
+    };
+  };
+  home.file.".config/noctalia/plugins/screen-recorder/settings.json" = {
+    text = builtins.toJSON {
+      hideInactive = true;
+      copyToClipboard = true;
+      directory = "/home/bab/Videos/ScreenRecordings/";
     };
   };
   home.file.".config/noctalia/plugins.json" = {
@@ -37,18 +50,16 @@
         }
       ];
       states = {
-        mangowc-layout-switcher = {
-          enabled = true;
-        };
-        privacy-indicator = {
-          enabled = true;
-        };
+        mangowc-layout-switcher.enabled = true;
+        privacy-indicator.enabled = true;
+        screen-recorder.enabled = true;
       };
     };
   };
 
   programs.noctalia-shell = {
     enable = true;
+    package = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override { calendarSupport = true; };
     colors = with config.palette; {
       mPrimary = blue.hex;
       mOnPrimary = crust.hex;
@@ -101,14 +112,6 @@
           ];
           right = [
             {
-              id = "Tray";
-              blacklist = [];
-              colorizeIcons = false;
-              drawerEnabled = false;
-              hidePassive = true;
-              pinned = [];
-            }
-            {
               id = "MediaMini";
               hideMode = "hidden";
               hideWhenIdle = false;
@@ -120,6 +123,14 @@
               showVisualizer = true;
               useFixedWidth = true;
               visualizerType = "linear";
+            }
+            {
+              id = "Tray";
+              blacklist = [];
+              colorizeIcons = false;
+              drawerEnabled = false;
+              hidePassive = true;
+              pinned = [];
             }
             {
               id = "NotificationHistory";
@@ -167,12 +178,17 @@
               enableColorization = true;
               useDistroLogo = true;
             }
+            {
+              id = "plugin:screen-recorder";
+            }
           ];
         };
       };
       general = {
         avatarImage = "/home/bab/.face";
         dimmerOpacity = 0;
+        showChangelogOnStartup = true;
+        telemetryEnabled = false;
       };
       ui = {
         fontDefault = "Fira Sans";
@@ -184,6 +200,8 @@
         name = "Groningen";
         showWeekNumberInCalendar = true;
         weatherShowEffects = false;
+        firstDayOfWeek = 1;
+        hideWeatherCityName = true;
       };
       calendar = {
         cards = [
@@ -205,30 +223,31 @@
           }
         ];
       };
-      screenRecorder = {
-        copyToClipboard = true;
-        directory = "/home/bab/Videos/ScreenRecordings";
-      };
       wallpaper = {
         enabled = true;
+        automationEnabled = true;
         directory = "/home/bab/Pictures/Wallpapers";
         fillColor = config.palette.mantle.hex;
         hideWallpaperFilenames = true;
-        randomEnabled = true;
         randomIntervalSec = 3600;
-        recursiveSearch = true;
+        setWallpaperOnAllMonitors = true;
         transitionDuration = 1000;
         transitionEdgeSmoothness = 0.2;
+        transitionType = "random";
+        viewMode = "recursive";
+        wallpaperChangeMode = "random";
       };
       appLauncher = {
         position = "top_center";
         terminalCommand = "kitty -e";
       };
       controlCenter = {
+        diskPath = "/home";
+        position = "close_to_bar_button";
         shortcuts = {
           left = [
             {
-              id = "WiFi";
+              id = "Network";
             }
             {
               id = "Bluetooth";
@@ -236,10 +255,13 @@
           ];
           right = [
             {
+              id = "Notifications";
+            }
+            {
               id = "KeepAwake";
             }
             {
-              id = "ScreenRecorder";
+              id = "plugin:screen-recorder";
             }
           ];
         };
@@ -312,6 +334,7 @@
       };
       notifications = {
         enabled = true;
+        overlayLayer = true;
         respectExpireTimeout = true;
         saveToHistory = {
           low = false;
@@ -325,6 +348,7 @@
       };
       nightLight = {
         enabled = true;
+        autoSchedule = true;
         dayTemp = 6500;
         nightTemp = 2700;
       };
