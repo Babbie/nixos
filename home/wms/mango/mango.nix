@@ -31,10 +31,12 @@
 
         windowrule = tags:2, monitor:DP-3, isopensilent:1, istagsilent:1, appid:vesktop
         exec-once = vesktop
-        windowrule = tags:2, monitor:DP-3, isopensilent:1, istagsilent:1, appid:Slack
-        exec-once = slack
+        windowrule = tags:2, monitor:DP-3, isopensilent:1, istagsilent:1, appid:Spotify
+        exec-once = spotify
 
-        windowrule = tags:3, appid:zen.*
+        windowrule = tags:1, monitor:DP-3, isopensilent:1, istagsilent:1, appid:Slack
+        exec-once = slack
+        windowrule = tags:1, monitor:DP-3, appid:zen.*
         exec-once = zen-beta
 
 
@@ -105,6 +107,9 @@
         no_radius_when_single = 0
         focused_opacity = 1.0
         unfocused_opacity = 0.95
+
+        ### Window rules
+        windowrule = unfocused_opacity:1.0, title:.*YouTube.*
 
         # Animations
         ## Enabling
@@ -180,7 +185,7 @@
         tagrule=id:8,monitor_name:eDP-1,layout_name:tgmix
         tagrule=id:9,monitor_name:eDP-1,layout_name:tgmix
 
-        tagrule=id:1,monitor_name:DP-1,layout_name:tgmix
+        tagrule=id:1,monitor_name:DP-1,layout_name:monocle
         tagrule=id:2,monitor_name:DP-1,layout_name:tgmix
         tagrule=id:3,monitor_name:DP-1,layout_name:tgmix
         tagrule=id:4,monitor_name:DP-1,layout_name:tgmix

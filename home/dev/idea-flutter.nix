@@ -14,11 +14,8 @@ let
       "35"
       "34"
       "33"
-      "32"
-      "31"
     ];
     buildToolsVersions = [
-      "35.0.0"
       "34.0.0"
     ];
     systemImageTypes = [

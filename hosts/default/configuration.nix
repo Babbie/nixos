@@ -4,7 +4,6 @@
     ../../boot
     ../../system
     ../../displaymanager
-    ../../secretservice
     ../../firewall
   ];
 

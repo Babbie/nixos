@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     proton-pass
     pwvucontrol
+    yubioath-flutter
   ];
 
   programs = {

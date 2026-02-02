@@ -1,3 +1,3 @@
 {
-  imports = [ ./passSecretService.nix ];
+  imports = [ ./keePassXC.nix ];
 }
