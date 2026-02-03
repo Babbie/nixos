@@ -6,8 +6,8 @@ let
     name = "rider-fhs";
     runScript = "";
     targetPkgs = pkgs: with pkgs; [
-      dotnet-sdk_9
-      dotnet-aspnetcore_9
+      dotnet-sdk_10
+      dotnet-aspnetcore_10
       dotnetPackages.Nuget
       mono
       msbuild
