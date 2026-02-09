@@ -52,6 +52,7 @@ let
       fvm
       cmake
       azure-cli
+      lcov
     ];
   };
   

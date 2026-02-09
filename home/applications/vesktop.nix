@@ -12,7 +12,7 @@
         rgbString = (rgb: "rgb(${toString rgb.r}, ${toString rgb.g}, ${toString rgb.b})");
       in {
         hardwareAcceleration = true;
-        hardwareVideoAcceleration = true;
+        hardwareVideoAcceleration = false;
         splashTheming = true;
         splashBackground = rgbString p.base.rgb;
         splashColor = rgbString p.text.rgb;
