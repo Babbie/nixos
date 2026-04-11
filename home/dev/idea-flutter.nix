@@ -16,7 +16,7 @@ let
       "33"
     ];
     buildToolsVersions = [
-      "34.0.0"
+      "35.0.0"
     ];
     systemImageTypes = [
       "google_apis_playstore"

@@ -75,7 +75,7 @@
               adaptiveSync = false;
             }
             {
-              criteria = "Dell Inc. DELL S2722DZ GMF68H3";
+              criteria = "Dell Inc. DELL S2722DZ *";
               status = "enable";
               mode = "2560x1440@75Hz";
               position = "1921,0";
@@ -92,6 +92,7 @@
               criteria = "eDP-1";
               status = "enable";
               scale = 1.333333;
+              position = "0,0";
               adaptiveSync = false;
             }
             {

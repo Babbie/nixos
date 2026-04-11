@@ -2,9 +2,10 @@
 
 {
   imports = [
+    inputs.catppuccin.homeModules.catppuccin
+    inputs.nix-index-database.homeModules.default
     inputs.nixvim.homeModules.nixvim
     inputs.zen-browser.homeModules.beta
-    inputs.catppuccin.homeModules.catppuccin
 
     ../../home/applications
     ../../home/editor/nixvim
