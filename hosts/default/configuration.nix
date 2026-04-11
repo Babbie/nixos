@@ -36,6 +36,12 @@
 
     security.polkit.enable = true;
 
+    # AppImages
+    programs.appimage = {
+      enable = true;
+      binfmt = true;
+    };
+
     # yubikey
     services.pcscd.enable = true;
     services.udev.packages = [ pkgs.yubikey-personalization ];
