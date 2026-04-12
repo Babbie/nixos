@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib, ... }:
 {
   imports = [
     inputs.noctalia.homeModules.default
@@ -17,8 +17,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "noctalia-dev";
       repo = "noctalia-plugins";
-      rev = "91b121df5d1331b7dcad7f4db25263cea4562827";
-      hash = "sha256-S1gvbIEHrZ0F4wHT2rLununkbqYYrMXW0S5zX7yqJtw=";
+      rev = "96ac1bf32ef080dac518c625bf1ee800446bf1c0";
+      hash = "sha256-+t7NVEOsjQJpYyaBvsDHaU8+kZs5nnLelwiCfr6iNBo=";
       sparseCheckout = [ 
         "mangowc-layout-switcher" 
         "privacy-indicator"
@@ -333,7 +333,7 @@
         firstDayOfWeek = 1;
         hideWeatherTimezone = false;
         hideWeatherCityName = true;
-        autoLocate = true;
+        autoLocate = false;
       };
       calendar = {
         cards = [
