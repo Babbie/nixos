@@ -549,29 +549,29 @@
         countdownDuration = 10000;
         position = "top_right";
         showHeader = true;
-        showKeybinds = true;
+        showKeybinds = false;
         largeButtonsStyle = true;
         largeButtonsLayout = "single-row";
         powerOptions = [
           {
             action = "lock";
             enabled = true;
-            keybind = "";
+            keybind = "1";
           }
           {
             action = "reboot";
             enabled = true;
-            keybind = "";
+            keybind = "2";
           }
           {
             action = "shutdown";
             enabled = true;
-            keybind = "";
+            keybind = "3";
           }
           {
             action = "rebootToUefi";
             enabled = true;
-            keybind = "";
+            keybind = "4";
           }
         ];
       };
