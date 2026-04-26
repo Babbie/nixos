@@ -12,6 +12,7 @@
     ./hardware-configuration.nix
 
     ../../dev/adb.nix
+    ../../misc/steam.nix
   ];
 
   config = {
