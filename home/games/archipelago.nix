@@ -3,6 +3,7 @@ let
   bizhawk = import inputs.bizhawk {
     forNixOS = true;
     inherit pkgs;
+    system = "x86_64-linux";
     dotnet-sdk_5 = pkgs.dotnet-sdk_6;
     gnome-themes-extra = pkgs.gnome-themes-extra;
   };

@@ -6,39 +6,42 @@
     ./treesitter.nix
     ./which-key.nix
   ];
-  
-  programs.nixvim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
 
-    colorscheme = "catppuccin-macchiato";
-    colorschemes.catppuccin.enable = true;
+  config = {
+    programs.nixvim = {
+      enable = true;
+      nixpkgs.config.allowUnfree = true;
+      viAlias = true;
+      vimAlias = true;
 
-    editorconfig.enable = true;
+      colorscheme = "catppuccin-macchiato";
+      colorschemes.catppuccin.enable = true;
 
-    globals.mapleader = " ";
+      editorconfig.enable = true;
 
-    opts = {
-      autoindent = true;
-      colorcolumn = "120";
-      copyindent = true;
-      cursorline = true;
-      expandtab = true;
-      ignorecase = true;
-      infercase = true;
-      mousefocus = true;
-      number = true;
-      relativenumber = true;
-      scrolloff = 4;
-      shiftwidth = 2;
-      showcmd = false;
-      sidescrolloff = 4;
-      signcolumn = "number";
-      smartcase = true;
-      smartindent = true;
-      softtabstop = 2;
-      undofile = true;
+      globals.mapleader = " ";
+
+      opts = {
+        autoindent = true;
+        colorcolumn = "120";
+        copyindent = true;
+        cursorline = true;
+        expandtab = true;
+        ignorecase = true;
+        infercase = true;
+        mousefocus = true;
+        number = true;
+        relativenumber = true;
+        scrolloff = 4;
+        shiftwidth = 2;
+        showcmd = false;
+        sidescrolloff = 4;
+        signcolumn = "number";
+        smartcase = true;
+        smartindent = true;
+        softtabstop = 2;
+        undofile = true;
+      };
     };
   };
 }

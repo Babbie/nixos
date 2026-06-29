@@ -52,7 +52,7 @@
         focus_cross_monitor = 1;
         exchange_cross_monitor = 1;
         scratchpad_cross_monitor = 1;
-        circle_layout = "tgmix,scroller,vertical_tile,vertical_scroller,monocle";
+        circle_layout = "fair,scroller,vertical_tile,vertical_scroller,monocle";
 
         ## Window
         no_border_when_single = 0;
@@ -177,34 +177,34 @@
         # Rules
         tagrule = [
           "id:1,monitor_name:HDMI-A-1,layout_name:monocle"
-          "id:2,monitor_name:HDMI-A-1,layout_name:tgmix"
-          "id:3,monitor_name:HDMI-A-1,layout_name:tgmix"
-          "id:4,monitor_name:HDMI-A-1,layout_name:tgmix"
-          "id:5,monitor_name:HDMI-A-1,layout_name:tgmix"
-          "id:6,monitor_name:HDMI-A-1,layout_name:tgmix"
-          "id:7,monitor_name:HDMI-A-1,layout_name:tgmix"
-          "id:8,monitor_name:HDMI-A-1,layout_name:tgmix"
-          "id:9,monitor_name:HDMI-A-1,layout_name:tgmix"
+          "id:2,monitor_name:HDMI-A-1,layout_name:fair"
+          "id:3,monitor_name:HDMI-A-1,layout_name:fair"
+          "id:4,monitor_name:HDMI-A-1,layout_name:fair"
+          "id:5,monitor_name:HDMI-A-1,layout_name:fair"
+          "id:6,monitor_name:HDMI-A-1,layout_name:fair"
+          "id:7,monitor_name:HDMI-A-1,layout_name:fair"
+          "id:8,monitor_name:HDMI-A-1,layout_name:fair"
+          "id:9,monitor_name:HDMI-A-1,layout_name:fair"
 
           "id:1,monitor_name:DP-1,layout_name:monocle"
-          "id:2,monitor_name:DP-1,layout_name:tgmix"
-          "id:3,monitor_name:DP-1,layout_name:tgmix"
-          "id:4,monitor_name:DP-1,layout_name:tgmix"
-          "id:5,monitor_name:DP-1,layout_name:tgmix"
-          "id:6,monitor_name:DP-1,layout_name:tgmix"
-          "id:7,monitor_name:DP-1,layout_name:tgmix"
-          "id:8,monitor_name:DP-1,layout_name:tgmix"
-          "id:9,monitor_name:DP-1,layout_name:tgmix"
+          "id:2,monitor_name:DP-1,layout_name:fair"
+          "id:3,monitor_name:DP-1,layout_name:fair"
+          "id:4,monitor_name:DP-1,layout_name:fair"
+          "id:5,monitor_name:DP-1,layout_name:fair"
+          "id:6,monitor_name:DP-1,layout_name:fair"
+          "id:7,monitor_name:DP-1,layout_name:fair"
+          "id:8,monitor_name:DP-1,layout_name:fair"
+          "id:9,monitor_name:DP-1,layout_name:fair"
 
           "id:1,monitor_name:DP-4,layout_name:monocle"
-          "id:2,monitor_name:DP-4,layout_name:tgmix"
-          "id:3,monitor_name:DP-4,layout_name:tgmix"
-          "id:4,monitor_name:DP-4,layout_name:tgmix"
-          "id:5,monitor_name:DP-4,layout_name:tgmix"
-          "id:6,monitor_name:DP-4,layout_name:tgmix"
-          "id:7,monitor_name:DP-4,layout_name:tgmix"
-          "id:8,monitor_name:DP-4,layout_name:tgmix"
-          "id:9,monitor_name:DP-4,layout_name:tgmix"
+          "id:2,monitor_name:DP-4,layout_name:fair"
+          "id:3,monitor_name:DP-4,layout_name:fair"
+          "id:4,monitor_name:DP-4,layout_name:fair"
+          "id:5,monitor_name:DP-4,layout_name:fair"
+          "id:6,monitor_name:DP-4,layout_name:fair"
+          "id:7,monitor_name:DP-4,layout_name:fair"
+          "id:8,monitor_name:DP-4,layout_name:fair"
+          "id:9,monitor_name:DP-4,layout_name:fair"
 
           "id:1,monitor_name:DP-3,layout_name:vertical_scroller"
           "id:2,monitor_name:DP-3,layout_name:vertical_scroller"
@@ -216,15 +216,15 @@
           "id:8,monitor_name:DP-3,layout_name:vertical_scroller"
           "id:9,monitor_name:DP-3,layout_name:vertical_scroller"
 
-          "id:1,monitor_name:eDP-1,layout_name:tgmix"
-          "id:2,monitor_name:eDP-1,layout_name:tgmix"
-          "id:3,monitor_name:eDP-1,layout_name:tgmix"
-          "id:4,monitor_name:eDP-1,layout_name:tgmix"
-          "id:5,monitor_name:eDP-1,layout_name:tgmix"
-          "id:6,monitor_name:eDP-1,layout_name:tgmix"
-          "id:7,monitor_name:eDP-1,layout_name:tgmix"
-          "id:8,monitor_name:eDP-1,layout_name:tgmix"
-          "id:9,monitor_name:eDP-1,layout_name:tgmix"
+          "id:1,monitor_name:eDP-1,layout_name:fair"
+          "id:2,monitor_name:eDP-1,layout_name:fair"
+          "id:3,monitor_name:eDP-1,layout_name:fair"
+          "id:4,monitor_name:eDP-1,layout_name:fair"
+          "id:5,monitor_name:eDP-1,layout_name:fair"
+          "id:6,monitor_name:eDP-1,layout_name:fair"
+          "id:7,monitor_name:eDP-1,layout_name:fair"
+          "id:8,monitor_name:eDP-1,layout_name:fair"
+          "id:9,monitor_name:eDP-1,layout_name:fair"
         ];
 
         ## Let Noctalia handle its own animations and disable blur for it (bugs out)

@@ -11,6 +11,7 @@
     proton-pass
     pwvucontrol
     yubioath-flutter
+    spotify
   ];
 
   programs = {
