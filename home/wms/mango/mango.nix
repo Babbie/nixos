@@ -4,7 +4,7 @@
     ../kanshi.nix
     ../cursor.nix
     ../portal.nix
-    ../hypridle.nix
+    #../hypridle.nix
     ../noctalia
     ../../../util/palette.nix
     ../../applications/screenshot.nix
