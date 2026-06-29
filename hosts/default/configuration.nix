@@ -42,12 +42,21 @@
       binfmt = true;
     };
 
+    fonts.enableDefaultPackages = true;
+    fonts.packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      nerd-fonts.fira-code
+    ];
+
     # yubikey
     services.pcscd.enable = true;
     services.udev.packages = [ pkgs.yubikey-personalization ];
 
-    catppuccin = {
+    catppuccin = rec {
       enable = mkDefault true;
+      autoEnable = enable;
       accent = mkDefault "blue";
       flavor = mkDefault "macchiato";
     };

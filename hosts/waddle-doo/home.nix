@@ -12,7 +12,6 @@
     slack
     teams-for-linux
     postman
-    spotify
   ];
 
   home.stateVersion = "25.05";

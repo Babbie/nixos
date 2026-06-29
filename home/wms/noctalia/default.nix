@@ -17,8 +17,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "noctalia-dev";
       repo = "noctalia-plugins";
-      rev = "96ac1bf32ef080dac518c625bf1ee800446bf1c0";
-      hash = "sha256-+t7NVEOsjQJpYyaBvsDHaU8+kZs5nnLelwiCfr6iNBo=";
+      rev = "ce69fcc51d0e8d61c23ce92fbf2e782cf13f6d81";
+      hash = "sha256-F9ck02Dz0z+wr8Lu+zoR9Xn+MUhr8IWgtsqa3Uw4Syo=";
       sparseCheckout = [ 
         "mangowc-layout-switcher" 
         "privacy-indicator"

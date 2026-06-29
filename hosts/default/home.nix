@@ -28,8 +28,9 @@
       recursive = true;
     };
 
-    catppuccin = {
+    catppuccin = rec {
       enable = mkDefault true;
+      autoEnable = enable;
       accent = mkDefault "blue";
       flavor = mkDefault "macchiato";
     };
