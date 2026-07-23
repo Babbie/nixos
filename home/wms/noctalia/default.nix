@@ -46,7 +46,7 @@
       };
 
       control_center = {
-        hidden_tabs = [ "monitor" ];
+        hidden_tabs = [ "monitor" "notifications" ];
         sidebar_section = "none";
         calendar.show_events_card = false;
       };
@@ -64,6 +64,17 @@
       };
 
       nightlight.enabled = true;
+
+      notification = {
+        filter_order = [ "no_history" ];
+        filter.no_history = {
+          enabled = true;
+          match_content = ".*";
+          show_toast = true;
+          save_history = false;
+          play_sound = true;
+        };
+      };
 
       osd.kinds.media = false;
 
