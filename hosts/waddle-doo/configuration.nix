@@ -9,7 +9,6 @@
     ./hardware-configuration.nix
 
     ../../dev/adb.nix
-    ../../misc/intune.nix
   ];
 
   config = {

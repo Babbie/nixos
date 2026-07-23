@@ -14,6 +14,7 @@ let
       "35"
       "34"
       "33"
+      "31"
     ];
     buildToolsVersions = [
       "35.0.0"

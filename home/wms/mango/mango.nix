@@ -7,7 +7,6 @@
     #../hypridle.nix
     ../noctalia
     ../../../util/palette.nix
-    ../../applications/screenshot.nix
     inputs.mango.hmModules.mango
   ];
   options = {
@@ -23,7 +22,7 @@
       enable = true;
       settings = with config.palette; {
         exec-once = [
-          "noctalia-shell"
+          "noctalia"
           "joystickwake"
           "vesktop"
           "spotify"
@@ -238,20 +237,20 @@
 
           ## Spawns
           "SUPER                ,Return ,spawn,kitty"
-          "SUPER                ,space  ,spawn,noctalia-shell ipc call launcher toggle"
-          "CTRL+ALT+SHIFT       ,l      ,spawn,noctalia-shell ipc call lockScreen lock"
+          "SUPER                ,space  ,spawn,noctalia msg panel-toggle launcher"
+          "CTRL+ALT+SHIFT       ,l      ,spawn,noctalia msg session lock"
 
           ## Special keys
-          "NONE, XF86AudioMute          ,spawn,noctalia-shell ipc call volume muteOutput"
-          "NONE, XF86AudioLowerVolume   ,spawn,noctalia-shell ipc call volume decrease"
-          "NONE, XF86AudioRaiseVolume   ,spawn,noctalia-shell ipc call volume increase"
-          "NONE, XF86AudioMicMute       ,spawn,noctalia-shell ipc call volume muteInput"
+          "NONE, XF86AudioMute          ,spawn,noctalia msg volume-mute"
+          "NONE, XF86AudioLowerVolume   ,spawn,noctalia msg volume-down"
+          "NONE, XF86AudioRaiseVolume   ,spawn,noctalia msg volume-up"
+          "NONE, XF86AudioMicMute       ,spawn,noctalia msg mic-mute"
           "NONE, XF86MonBrightnessDown  ,spawn,brightnessctl --device ${config.backlightDevice} s 10%-"
           "NONE, XF86MonBrightnessUp    ,spawn,brightnessctl --device ${config.backlightDevice} s 10%+"
-          "NONE, XF86AudioPlay          ,spawn,noctalia-shell ipc call media playPause"
-          "NONE, XF86AudioStop          ,spawn,noctalia-shell ipc call media stop"
-          "NONE, XF86AudioPrev          ,spawn,noctalia-shell ipc call media previous"
-          "NONE, XF86AudioNext          ,spawn,noctalia-shell ipc call media next"
+          "NONE, XF86AudioPlay          ,spawn,noctalia msg media toggle"
+          "NONE, XF86AudioStop          ,spawn,noctalia msg media stop"
+          "NONE, XF86AudioPrev          ,spawn,noctalia msg media previous"
+          "NONE, XF86AudioNext          ,spawn,noctalia msg media next"
 
           ## Misc
           "SUPER+SHIFT          ,q      ,killclient"
@@ -260,8 +259,7 @@
           "ALT                  ,Tab    ,toggleoverview,"
           "SUPER                ,z      ,toggle_scratchpad"
           "SUPER                ,n      ,switch_layout"
-          "SUPER                ,s      ,spawn,~/.bin/screenshot"
-          "SUPER+SHIFT          ,s      ,spawn,~/.bin/screenshot active"
+          "SUPER                ,s      ,spawn,noctalia msg screenshot-region"
 
           ### Scroller
           "SUPER                ,e      ,set_proportion,1.0"

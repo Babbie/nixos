@@ -86,6 +86,27 @@
       }
       {
         profile = {
+          name = "work2";
+          outputs = [
+            {
+              criteria = "eDP-1";
+              status = "enable";
+              scale = 1.25;
+              position = "0,1200";
+              adaptiveSync = false;
+            }
+            {
+              criteria = "LG Electronics LG ULTRAFINE *";
+              status = "enable";
+              scale = 1.25;
+              position = "2049,0";
+              adaptiveSync = false;
+            }
+          ];
+        };
+      }
+      {
+        profile = {
           name = "wildcard";
           outputs = [
             {

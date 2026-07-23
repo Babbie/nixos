@@ -57,6 +57,7 @@
     catppuccin = rec {
       enable = mkDefault true;
       autoEnable = enable;
+      cache.enable = true;
       accent = mkDefault "blue";
       flavor = mkDefault "macchiato";
     };
@@ -97,7 +98,10 @@
     environment.variables.EDITOR = "nvim";
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
-    nixpkgs.config.allowUnfree = true;
+    nixpkgs.config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [ "electron-40.10.5" ];
+    };
   };
 }
 
