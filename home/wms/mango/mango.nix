@@ -26,7 +26,7 @@
           "joystickwake"
           "vesktop"
           "spotify"
-          "slack"
+          "teams-for-linux"
           "zen-beta"
         ];
         exec = ["dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots"];

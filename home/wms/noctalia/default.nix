@@ -177,19 +177,19 @@
 
         audio_visualizer.mirrored = false;
         battery.hide_when_full = true;
-        cpu.show_label = false;
+        cpu.show_value = false;
 
         disk-home = {
           path = "/home";
-          show_label = false;
-          stat = "disk_pct";
+          show_value = false;
+          stat = "disk_used_pct";
           type = "sysmon";
         };
 
         disk-root = {
           path = "/";
-          show_label = false;
-          stat = "disk_pct";
+          show_value = false;
+          stat = "disk_used_pct";
           type = "sysmon";
         };
 
@@ -207,8 +207,8 @@
         };
 
         privacy.hide_inactive = true;
-        ram.show_label = false;
-        temp.show_label = false;
+        ram.show_value = false;
+        temp.show_value = false;
         tray.drawer = true;
         volume.show_label = false;
         
