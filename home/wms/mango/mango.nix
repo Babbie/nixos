@@ -51,7 +51,7 @@
         focus_cross_monitor = 1;
         exchange_cross_monitor = 1;
         scratchpad_cross_monitor = 1;
-        circle_layout = "fair,scroller,vertical_tile,vertical_scroller,monocle";
+        circle_layout = "fair,scroller,vertical_fair,vertical_scroller,monocle";
 
         ## Window
         no_border_when_single = 0;

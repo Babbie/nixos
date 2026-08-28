@@ -22,6 +22,5 @@
       enableZshIntegration = true;
     };
     nix-index-database.comma.enable = true;
-    github-copilot-cli.enable = true;
   };
 }

@@ -42,6 +42,8 @@
       binfmt = true;
     };
 
+    programs.direnv.enable = true;
+
     fonts.enableDefaultPackages = true;
     fonts.packages = with pkgs; [
       noto-fonts

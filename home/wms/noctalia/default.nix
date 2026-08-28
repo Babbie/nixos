@@ -1,19 +1,33 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
-    inputs.noctalia.homeModules.default
-
     ../../../util/palette.nix
-  ];
-  home.packages = with pkgs; [ 
-    brightnessctl 
-    # for lyrics
-    python3
-    playerctl
   ];
 
   programs.noctalia = {
     enable = true;
+    package = pkgs.symlinkJoin {
+      name = "noctalia-wrapped";
+      meta.mainProgram = "noctalia";
+      paths = [ pkgs.noctalia ];
+      buildInputs = [ pkgs.makeWrapper ];
+
+      postBuild = ''
+        wrapProgram $out/bin/noctalia \
+          --prefix PATH : ${pkgs.lib.makeBinPath (
+            with pkgs;
+            [
+              brightnessctl 
+              # for lyrics
+              python3
+              playerctl
+              # for mango layout controls
+              jq
+            ]
+          )
+        }
+      '';
+    };
 
     settings = {
       bar.default = {
@@ -22,7 +36,7 @@
         padding = 12;
         radius_top_left = 0;
         radius_top_right = 0;
-        start = [ "workspaces" ];
+        start = [ "layout" "workspaces" ];
         center = [ "active_window" ];
         end = [ "group:music" "tray" "volume" "group:stats" "privacy" "clock" ];
         capsule_group = [
@@ -84,6 +98,20 @@
           hide_optimize_button = true;
           update_command = "run0 nix flake update --flake ~/.config/nixos && run0 nixos-rebuild switch --flake ~/.config/nixos#";
         };
+        "ezequiel/mango_layouts" = {
+          panel_open_near_click = true;
+          panel_placement = "attached";
+          panel_position = "top_left";
+          show_center_tile = false;
+          show_deck = false;
+          show_dwindle = false;
+          show_grid = false;
+          show_right_tile = false;
+          show_tile = false;
+          show_vertical_deck = false;
+          show_vertical_grid = false;
+          show_vertical_tile = false;
+        };
         "h465855hgg/lyrics" = {
           char_width = 10;
           lyrics_sources = [ "lrclib" "netease" "splayer" "kugou" "qishui" "apple_music" "spotify" "musixmatch" ];
@@ -96,6 +124,7 @@
         enabled = [
           "avivbintangaringga/nix-monitor"
           "h465855hgg/lyrics"
+          "ezequiel/mango_layouts"
         ];
       };
 
@@ -191,6 +220,13 @@
           show_value = false;
           stat = "disk_used_pct";
           type = "sysmon";
+        };
+
+        layout = {
+          capsule = true;
+          capsule_fill = "primary";
+          color = "on_primary";
+          type = "ezequiel/mango_layouts:btn";
         };
 
         lyrics = {

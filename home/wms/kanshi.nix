@@ -27,7 +27,7 @@
               criteria = "LG Electronics LG ULTRAGEAR 308NTABAS360";
               status = "enable";
               mode = "3440x1440";
-              position = "1440,550";
+              position = "1440,250";
               adaptiveSync = true;
             }
             {
