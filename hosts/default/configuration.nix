@@ -1,5 +1,8 @@
-{ inputs, lib, pkgs, ... }:
 {
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../boot
     ../../system
@@ -8,9 +11,11 @@
   ];
 
   config = with lib; {
-    boot.loader.systemd-boot.enable = mkDefault true;
-    boot.loader.efi.canTouchEfiVariables = mkDefault true;
-    boot.tmp.cleanOnBoot = true;
+    boot = {
+      loader.systemd-boot.enable = mkDefault true;
+      loader.efi.canTouchEfiVariables = mkDefault true;
+      tmp.cleanOnBoot = true;
+    };
 
     networking.networkmanager.enable = mkDefault true;
 
@@ -18,7 +23,7 @@
 
     i18n = mkDefault {
       defaultLocale = "en_US.UTF-8";
-      extraLocales = [ "nl_NL.UTF-8/UTF-8" ];
+      extraLocales = ["nl_NL.UTF-8/UTF-8"];
       extraLocaleSettings = {
         LC_MONETARY = "nl_NL.UTF-8";
         LC_PAPER = "nl_NL.UTF-8";
@@ -29,20 +34,27 @@
       };
     };
 
-    services.pipewire = {
-      enable = mkDefault true;
-      pulse.enable = mkDefault true;
+    services = {
+      pipewire = {
+        enable = mkDefault true;
+        pulse.enable = mkDefault true;
+      };
+      # yubikey
+      pcscd.enable = true;
+      udev.packages = [pkgs.yubikey-personalization];
     };
 
     security.polkit.enable = true;
 
     # AppImages
-    programs.appimage = {
-      enable = true;
-      binfmt = true;
+    programs = {
+      appimage = {
+        enable = true;
+        binfmt = true;
+      };
+      direnv.enable = true;
+      zsh.enable = true;
     };
-
-    programs.direnv.enable = true;
 
     fonts.enableDefaultPackages = true;
     fonts.packages = with pkgs; [
@@ -51,10 +63,6 @@
       noto-fonts-color-emoji
       nerd-fonts.fira-code
     ];
-
-    # yubikey
-    services.pcscd.enable = true;
-    services.udev.packages = [ pkgs.yubikey-personalization ];
 
     catppuccin = rec {
       enable = mkDefault true;
@@ -75,35 +83,33 @@
       ];
     };
 
-    # ZSH stuff
-    programs.zsh.enable = true;
-    environment.pathsToLink = [
-      "/share/applications"
-      "/share/xdg-desktop-portal"
-      "/share/zsh" 
-    ];
+    environment = {
+      # ZSH autocomplete paths
+      pathsToLink = [
+        "/share/applications"
+        "/share/xdg-desktop-portal"
+        "/share/zsh"
+      ];
+      variables.EDITOR = "nvim";
+      systemPackages = with pkgs; [
+        bash
+        neovim
+        nix-tree
+        wayland-utils
+        wl-clipboard
+      ];
+    };
 
     home-manager = {
       useGlobalPkgs = mkDefault true;
-      useUserPackages= mkDefault true;
+      useUserPackages = mkDefault true;
       backupFileExtension = mkDefault "backup";
     };
 
-    environment.systemPackages = with pkgs; [
-      bash
-      neovim
-      nix-tree
-      wayland-utils
-      wl-clipboard
-    ];
-
-    environment.variables.EDITOR = "nvim";
-
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings.experimental-features = ["nix-command" "flakes"];
     nixpkgs.config = {
       allowUnfree = true;
-      permittedInsecurePackages = [ "electron-40.10.5" ];
+      permittedInsecurePackages = ["electron-40.10.5"];
     };
   };
 }
-

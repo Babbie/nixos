@@ -1,31 +1,33 @@
-{ inputs, lib, pkgs, ... }:
-
 {
+  inputs,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     inputs.nix-index-database.homeModules.default
-    inputs.nixvim.homeModules.nixvim
     inputs.zen-browser.homeModules.beta
 
     ../../home/applications
-    ../../home/editor/nixvim
+    #../../home/editor/nixvim
+    ../../home/editor
     ../../home/shell
     ../../home/wms/mango
     ../../home/secretService
   ];
 
   config = with lib; {
-    home.username = mkDefault "bab";
-    home.homeDirectory = mkDefault "/home/bab";
-
-    # Packages that should be installed to the user profile.
-    home.packages = with pkgs; [
-      unzip
-    ];
-
-    home.file."Pictures/Wallpapers" = {
-      source = ../../files/wallpapers;
-      recursive = true;
+    home = {
+      username = mkDefault "bab";
+      homeDirectory = mkDefault "/home/bab";
+      packages = with pkgs; [
+        unzip
+      ];
+      file."Pictures/Wallpapers" = {
+        source = ../../files/wallpapers;
+        recursive = true;
+      };
     };
 
     catppuccin = rec {

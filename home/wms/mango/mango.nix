@@ -169,7 +169,6 @@
         ## Overview
         enable_hotarea = 1;
         hotarea_size = 10;
-        ov_tab_mode = 0;
         overviewgappi = 30;
         overviewgappo = 30;
 
