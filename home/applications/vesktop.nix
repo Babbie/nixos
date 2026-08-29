@@ -16,22 +16,18 @@
         splashTheming = true;
         splashBackground = rgbString p.base.rgb;
         splashColor = rgbString p.text.rgb;
-        tray = false;
+        tray = true;
       };
     vencord = {
       settings = {
         autoUpdate = true;
         autoUpdateNotification = true;
         plugins = {
-          ChatInputButtonAPI.enabled = true;
-          CommandsAPI.enabled = true;
-          MemberListDecoratorsAPI.enabled = true;
-          MessageAccessoriesAPI.enabled = true;
-          MessageDecorationsAPI.enabled = true;
-          MessageEventsAPI.enabled = true;
-          ServerListAPI.enabled = true;
-          UserSettingsAPI.enabled = true;
+          AnonymiseFileNames.enabled = true;
           BetterGifAltText.enabled = true;
+          ChatInputButtonAPI.enabled = true;
+          ClearURLs.enabled = true;
+          CommandsAPI.enabled = true;
           CopyFileContents.enabled = true;
           CrashHandler.enabled = true;
           Dearrow = {
@@ -40,6 +36,12 @@
             replaceElements = 0;
             dearrowByDefault = true;
           };
+          MemberListDecoratorsAPI.enabled = true;
+          MessageAccessoriesAPI.enabled = true;
+          MessageDecorationsAPI.enabled = true;
+          MessageEventsAPI.enabled = true;
+          ServerListAPI.enabled = true;
+          UserSettingsAPI.enabled = true;
           FakeNitro = {
             enabled = true;
             enableEmojiBypass = true;
@@ -79,6 +81,7 @@
             colorMobileIndicator = true;
           };
           PreviewMessage.enabled = true;
+          RoleColorEverywhere.enabled = true;
           SendTimestamps = {
             enabled = true;
             replaceMessageContents = true;
@@ -90,6 +93,7 @@
             includeBlockedUsers = true;
           };
           Unindent.enabled = true;
+          UserMessagesPronouns.enabled = true;
           ValidReply.enabled = true;
           ValidUser.enabled = true;
           VoiceMessages = {
