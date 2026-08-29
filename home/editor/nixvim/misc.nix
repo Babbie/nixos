@@ -42,8 +42,13 @@
     };
     keymaps = [
       {
+        mode = "n";
         key = "<leader>u";
         action = "<CMD>UndotreeToggle<CR>";
+        options = {
+          silent = true;
+          desc = "Undotree";
+        };
       }
     ];
   };
