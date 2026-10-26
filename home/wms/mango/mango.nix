@@ -1,5 +1,10 @@
-{ inputs, lib, config, pkgs, ... }:
 {
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ../kanshi.nix
     ../cursor.nix
@@ -17,11 +22,11 @@
   };
 
   config = {
-    home.packages = [ pkgs.joystickwake ];
+    home.packages = [pkgs.joystickwake];
     wayland.windowManager.mango = {
       enable = true;
       settings = with config.palette; {
-        exec-once = [
+        exec_once = [
           "noctalia"
           "joystickwake"
           "vesktop"
@@ -31,17 +36,17 @@
         ];
         exec = ["dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots"];
 
-        windowrule = [
-          "tags:2, monitor:DP-3, isopensilent:1, istagsilent:1, appid:vesktop"
-          "tags:2, monitor:DP-3, isopensilent:1, istagsilent:1, appid:Spotify"
-          "tags:1, monitor:DP-3, isopensilent:1, istagsilent:1, appid:Slack"
-          "tags:1, monitor:DP-3, appid:zen.*"
+        window_rule = [
+          "tags:2, monitor:DP-3, is_open_silent:1, is_tag_silent:1, app_id:vesktop"
+          "tags:2, monitor:DP-3, is_open_silent:1, is_tag_silent:1, app_id:Spotify"
+          "tags:1, monitor:DP-3, is_open_silent:1, is_tag_silent:1, app_id:Slack"
+          "tags:1, monitor:DP-3, app_id:zen.*"
           "unfocused_opacity:1.0, title:.*YouTube.*"
         ];
 
         # General
         ## System
-        syncobj_enable = 1;
+        sync_obj_enable = 1;
         allow_tearing = 2;
 
         ## Focus
@@ -62,21 +67,21 @@
 
         # Visuals
         ## Theming
-        borderpx = 2;
-        gappih = 6;
-        gappiv = 6;
-        gappoh = 12;
-        gappov = 12;
+        border_px = 2;
+        gap_inner_horizontal = 6;
+        gap_inner_vertical = 6;
+        gap_outer_horizontal = 12;
+        gap_outer_vertical = 12;
 
         ## Colors
-        rootcolor = "0x${base.stripped}ff";
-        bordercolor = "0x${surface1.stripped}ff";
-        focuscolor = "0x${blue.stripped}ff";
-        urgentcolor = "0x${red.stripped}ff";
-        maximizescreencolor = "0x${green.stripped}ff";
-        scratchpadcolor = "0x${teal.stripped}ff";
-        globalcolor = "0x${mauve.stripped}ff";
-        overlaycolor = "0x${mauve.stripped}ff";
+        root_color = "0x${base.stripped}ff";
+        border_color = "0x${surface1.stripped}ff";
+        focus_color = "0x${blue.stripped}ff";
+        urgent_color = "0x${red.stripped}ff";
+        maximized_screen_color = "0x${green.stripped}ff";
+        scratchpad_color = "0x${teal.stripped}ff";
+        global_color = "0x${mauve.stripped}ff";
+        overlay_color = "0x${mauve.stripped}ff";
 
         ## Scratchpad appearance
         scratchpad = {
@@ -100,7 +105,7 @@
         shadows_blur = 15;
         shadows_position_x = 0;
         shadows_position_y = 0;
-        shadowscolor= "0x${crust.stripped}ff";
+        shadows_color = "0x${crust.stripped}ff";
 
         ## Opacity & Corner Radius
         border_radius = 12;
@@ -124,8 +129,8 @@
         ## Fade
         animation_fade_in = 1;
         animation_fade_out = 1;
-        fadein_begin_opacity = 0.5;
-        fadeout_begin_opacity = 0.8;
+        fade_in_begin_opacity = 0.5;
+        fade_out_begin_opacity = 0.8;
 
         ## Zoom
         zoom_initial_ratio = 0.3;
@@ -141,9 +146,9 @@
         ## Curves
         animation_curve_move = "0.46,1.0,0.29,1";
         animation_curve_open = "0.17,0.89,0.10,1.08";
-        animation_curve_opafadein = "0.46,1.0,0.29,1";
+        animation_curve_opacity_fade_in = "0.46,1.0,0.29,1";
         animation_curve_close = "0.08,0.92,0,1";
-        animation_curve_opafadeout = "0.5,0.5,0.5,0.5";
+        animation_curve_opacity_fade_out = "0.5,0.5,0.5,0.5";
         animation_curve_tag = "0.46,1.0,0.29,1";
         animation_curve_focus = "0.46,1.0,0.29,1";
 
@@ -160,20 +165,20 @@
 
         ## Master-Stack
         new_is_master = 1;
-        default_mfact = 0.55;
-        default_nmaster = 1;
-        smartgaps = 0;
+        default_master_factor = 0.55;
+        default_master_count = 1;
+        smart_gaps = 0;
         center_master_overspread = 1;
         center_when_single_stack = 0;
 
         ## Overview
         enable_hotarea = 1;
         hotarea_size = 10;
-        overviewgappi = 30;
-        overviewgappo = 30;
+        overview_gap_inner = 30;
+        overview_gap_outer = 30;
 
         # Rules
-        tagrule = [
+        tag_rule = [
           "id:1,monitor_name:HDMI-A-1,layout_name:monocle"
           "id:2,monitor_name:HDMI-A-1,layout_name:fair"
           "id:3,monitor_name:HDMI-A-1,layout_name:fair"
@@ -226,7 +231,7 @@
         ];
 
         ## Let Noctalia handle its own animations and disable blur for it (bugs out)
-        layerrule = ["noblur:1,noanim:1,layer_name:noctalia.*"];
+        layer_rule = ["no_blur:1,no_animation:1,layer_name:noctalia.*"];
 
         # Key Bindings
         bind = [
@@ -357,7 +362,7 @@
           "NONE          ,right,3,viewtoleft"
         ];
 
-        keymode = {
+        key_mode = {
           resize = {
             bind = [
               ## Resize commands
