@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ../../../util/palette.nix
   ];
@@ -9,15 +8,15 @@
     package = pkgs.symlinkJoin {
       name = "noctalia-wrapped";
       meta.mainProgram = "noctalia";
-      paths = [ pkgs.noctalia ];
-      buildInputs = [ pkgs.makeWrapper ];
+      paths = [pkgs.noctalia];
+      buildInputs = [pkgs.makeWrapper];
 
       postBuild = ''
         wrapProgram $out/bin/noctalia \
-          --prefix PATH : ${pkgs.lib.makeBinPath (
-            with pkgs;
-            [
-              brightnessctl 
+          --prefix PATH : ${
+          pkgs.lib.makeBinPath (
+            with pkgs; [
+              brightnessctl
               # for lyrics
               python3
               playerctl
@@ -36,15 +35,15 @@
         padding = 12;
         radius_top_left = 0;
         radius_top_right = 0;
-        start = [ "layout" "workspaces" ];
-        center = [ "active_window" ];
-        end = [ "group:music" "tray" "volume" "group:stats" "privacy" "clock" ];
+        start = ["layout" "workspaces"];
+        center = ["active_window"];
+        end = ["group:music" "tray" "volume" "group:stats" "privacy" "clock"];
         capsule_group = [
           {
             enabled = true;
             fill = "surface_variant";
             id = "stats";
-            members = [ "battery" "temp" "cpu" "ram" "disk-root" "disk-home" "nix-monitor" ];
+            members = ["battery" "temp" "cpu" "ram" "disk-root" "disk-home" "nix-monitor"];
             opacity = 1.0;
             padding = 6.0;
           }
@@ -52,7 +51,7 @@
             enabled = true;
             fill = "surface_variant";
             id = "music";
-            members = [ "lyrics" "audio_visualizer" ];
+            members = ["lyrics" "audio_visualizer"];
             opacity = 1.0;
             padding = 8.0;
           }
@@ -60,7 +59,7 @@
       };
 
       control_center = {
-        hidden_tabs = [ "monitor" "notifications" ];
+        hidden_tabs = ["monitor" "notifications"];
         sidebar_section = "none";
         calendar.show_events_card = false;
       };
@@ -68,7 +67,7 @@
       desktop_widgets.enabled = false;
 
       idle = {
-        behavior_order = [ "lock" ];
+        behavior_order = ["lock"];
         pre_action_fade_seconds = 5;
         behavior.lock = {
           enabled = true;
@@ -80,7 +79,7 @@
       nightlight.enabled = true;
 
       notification = {
-        filter_order = [ "no_history" ];
+        filter_order = ["no_history"];
         filter.no_history = {
           enabled = true;
           match_content = ".*";
@@ -114,7 +113,7 @@
         };
         "h465855hgg/lyrics" = {
           char_width = 10;
-          lyrics_sources = [ "lrclib" "netease" "splayer" "kugou" "qishui" "apple_music" "spotify" "musixmatch" ];
+          lyrics_sources = ["lrclib" "netease" "splayer" "kugou" "qishui" "apple_music" "spotify" "musixmatch"];
           show_romanization = true;
           translation_language = "en";
         };
@@ -130,6 +129,7 @@
 
       shell = {
         clipboard_enabled = false;
+        greeter_sync.auto_sync = true;
         password_style = "random";
         polkit_agent = true;
         show_location = false;
@@ -153,7 +153,7 @@
           actions = [
             {
               action = "lock";
-              countdown_seconds = 0.0; 
+              countdown_seconds = 0.0;
               enabled = true;
               shortcut = "1";
               variant = "default";
@@ -247,7 +247,7 @@
         temp.show_value = false;
         tray.drawer = true;
         volume.show_label = false;
-        
+
         workspaces = {
           focused_output_only = true;
           hide_when_empty = true;

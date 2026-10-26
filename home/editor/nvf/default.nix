@@ -50,21 +50,24 @@
       searchCase = "smart";
       statusline.lualine = {
         enable = true;
-        activeSection = {
-          a = [''{ "mode" }''];
-          b = [''{ "branch" }'' ''{ "diff" }'' ''{ "diagnostics" }''];
-          c = [''{ "searchcount" }''];
-          x = [''{ "progress" }'' ''{ "location" }''];
-          y = [''{ "lsp_status" }''];
-          z = [''{ "filetype" }''];
-        };
-        componentSeparator = {
-          left = "";
-          right = "";
-        };
-        sectionSeparator = {
-          left = "";
-          right = "";
+        setupOpts = {
+          component_separators = {
+            left = "";
+            right = "";
+          };
+          section_separators = {
+            left = "";
+            right = "";
+          };
+
+          sections = {
+            lualine_a = [{"@1" = "mode";}];
+            lualine_b = [{"@1" = "branch";} {"@1" = "diff";} {"@1" = "diagnostics";}];
+            lualine_c = [{"@1" = "searchcount";}];
+            lualine_x = [{"@1" = "progress";} {"@1" = "location";}];
+            lualine_y = [{"@1" = "lsp_status";}];
+            lualine_z = [{"@1" = "filetype";}];
+          };
         };
       };
       syntaxHighlighting = true;

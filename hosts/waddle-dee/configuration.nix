@@ -1,5 +1,4 @@
-{ inputs, ... }:
-{
+{inputs, ...}: {
   imports = [
     ../default/configuration.nix
     ../default/laptop.nix
@@ -17,13 +16,14 @@
 
   config = {
     networking.hostName = "waddle-dee";
+    # Full traffic VPN requires this to be set
+    networking.firewall.checkReversePath = false;
 
-    home-manager = { 
+    home-manager = {
       users.bab = import ./home.nix;
-      extraSpecialArgs = { inherit inputs; };
+      extraSpecialArgs = {inherit inputs;};
     };
 
     system.stateVersion = "25.05";
   };
 }
-

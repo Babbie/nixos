@@ -31,30 +31,40 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    umbriel = {
+      url = "github:noctalia-dev/umbriel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, ... }@inputs: {
+  outputs = {nixpkgs, ...} @ inputs: {
     nixosConfigurations = {
       waddle-dee = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ 
+        modules = [
           ./hosts/waddle-dee/configuration.nix
           inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.default
         ];
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
       };
       waddle-doo = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ 
+        modules = [
           ./hosts/waddle-doo/configuration.nix
           inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.default
         ];
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
       };
     };
   };
